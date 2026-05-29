@@ -218,9 +218,7 @@ const CONTENIDOS = {
  */
 const GALERIAS = {
   desayunos: [
-    // { src: "img/desayunos/tostada-aguacate.jpg", alt: "Tostada de aguacate con huevo" },
-    // { src: "img/desayunos/yogur-frutos.jpg",    alt: "Yogur con frutos rojos y semillas" },
-    // { src: "img/desayunos/avena-platano.jpg",   alt: "Porridge de avena con plátano" },
+    // { src: "img/desayunos/DESAYUNOS.jpg", alt: "Desayunos para cada día" },
   ],
   almuerzos: [
     // { src: "img/almuerzos/ensalada-mediterranea.jpg", alt: "Ensalada mediterránea" },
