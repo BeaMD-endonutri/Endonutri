@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Endocrinología y Nutrición Clínica · HJR Huelva</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- OVERLAY para cerrar menú en móvil -->
+<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
+
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <div class="sidebar-logo">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#4a9b6f"/><path d="M16 8v16M10 14h12M13 10c0 0 3-2 3 2s3 2 3-2" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Nutrición HJR</span>
+    </div>
+    <button class="sidebar-close" onclick="closeSidebar()" aria-label="Cerrar menú">✕</button>
+  </div>
+
+  <nav class="sidebar-nav">
+
+    <!-- 1. ENTENDIENDO LA OBESIDAD -->
+    <div class="nav-group">
+      <button class="nav-group-title" onclick="toggleGroup(this)">
+        <span class="nav-icon">🧠</span>
+        <span>Entendiendo la Obesidad</span>
+        <span class="nav-arrow">▾</span>
+      </button>
+      <div class="nav-submenu open">
+        <a href="#" onclick="showSection('obesidad-que-es')">¿Qué es la obesidad?</a>
+        <a href="#" onclick="showSection('obesidad-por-que')">¿Por qué cuesta perder peso?</a>
+        <a href="#" onclick="showSection('obesidad-hambre')">Hambre y saciedad</a>
+        <a href="#" onclick="showSection('obesidad-metabolismo')">Metabolismo explicado fácil</a>
+        <a href="#" onclick="showSection('obesidad-mitos')">Mitos frecuentes</a>
+        <a href="#" onclick="showSection('obesidad-composicion')">Composición corporal</a>
+      </div>
+    </div>
+
+    <!-- 2. IDEAS DE COMIDAS -->
+    <div class="nav-group">
+      <button class="nav-group-title" onclick="toggleGroup(this)">
+        <span class="nav-icon">🥗</span>
+        <span>Ideas de Comidas</span>
+        <span class="nav-arrow">▾</span>
+      </button>
+      <div class="nav-submenu">
+        <a href="#" onclick="showSection('comidas-desayunos')">🌅 Desayunos</a>
+        <a href="#" onclick="showSection('comidas-almuerzos')">☀️ Almuerzos</a>
+        <a href="#" onclick="showSection('comidas-meriendas')">🍎 Meriendas</a>
+        <a href="#" onclick="showSection('comidas-cenas')">🌙 Cenas</a>
+        <a href="#" onclick="showSection('comidas-snacks')">🥜 Snacks / Extras</a>
+        <a href="#" onclick="showSection('comidas-recetas')">👨‍🍳 Recetas rápidas</a>
+      </div>
+    </div>
+
+    <!-- 3. PLANES DE ALIMENTACIÓN -->
+    <div class="nav-group">
+      <button class="nav-group-title" onclick="toggleGroup(this)">
+        <span class="nav-icon">📋</span>
+        <span>Planes de Alimentación</span>
+        <span class="nav-arrow">▾</span>
+      </button>
+      <div class="nav-submenu">
+        <a href="#" onclick="showSection('planes-calorias')">Por calorías</a>
+        <a href="#" onclick="showSection('planes-especiales')">Situaciones especiales</a>
+      </div>
+    </div>
+
+    <!-- 4. MOVIMIENTO Y EJERCICIO -->
+    <div class="nav-group">
+      <button class="nav-group-title" onclick="toggleGroup(this)">
+        <span class="nav-icon">🏃</span>
+        <span>Movimiento y Ejercicio</span>
+        <span class="nav-arrow">▾</span>
+      </button>
+      <div class="nav-submenu">
+        <a href="#" onclick="showSection('ejercicio-empezar')">Cómo empezar</a>
+        <a href="#" onclick="showSection('ejercicio-fuerza')">Entrenamiento de fuerza</a>
+        <a href="#" onclick="showSection('ejercicio-cardio')">Cardio</a>
+        <a href="#" onclick="showSection('ejercicio-casa')">Ejercicio en casa</a>
+        <a href="#" onclick="showSection('ejercicio-pasos')">Pasos diarios</a>
+        <a href="#" onclick="showSection('ejercicio-videos')">Vídeos</a>
+      </div>
+    </div>
+
+    <!-- 5. HERRAMIENTAS ÚTILES -->
+    <div class="nav-group">
+      <button class="nav-group-title" onclick="toggleGroup(this)">
+        <span class="nav-icon">🛠️</span>
+        <span>Herramientas Útiles</span>
+        <span class="nav-arrow">▾</span>
+      </button>
+      <div class="nav-submenu">
+        <a href="#" onclick="showSection('herramientas-plato')">Método del plato</a>
+        <a href="#" onclick="showSection('herramientas-etiquetas')">Lectura de etiquetas</a>
+        <a href="#" onclick="showSection('herramientas-compra')">Compra saludable</a>
+        <a href="#" onclick="showSection('herramientas-raciones')">Tamaño de raciones</a>
+        <a href="#" onclick="showSection('herramientas-fuera')">Comer fuera de casa</a>
+      </div>
+    </div>
+
+    <!-- 6. CUESTIONARIO -->
+    <div class="nav-group">
+      <button class="nav-group-title" onclick="toggleGroup(this)">
+        <span class="nav-icon">📝</span>
+        <span>Cuestionario Previo</span>
+        <span class="nav-arrow">▾</span>
+      </button>
+      <div class="nav-submenu">
+        <a href="#" onclick="showSection('cuestionario-main')">Rellenar cuestionario</a>
+        <a href="#" onclick="showSection('cuestionario-pdf')">Versión imprimible (PDF)</a>
+      </div>
+    </div>
+
+    <!-- 7. PREGUNTAS FRECUENTES -->
+    <div class="nav-group nav-single">
+      <button class="nav-group-title" onclick="showSection('faq'); closeSidebar()">
+        <span class="nav-icon">❓</span>
+        <span>Preguntas Frecuentes</span>
+      </button>
+    </div>
+
+    <!-- 8. CONTACTO -->
+    <div class="nav-group nav-single">
+      <button class="nav-group-title" onclick="showSection('contacto'); closeSidebar()">
+        <span class="nav-icon">📞</span>
+        <span>Contacto</span>
+      </button>
+    </div>
+
+  </nav>
+</aside>
+
+<!-- ===== MAIN CONTENT ===== -->
+<div class="main-wrapper" id="mainWrapper">
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <button class="hamburger" onclick="openSidebar()" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="topbar-title">
+      <span class="topbar-short">Endocrinología · HJR Huelva</span>
+    </div>
+    <div class="topbar-logo">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#4a9b6f"/><path d="M16 8v16M10 14h12" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+    </div>
+  </header>
+
+  <!-- CONTENT AREA -->
+  <main class="content-area" id="contentArea">
+
+    <!-- ======= HOME ======= -->
+    <section class="section active" id="section-home">
+      <div class="hero">
+        <div class="hero-badge">Hospital Juan Ramón Jiménez · Huelva</div>
+        <h1 class="hero-title">Servicio de Endocrinología<br><span>y Nutrición Clínica</span></h1>
+        <p class="hero-subtitle">Tu espacio de recursos, información y apoyo en el camino hacia una vida más saludable.</p>
+        <div class="hero-decoration"></div>
+      </div>
+
+      <div class="home-cards">
+        <div class="home-card" onclick="showSection('obesidad-que-es')">
+          <div class="hcard-icon">🧠</div>
+          <div class="hcard-text">
+            <h3>Entendiendo la Obesidad</h3>
+            <p>Información clara y sin tecnicismos</p>
+          </div>
+          <span class="hcard-arrow">→</span>
+        </div>
+        <div class="home-card" onclick="showSection('comidas-desayunos')">
+          <div class="hcard-icon">🥗</div>
+          <div class="hcard-text">
+            <h3>Ideas de Comidas</h3>
+            <p>Galería de recetas e inspiración</p>
+          </div>
+          <span class="hcard-arrow">→</span>
+        </div>
+        <div class="home-card" onclick="showSection('planes-calorias')">
+          <div class="hcard-icon">📋</div>
+          <div class="hcard-text">
+            <h3>Planes de Alimentación</h3>
+            <p>Descarga tu plan personalizado</p>
+          </div>
+          <span class="hcard-arrow">→</span>
+        </div>
+        <div class="home-card highlight" onclick="showSection('cuestionario-main')">
+          <div class="hcard-icon">📝</div>
+          <div class="hcard-text">
+            <h3>Cuestionario Previo</h3>
+            <p>Antes de tu sesión grupal</p>
+          </div>
+          <span class="hcard-arrow">→</span>
+        </div>
+        <div class="home-card" onclick="showSection('herramientas-plato')">
+          <div class="hcard-icon">🛠️</div>
+          <div class="hcard-text">
+            <h3>Herramientas Útiles</h3>
+            <p>Plato, etiquetas y más</p>
+          </div>
+          <span class="hcard-arrow">→</span>
+        </div>
+        <div class="home-card" onclick="showSection('faq')">
+          <div class="hcard-icon">❓</div>
+          <div class="hcard-text">
+            <h3>Preguntas Frecuentes</h3>
+            <p>Resolvemos tus dudas</p>
+          </div>
+          <span class="hcard-arrow">→</span>
+        </div>
+      </div>
+
+      <!-- QR Principal -->
+      <div class="qr-card" id="mainQrCard">
+        <div class="qr-info">
+          <h3>Acceso rápido a esta web</h3>
+          <p>Escanea el código QR o compártelo con otros pacientes</p>
+          <small class="qr-url-label" id="qrUrlLabel">URL configurable en js/config.js</small>
+        </div>
+        <div class="qr-image" id="mainQrContainer">
+          <canvas id="mainQrCanvas"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= ENTENDIENDO LA OBESIDAD ======= -->
+    <!-- Plantilla reutilizable para todos los subapartados -->
+    <section class="section" id="section-obesidad-que-es">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>¿Qué es la obesidad?</h2>
+      </div>
+      <div class="content-card editable-zone" id="content-obesidad-que-es">
+        <p class="placeholder-text">📄 Añade aquí el contenido: texto, imágenes o PDFs.<br><br>
+        Para editar: abre <strong>js/contenidos.js</strong> y modifica la sección <code>obesidad-que-es</code>.</p>
+        <!-- EJEMPLO de cómo quedará cuando añadas contenido:
+        <h3>La obesidad es una enfermedad crónica...</h3>
+        <p>Texto explicativo aquí...</p>
+        <img src="img/obesidad-intro.jpg" alt="Descripción" class="content-img">
+        <a href="pdfs/obesidad-que-es.pdf" class="pdf-btn" target="_blank">📥 Descargar PDF</a>
+        -->
+      </div>
+    </section>
+
+    <section class="section" id="section-obesidad-por-que">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>¿Por qué cuesta perder peso?</h2>
+      </div>
+      <div class="content-card editable-zone" id="content-obesidad-por-que">
+        <p class="placeholder-text">📄 Edita <strong>js/contenidos.js</strong> → sección <code>obesidad-por-que</code></p>
+      </div>
+    </section>
+
+    <section class="section" id="section-obesidad-hambre">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>Hambre y saciedad</h2>
+      </div>
+      <div class="content-card editable-zone" id="content-obesidad-hambre">
+        <p class="placeholder-text">📄 Edita <strong>js/contenidos.js</strong> → sección <code>obesidad-hambre</code></p>
+      </div>
+    </section>
+
+    <section class="section" id="section-obesidad-metabolismo">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>Metabolismo explicado fácil</h2>
+      </div>
+      <div class="content-card editable-zone" id="content-obesidad-metabolismo">
+        <p class="placeholder-text">📄 Edita <strong>js/contenidos.js</strong> → sección <code>obesidad-metabolismo</code></p>
+      </div>
+    </section>
+
+    <section class="section" id="section-obesidad-mitos">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>Mitos frecuentes</h2>
+      </div>
+      <div class="content-card editable-zone" id="content-obesidad-mitos">
+        <p class="placeholder-text">📄 Edita <strong>js/contenidos.js</strong> → sección <code>obesidad-mitos</code></p>
+      </div>
+    </section>
+
+    <section class="section" id="section-obesidad-composicion">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>Composición corporal</h2>
+      </div>
+      <div class="content-card editable-zone" id="content-obesidad-composicion">
+        <p class="placeholder-text">📄 Edita <strong>js/contenidos.js</strong> → sección <code>obesidad-composicion</code></p>
+      </div>
+    </section>
+
+    <!-- ======= IDEAS DE COMIDAS ======= -->
+    <section class="section" id="section-comidas-desayunos">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>🌅 Desayunos</h2>
+      </div>
+      <div class="gallery-grid" id="gallery-desayunos">
+        <!-- Las imágenes se cargan desde js/contenidos.js -->
+        <div class="gallery-empty">
+          <span>🌅</span>
+          <p>Añade imágenes en la carpeta <code>/img/desayunos/</code><br>y regístralas en <code>js/contenidos.js</code></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="section-comidas-almuerzos">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>☀️ Almuerzos</h2>
+      </div>
+      <div class="gallery-grid" id="gallery-almuerzos">
+        <div class="gallery-empty"><span>☀️</span><p>Añade imágenes en <code>/img/almuerzos/</code></p></div>
+      </div>
+    </section>
+
+    <section class="section" id="section-comidas-meriendas">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>🍎 Meriendas</h2>
+      </div>
+      <div class="gallery-grid" id="gallery-meriendas">
+        <div class="gallery-empty"><span>🍎</span><p>Añade imágenes en <code>/img/meriendas/</code></p></div>
+      </div>
+    </section>
+
+    <section class="section" id="section-comidas-cenas">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>🌙 Cenas</h2>
+      </div>
+      <div class="gallery-grid" id="gallery-cenas">
+        <div class="gallery-empty"><span>🌙</span><p>Añade imágenes en <code>/img/cenas/</code></p></div>
+      </div>
+    </section>
+
+    <section class="section" id="section-comidas-snacks">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>🥜 Snacks / Extras</h2>
+      </div>
+      <div class="gallery-grid" id="gallery-snacks">
+        <div class="gallery-empty"><span>🥜</span><p>Añade imágenes en <code>/img/snacks/</code></p></div>
+      </div>
+    </section>
+
+    <section class="section" id="section-comidas-recetas">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>👨‍🍳 Recetas rápidas</h2>
+      </div>
+      <div class="gallery-grid" id="gallery-recetas">
+        <div class="gallery-empty"><span>👨‍🍳</span><p>Añade imágenes en <code>/img/recetas/</code></p></div>
+      </div>
+    </section>
+
+    <!-- ======= PLANES DE ALIMENTACIÓN ======= -->
+    <section class="section" id="section-planes-calorias">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>📋 Planes por calorías</h2>
+      </div>
+      <div class="plans-grid" id="planes-calorias-grid">
+        <!-- Generado por js/contenidos.js -->
+        <div class="plan-card">
+          <div class="plan-kcal">1200 kcal</div>
+          <p>Plan hipocalórico</p>
+          <a href="pdfs/planes-calorias/plan-1200.pdf" class="pdf-btn" target="_blank">📥 Descargar PDF</a>
+        </div>
+        <div class="plan-card">
+          <div class="plan-kcal">1500 kcal</div>
+          <p>Plan moderado</p>
+          <a href="pdfs/planes-calorias/plan-1500.pdf" class="pdf-btn" target="_blank">📥 Descargar PDF</a>
+        </div>
+        <div class="plan-card">
+          <div class="plan-kcal">1800 kcal</div>
+          <p>Plan estándar</p>
+          <a href="pdfs/planes-calorias/plan-1800.pdf" class="pdf-btn" target="_blank">📥 Descargar PDF</a>
+        </div>
+        <div class="plan-card">
+          <div class="plan-kcal">2000 kcal</div>
+          <p>Plan mantenimiento</p>
+          <a href="pdfs/planes-calorias/plan-2000.pdf" class="pdf-btn" target="_blank">📥 Descargar PDF</a>
+        </div>
+      </div>
+      <div class="info-box">
+        💡 Para añadir un nuevo plan: copia la tarjeta en <code>js/contenidos.js</code> y sube el PDF a <code>/pdfs/planes-calorias/</code>
+      </div>
+    </section>
+
+    <section class="section" id="section-planes-especiales">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>📋 Situaciones especiales</h2>
+      </div>
+      <div class="plans-grid">
+        <div class="plan-card special">
+          <div class="plan-icon">🩸</div>
+          <h3>Diabetes</h3>
+          <a href="pdfs/situaciones-especiales/diabetes.pdf" class="pdf-btn" target="_blank">📥 Descargar</a>
+        </div>
+        <div class="plan-card special">
+          <div class="plan-icon">🌸</div>
+          <h3>Menopausia</h3>
+          <a href="pdfs/situaciones-especiales/menopausia.pdf" class="pdf-btn" target="_blank">📥 Descargar</a>
+        </div>
+        <div class="plan-card special">
+          <div class="plan-icon">❤️</div>
+          <h3>Hipercolesterolemia</h3>
+          <a href="pdfs/situaciones-especiales/hipercolesterolemia.pdf" class="pdf-btn" target="_blank">📥 Descargar</a>
+        </div>
+        <div class="plan-card special">
+          <div class="plan-icon">🌿</div>
+          <h3>Colon irritable</h3>
+          <a href="pdfs/situaciones-especiales/colon-irritable.pdf" class="pdf-btn" target="_blank">📥 Descargar</a>
+        </div>
+        <div class="plan-card special">
+          <div class="plan-icon">⚡</div>
+          <h3>Resistencia a la insulina</h3>
+          <a href="pdfs/situaciones-especiales/resistencia-insulina.pdf" class="pdf-btn" target="_blank">📥 Descargar</a>
+        </div>
+        <div class="plan-card special">
+          <div class="plan-icon">🥦</div>
+          <h3>Vegetarianos</h3>
+          <a href="pdfs/situaciones-especiales/vegetariano.pdf" class="pdf-btn" target="_blank">📥 Descargar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= EJERCICIO ======= -->
+    <section class="section" id="section-ejercicio-empezar">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>🏃 Cómo empezar a moverse</h2>
+      </div>
+      <div class="content-card editable-zone" id="content-ejercicio-empezar">
+        <p class="placeholder-text">📄 Edita <strong>js/contenidos.js</strong> → sección <code>ejercicio-empezar</code></p>
+      </div>
+    </section>
+
+    <section class="section" id="section-ejercicio-fuerza">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>💪 Entrenamiento de fuerza</h2>
+      </div>
+      <div class="content-card editable-zone" id="content-ejercicio-fuerza">
+        <p class="placeholder-text">📄 Edita <strong>js/contenidos.js</strong> → sección <code>ejercicio-fuerza</code></p>
+      </div>
+    </section>
+
+    <section class="section" id="section-ejercicio-cardio">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>🫀 Cardio</h2>
+      </div>
+      <div class="content-card editable-zone" id="content-ejercicio-cardio">
+        <p class="placeholder-text">📄 Edita <strong>js/contenidos.js</strong> → sección <code>ejercicio-cardio</code></p>
+      </div>
+    </section>
+
+    <section class="section" id="section-ejercicio-casa">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>🏠 Ejercicio en casa</h2>
+      </div>
+      <div class="content-card editable-zone" id="content-ejercicio-casa">
+        <p class="placeholder-text">📄 Edita <strong>js/contenidos.js</strong> → sección <code>ejercicio-casa</code></p>
+      </div>
+    </section>
+
+    <section class="section" id="section-ejercicio-pasos">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>👣 Pasos diarios</h2>
+      </div>
+      <div class="content-card editable-zone" id="content-ejercicio-pasos">
+        <p class="placeholder-text">📄 Edita <strong>js/contenidos.js</strong> → sección <code>ejercicio-pasos</code></p>
+      </div>
+    </section>
+
+    <section class="section" id="section-ejercicio-videos">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>▶️ Vídeos de ejercicio</h2>
+      </div>
+      <div class="content-card editable-zone" id="content-ejercicio-videos">
+        <p class="placeholder-text">📄 Añade vídeos de YouTube con el código embed en <strong>js/contenidos.js</strong> → sección <code>ejercicio-videos</code><br><br>
+        Ejemplo:<br>
+        <code>&lt;iframe src="https://www.youtube.com/embed/VIDEOID" ...&gt;&lt;/iframe&gt;</code></p>
+      </div>
+    </section>
+
+    <!-- ======= HERRAMIENTAS ======= -->
+    <section class="section" id="section-herramientas-plato">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>🍽️ Método del plato</h2>
+      </div>
+      <div class="content-card">
+        <div class="plate-method">
+          <div class="plate-visual">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="plate-svg">
+              <circle cx="100" cy="100" r="95" fill="#f5f0e8" stroke="#ddd" stroke-width="2"/>
+              <!-- mitad verduras -->
+              <path d="M100,100 L100,5 A95,95 0 0,1 195,100 Z" fill="#7cc47f" opacity="0.85"/>
+              <path d="M100,100 L195,100 A95,95 0 0,1 100,195 Z" fill="#7cc47f" opacity="0.7"/>
+              <!-- cuarto proteína -->
+              <path d="M100,100 L100,195 A95,95 0 0,1 5,100 Z" fill="#e8a87c" opacity="0.85"/>
+              <!-- cuarto carbohidratos -->
+              <path d="M100,100 L5,100 A95,95 0 0,1 100,5 Z" fill="#f0d06e" opacity="0.85"/>
+              <!-- etiquetas -->
+              <text x="140" y="60" text-anchor="middle" font-size="10" fill="#2d6a4f" font-weight="bold">VERDURAS</text>
+              <text x="140" y="72" text-anchor="middle" font-size="9" fill="#2d6a4f">50%</text>
+              <text x="140" y="150" text-anchor="middle" font-size="10" fill="#2d6a4f" font-weight="bold">VERDURAS</text>
+              <text x="55" y="150" text-anchor="middle" font-size="10" fill="#7c3d1a" font-weight="bold">PROTEÍNA</text>
+              <text x="55" y="162" text-anchor="middle" font-size="9" fill="#7c3d1a">25%</text>
+              <text x="55" y="60" text-anchor="middle" font-size="9" fill="#7c6001" font-weight="bold">HIDRATOS</text>
+              <text x="55" y="72" text-anchor="middle" font-size="8" fill="#7c6001">25%</text>
+              <circle cx="100" cy="100" r="8" fill="white" stroke="#ccc" stroke-width="1"/>
+            </svg>
+          </div>
+          <div class="plate-legend">
+            <div class="legend-item green"><span>🥦 50% Verduras y hortalizas</span><p>La mitad del plato siempre verde</p></div>
+            <div class="legend-item orange"><span>🍗 25% Proteína</span><p>Pollo, pescado, legumbres, huevo</p></div>
+            <div class="legend-item yellow"><span>🍚 25% Hidratos de carbono</span><p>Arroz, pasta, pan, patata (preferiblemente integral)</p></div>
+          </div>
+        </div>
+        <div class="editable-zone" id="content-herramientas-plato">
+          <p class="placeholder-text">Añade más texto o recursos en <strong>js/contenidos.js</strong> → <code>herramientas-plato</code></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="section-herramientas-etiquetas">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>🔍 Lectura de etiquetas</h2>
+      </div>
+      <div class="content-card editable-zone" id="content-herramientas-etiquetas">
+        <p class="placeholder-text">📄 Edita <strong>js/contenidos.js</strong> → sección <code>herramientas-etiquetas</code></p>
+      </div>
+    </section>
+
+    <section class="section" id="section-herramientas-compra">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>🛒 Compra saludable</h2>
+      </div>
+      <div class="content-card editable-zone" id="content-herramientas-compra">
+        <p class="placeholder-text">📄 Edita <strong>js/contenidos.js</strong> → sección <code>herramientas-compra</code></p>
+      </div>
+    </section>
+
+    <section class="section" id="section-herramientas-raciones">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>✋ Tamaño de raciones</h2>
+      </div>
+      <div class="content-card editable-zone" id="content-herramientas-raciones">
+        <p class="placeholder-text">📄 Edita <strong>js/contenidos.js</strong> → sección <code>herramientas-raciones</code></p>
+      </div>
+    </section>
+
+    <section class="section" id="section-herramientas-fuera">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>🍽️ Comer fuera de casa</h2>
+      </div>
+      <div class="content-card editable-zone" id="content-herramientas-fuera">
+        <p class="placeholder-text">📄 Edita <strong>js/contenidos.js</strong> → sección <code>herramientas-fuera</code></p>
+      </div>
+    </section>
+
+    <!-- ======= CUESTIONARIO ======= -->
+    <section class="section" id="section-cuestionario-main">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>📝 Cuestionario Previo a Sesión Grupal</h2>
+      </div>
+      <div class="cuestionario-intro-card">
+        <p>Antes de tu primera sesión grupal, te pedimos que rellenes este breve cuestionario. Nos ayuda a conocerte mejor y preparar la sesión para ti.</p>
+      </div>
+      <button class="btn-cuestionario-big" onclick="showSection('cuestionario-form')">
+        <span class="btn-icon">📝</span>
+        Rellenar cuestionario online
+      </button>
+
+      <!-- QR del cuestionario -->
+      <div class="qr-card">
+        <div class="qr-info">
+          <h3>Código QR del cuestionario</h3>
+          <p>Escanéalo con tu móvil para acceder directamente</p>
+          <small>Para cambiar la URL: edita <code>js/config.js</code> → <code>URL_CUESTIONARIO</code></small>
+        </div>
+        <div class="qr-image">
+          <canvas id="cuestionarioQrCanvas"></canvas>
+        </div>
+      </div>
+
+      <div class="info-box mt-1">
+        <strong>📌 Instrucciones para el equipo médico:</strong><br>
+        • Para cambiar el correo receptor: edita <code>js/config.js</code> → <code>EMAIL_DESTINO</code><br>
+        • Para cambiar preguntas: edita <code>js/cuestionario.js</code> → array <code>PREGUNTAS</code><br>
+        • Para regenerar el QR: cambia la URL en <code>js/config.js</code> → el QR se regenera automáticamente
+      </div>
+    </section>
+
+    <!-- FORMULARIO CUESTIONARIO -->
+    <section class="section" id="section-cuestionario-form">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('cuestionario-main')">← Volver</button>
+        <h2>Cuestionario</h2>
+      </div>
+      <div class="form-card" id="formCard">
+        <div class="form-progress">
+          <div class="form-progress-bar" id="formProgressBar"></div>
+        </div>
+        <div id="formSteps"></div>
+        <div class="form-nav">
+          <button class="btn-secondary" id="btnPrev" onclick="formPrev()" style="display:none">← Anterior</button>
+          <button class="btn-primary" id="btnNext" onclick="formNext()">Siguiente →</button>
+          <button class="btn-submit" id="btnSubmit" onclick="submitForm()" style="display:none">✓ Enviar respuestas</button>
+        </div>
+      </div>
+      <div class="form-success" id="formSuccess" style="display:none">
+        <div class="success-icon">✅</div>
+        <h3>¡Cuestionario enviado!</h3>
+        <p>Hemos recibido tus respuestas. Nos vemos en la sesión.</p>
+        <button class="btn-primary" onclick="showSection('home')">Volver al inicio</button>
+      </div>
+    </section>
+
+    <!-- PDF CUESTIONARIO -->
+    <section class="section" id="section-cuestionario-pdf">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('cuestionario-main')">← Volver</button>
+        <h2>📄 Versión imprimible</h2>
+      </div>
+      <div class="content-card">
+        <p>Descarga la versión para imprimir del cuestionario previo a la sesión grupal.</p>
+        <a href="pdfs/cuestionario-imprimible.pdf" class="pdf-btn big" target="_blank">📥 Descargar PDF imprimible</a>
+        <div class="info-box mt-1">
+          💡 Para actualizar el PDF imprimible, edita el archivo en <code>/pdfs/cuestionario-imprimible.pdf</code>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= FAQ ======= -->
+    <section class="section" id="section-faq">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>❓ Preguntas frecuentes</h2>
+      </div>
+      <div class="faq-container" id="faqContainer">
+        <!-- Generado por js/contenidos.js -->
+      </div>
+      <div class="info-box mt-1">
+        💡 Para añadir o editar preguntas: abre <code>js/contenidos.js</code> → array <code>FAQ</code>
+      </div>
+    </section>
+
+    <!-- ======= CONTACTO ======= -->
+    <section class="section" id="section-contacto">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>📞 Contacto</h2>
+      </div>
+      <div class="contact-grid" id="contactGrid">
+        <!-- Generado por js/contenidos.js -->
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- LIGHTBOX para imágenes -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <div class="lightbox-inner">
+    <img id="lightboxImg" src="" alt="">
+    <button class="lightbox-close">✕</button>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="js/config.js"></script>
+<script src="js/contenidos.js"></script>
+<script src="js/cuestionario.js"></script>
+<script src="js/app.js"></script>
+<!-- QR Generator (CDN) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="js/qr.js"></script>
+</body>
+</html>
