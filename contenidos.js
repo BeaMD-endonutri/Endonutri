@@ -274,7 +274,7 @@ const FAQ = [
   },
   {
     pregunta: "¿Puedo tomar suplementos para adelgazar?",
-    respuesta: "No recomendamos ningún suplemento sin supervisión médica. Muchos productos del mercado no tienen evidencia científica y algunos pueden ser perjudiciales. Consulta siempre con tu equipo médico."
+    respuesta: "No recomendamos ningún suplemento sin supervisión médica. Muchos productos del mercado no tienen evidencia científica y algunos pueden ser perjudiciales. Consulta siempre con tu equipo médico. Los análogos GLP-1 (Como Rybelsus, Ozempic, Wegovy o Mounjaro) pueden ser de gran ayuda siempre que se acompañen de una serie de hábitos dietéticos y de ejercicio saludables. Si tu facultativo te los ha recetado sigue siempre sus intrucciones. Las sesiones grupales e individuales de enfermería juegan un papel crucial en el mantenimiento de estos hábitos, además de resolver las dudas pertinentes acerca de estos medicamentos y sus posibles efectos asociados. "
   },
   {
     pregunta: "¿Cuándo empezaré a ver resultados?",
