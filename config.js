@@ -16,7 +16,7 @@ const CONFIG = {
   // URL DE LA WEB COMPLETA (para QR principal)
   // Cambia esto cuando tengas el hosting definitivo
   // ------------------------------------------
-  URL_WEB: "https://TU-USUARIO.github.io/portal-endocrinologia",
+  URL_WEB: "https://beamd-endonutri.github.io/Endonutri/#",
 
   // ------------------------------------------
   // URL DEL CUESTIONARIO ONLINE
@@ -31,7 +31,7 @@ const CONFIG = {
   // Las respuestas del formulario se envían aquí
   // (Si usas Google Forms, configúralo en Google)
   // ------------------------------------------
-  EMAIL_DESTINO: "endocrinologia@hjrj.es",
+  EMAIL_DESTINO: "nutri.bea.md@gmail.com",
 
   // ------------------------------------------
   // DATOS DE CONTACTO
