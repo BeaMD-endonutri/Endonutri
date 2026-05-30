@@ -24,7 +24,7 @@ const CONFIG = {
   // Cuando tengas la URL definitiva, cámbiala aquí
   // El QR se regenera automáticamente
   // ------------------------------------------
-  URL_CUESTIONARIO: "https://forms.gle/TU-ENLACE-GOOGLE-FORM",
+  URL_CUESTIONARIO: "https://forms.gle/MqfdBLnNh9cZkaGF7",
 
   // ------------------------------------------
   // CORREO RECEPTOR DEL CUESTIONARIO
@@ -39,7 +39,7 @@ const CONFIG = {
   CONTACTO: {
     telefono:       "959 01 60 00",
     telefono_ext:   "Extensión 3XXX",
-    email:          "endocrinologia@hjrj.es",
+    email:          "nutri.bea.md@gmail.com",
     horario:        "Lunes a Viernes · 8:00 – 15:00",
     direccion:      "Ronda Exterior Norte, s/n. 21005 Huelva",
     whatsapp:       "",   // Deja vacío si no quieres mostrar WhatsApp
