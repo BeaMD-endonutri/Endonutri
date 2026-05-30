@@ -221,16 +221,13 @@ const GALERIAS = {
        { src: "img/desayunos/DESAYUNOS.jpg", alt: "Desayunos para cada día" },
   ],
   almuerzos: [
-    // { src: "img/almuerzos/ensalada-mediterranea.jpg", alt: "Ensalada mediterránea" },
-    // { src: "img/almuerzos/salteado-verduras.jpg",     alt: "Salteado de verduras con pollo" },
+       { src: "img/almuerzos/ALMUERZOS.jpg", alt: "Almuerzos fáciles y nutritivos" },
   ],
   meriendas: [
-    // { src: "img/meriendas/fruta-frutos-secos.jpg", alt: "Fruta con un puñado de frutos secos" },
-    // { src: "img/meriendas/yogur-natural.jpg",      alt: "Yogur natural sin azúcar" },
+       { src: "img/meriendas/MERIENDAS.png", alt: "Meriendas saciantes" },
   ],
   cenas: [
-    // { src: "img/cenas/crema-verduras.jpg", alt: "Crema de verduras casera" },
-    // { src: "img/cenas/tortilla-espanola.jpg", alt: "Tortilla española con ensalada" },
+       { src: "img/cenas/CENAS.jpg", alt: "Cenas rápidas y apetecibles" },
   ],
   snacks: [
     // { src: "img/snacks/zanahoria-hummus.jpg", alt: "Zanahoria con hummus" },
