@@ -218,7 +218,7 @@ const CONTENIDOS = {
  */
 const GALERIAS = {
   desayunos: [
-    // { src: "img/desayunos/DESAYUNOS.jpg", alt: "Desayunos para cada día" },
+     { src: "img/desayunos/DESAYUNOS.jpg", alt: "Desayunos para cada día" },
   ],
   almuerzos: [
     // { src: "img/almuerzos/ensalada-mediterranea.jpg", alt: "Ensalada mediterránea" },
