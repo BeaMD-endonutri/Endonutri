@@ -53,138 +53,193 @@ const PASOS_CUESTIONARIO = [
     ]
   },
 
-  // ---- PASO 2: Motivación ----
+  // ---- PASO 2: Alimentación últimas 24h ----
   {
-    titulo: "¿Por qué estás aquí?",
+  id: "desayuno",
+  tipo: "texto_largo",
+  label: "Desayuno",
+  placeholder: "¿Qué tomaste? ¿A qué hora? ¿Con pan? ¿Postre?",
+  requerido: false
+},
+{
+  id: "media_manana",
+  tipo: "texto_largo",
+  label: "Media mañana",
+  placeholder: "¿Tomaste algo? ¿El qué?",
+  requerido: false
+},
+{
+  id: "almuerzo",
+  tipo: "texto_largo",
+  label: "Almuerzo",
+  placeholder: "¿Qué tomaste? ¿A qué hora? ¿Con pan? ¿Postre?",
+  requerido: false
+},
+{
+  id: "merienda",
+  tipo: "texto_largo",
+  label: "Merienda",
+  placeholder: "¿Tomaste algo? ¿El qué?",
+  requerido: false
+},
+{
+  id: "cena",
+  tipo: "texto_largo",
+  label: "Cena",
+  placeholder: "¿Qué tomaste? ¿A qué hora? ¿Con pan? ¿Postre?",
+  requerido: false
+}
+{
+        id: "picoteo",
+        tipo: "texto_largo",
+        label: "¿Sueles picotear entre horas? ¿Qué tipo de alimentos?",
+        placeholder: "Cuéntanos...",
+        requerido: false
+      }
+    ]
+  },
+
+// ---- PASO 3: Historial de peso e hidratación ----
+  {
+    titulo: "Peso e hidratación",
     preguntas: [
       {
-        id: "motivacion_principal",
-        tipo: "radio",
-        label: "¿Cuál es tu principal motivo para acudir a esta consulta?",
-        opciones: [
-          "Quiero perder peso",
-          "Me lo ha recomendado mi médico",
-          "Tengo problemas de salud relacionados con el peso",
-          "Quiero aprender a comer mejor",
-          "Otro motivo"
-        ],
-        requerido: true
+        id: "peso_habitual",
+        tipo: "texto_largo",
+        label: "¿Cuál ha sido tu peso habitual? ¿Ha variado con los años o a raíz de algún evento?",
+        placeholder: "Cuéntanos tu historial de peso...",
+        requerido: false
       },
       {
-        id: "intentos_anteriores",
+        id: "agua",
         tipo: "radio",
-        label: "¿Has intentado perder peso antes?",
+        label: "¿Cuánta agua tomas a lo largo del día?",
         opciones: [
-          "Sí, muchas veces",
-          "Sí, alguna vez",
-          "No, es la primera vez",
-          "No lo necesito, vengo por otro motivo"
+          "Menos de 1 litro",
+          "Entre 1 y 1,5 litros",
+          "Entre 1,5 y 2 litros",
+          "Más de 2 litros"
         ],
         requerido: false
       }
     ]
   },
 
-  // ---- PASO 3: Alimentación ----
+  // ---- PASO 4: Ejercicio físico ----
   {
-    titulo: "Tu alimentación actual",
+    titulo: "Actividad física",
     preguntas: [
       {
-        id: "comidas_dia",
-        tipo: "radio",
-        label: "¿Cuántas veces comes al día aproximadamente?",
-        opciones: [
-          "1-2 veces",
-          "3 veces",
-          "4-5 veces",
-          "Pico continuamente, sin horarios fijos"
-        ],
+        id: "ejercicio",
+        tipo: "texto_largo",
+        label: "¿Realizas alguna actividad o ejercicio físico? Si es así, ¿cuál y con qué frecuencia semanal?",
+        placeholder: "Tipo de ejercicio y frecuencia...",
         requerido: false
       },
       {
-        id: "dificultades_alimentacion",
-        tipo: "checkbox",
-        label: "¿Cuáles de estas situaciones te resultan difíciles?",
-        opciones: [
-          "Picar entre horas",
-          "Comer por ansiedad o emociones",
-          "Comer fuera de casa",
-          "Cocinar de forma saludable",
-          "Mantener los hábitos en fin de semana",
-          "El dulce y los ultraprocesados",
-          "Comer deprisa o sin prestar atención"
-        ],
+        id: "patologia_ejercicio",
+        tipo: "texto_largo",
+        label: "¿Tienes alguna patología que te dificulte hacer ejercicio?",
+        placeholder: "Si no tienes ninguna, escribe 'No'",
         requerido: false
       }
     ]
   },
 
-  // ---- PASO 4: Actividad física ----
+  // ---- PASO 5: Historial de dietas y hábitos ----
   {
-    titulo: "Tu actividad física",
+    titulo: "Dietas y hábitos",
     preguntas: [
       {
-        id: "nivel_actividad",
-        tipo: "radio",
-        label: "¿Cómo describirías tu nivel de actividad física actual?",
-        opciones: [
-          "Sedentario/a (muy poco movimiento al día)",
-          "Ligeramente activo/a (camino un poco)",
-          "Moderadamente activo/a (ejercicio 1-2 días/semana)",
-          "Bastante activo/a (ejercicio 3+ días/semana)"
-        ],
+        id: "dietas_anteriores",
+        tipo: "texto_largo",
+        label: "¿Has realizado otras dietas anteriormente? ¿Cómo fueron los resultados?",
+        placeholder: "Cuéntanos tu experiencia...",
         requerido: false
       },
       {
-        id: "barreras_ejercicio",
+        id: "tabaco_alcohol",
+        tipo: "texto_largo",
+        label: "¿Fumas o bebes alcohol? ¿Con qué frecuencia?",
+        placeholder: "Sí / No / Ocasionalmente...",
+        requerido: false
+      },
+      {
+        id: "dificultades",
         tipo: "checkbox",
-        label: "¿Qué te impide hacer más ejercicio?",
+        label: "¿Qué es lo que más te dificulta a la hora de perder peso?",
         opciones: [
           "Falta de tiempo",
-          "Dolor o problemas físicos",
-          "No sé cómo empezar",
           "Falta de motivación",
+          "Cargas familiares",
+          "Ansiedad",
           "Cansancio",
-          "No tengo barreras, ya hago ejercicio"
+          "Hambre constante",
+          "Trabajo por turnos",
+          "Comer fuera de casa",
+          "Otro"
         ],
         requerido: false
       }
     ]
   },
 
-  // ---- PASO 5: Expectativas ----
+  // ---- PASO 6: Preferencias alimentarias ----
   {
-    titulo: "Tus expectativas",
+    titulo: "Preferencias alimentarias",
     preguntas: [
       {
-        id: "expectativa_peso",
-        tipo: "texto",
-        label: "¿Cuánto peso te gustaría perder o cuál es tu objetivo?",
-        placeholder: "Ej: perder 15 kg, llegar a 80 kg, sentirme mejor...",
+        id: "alergias",
+        tipo: "texto_largo",
+        label: "¿Qué alimentos no te gustan o eres alérgico/intolerante?",
+        placeholder: "Alimentos que no toleras o no te gustan...",
         requerido: false
       },
       {
-        id: "dificultad_esperada",
+        id: "favoritos",
+        tipo: "texto_largo",
+        label: "¿Cuáles son tus comidas favoritas?",
+        placeholder: "Tus platos preferidos...",
+        requerido: false
+      }
+    ]
+  },
+
+  // ---- PASO 7: Motivación y expectativas ----
+  {
+    titulo: "Motivación y expectativas",
+    preguntas: [
+      {
+        id: "motivacion",
         tipo: "radio",
-        label: "¿Cómo de difícil crees que te resultará este proceso?",
+        label: "¿Te sientes motivado/a para empezar un cambio?",
         opciones: [
-          "Muy difícil, tengo muchos obstáculos",
-          "Difícil, pero creo que puedo",
-          "Moderado, estoy bastante motivado/a",
-          "No creo que me cueste demasiado"
+          "Sí, tengo muchas ganas",
+          "Sí, aunque tengo dudas",
+          "Regular, necesito apoyo",
+          "Todavía no estoy seguro/a"
         ],
         requerido: false
       },
       {
-        id: "comentario_libre",
+        id: "temas_sesiones",
         tipo: "texto_largo",
-        label: "¿Hay algo más que quieras contarnos antes de la sesión?",
-        placeholder: "Cuéntanos lo que consideres importante...",
+        label: "¿Qué temas te gustaría que abordáramos en las siguientes sesiones?",
+        placeholder: "Cuéntanos qué te interesa...",
+        requerido: false
+      },
+      {
+        id: "info_adicional",
+        tipo: "texto_largo",
+        label: "Otra información a comentar o que creas que podría sernos útil (cirugía bariátrica, medicación pautada por endocrino, etc.)",
+        placeholder: "Cualquier información relevante...",
         requerido: false
       }
     ]
   }
+
 ];
+ 
 
 // =============================================
 // LÓGICA DEL FORMULARIO (no editar)
