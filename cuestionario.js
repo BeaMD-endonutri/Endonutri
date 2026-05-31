@@ -366,7 +366,7 @@ function formPrev() {
   }
 }
 
-function submitForm() {
+async function submitForm() {
   // Construye el resumen de respuestas
   let resumen = "";
   PASOS_CUESTIONARIO.forEach(paso => {
