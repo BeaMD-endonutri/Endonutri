@@ -367,31 +367,41 @@ function formPrev() {
 }
 
 function submitForm() {
-  // Construye un resumen de las respuestas
-  let resumen = "CUESTIONARIO PREVIO - SESIÓN GRUPAL\n";
-  resumen += "=====================================\n";
-  resumen += `Fecha: ${new Date().toLocaleDateString('es-ES')}\n\n`;
-
+  // Construye el resumen de respuestas
+  let resumen = "";
   PASOS_CUESTIONARIO.forEach(paso => {
-    resumen += `\n--- ${paso.titulo} ---\n`;
+    resumen += "\n" + paso.titulo.toUpperCase() + "\n";
     paso.preguntas.forEach(p => {
       const val = respuestas[p.id];
       if (val) {
-        resumen += `${p.label}\n→ ${Array.isArray(val) ? val.join(", ") : val}\n\n`;
+        resumen += p.label + "\n→ " + (Array.isArray(val) ? val.join(", ") : val) + "\n";
       }
     });
   });
 
-  // Intenta abrir el cliente de correo con los datos
-  const emailDestino = (typeof CONFIG !== "undefined") ? CONFIG.EMAIL_DESTINO : "";
-  const subject = encodeURIComponent("Cuestionario previo sesión grupal - " + (respuestas["nombre"] || "Paciente"));
-  const body    = encodeURIComponent(resumen);
+  const datos = {
+    access_key: "582ddeca-12df-4308-9b3f-1c7e232844ed",
+    subject: "Cuestionario previo sesión grupal - " + (respuestas["nombre"] || "Paciente"),
+    from_name: "Portal Endonutri",
+    message: resumen
+  };
 
-  if (emailDestino) {
-    window.open(`mailto:${emailDestino}?subject=${subject}&body=${body}`);
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(datos)
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      document.getElementById("formCard").style.display = "none";
+      document.getElementById("formSuccess").style.display = "block";
+    } else {
+      alert("Hubo un problema al enviar. Inténtalo de nuevo.");
+    }
+  } catch (error) {
+    alert("Error de conexión. Comprueba tu internet e inténtalo de nuevo.");
   }
-
-  // Muestra confirmación
-  document.getElementById("formCard").style.display = "none";
-  document.getElementById("formSuccess").style.display = "block";
 }
