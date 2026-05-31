@@ -37,10 +37,17 @@ const PASOS_CUESTIONARIO = [
         requerido: true
       },
       {
-        id: "peso_actual",
+        id: "correo electronico",
         tipo: "texto",
-        label: "Peso actual aproximado (kg)",
-        placeholder: "Ej: 92 kg",
+        label: "Correo electrónico",
+        placeholder: "E-mail",
+        requerido: true
+      },
+      {
+        id: "peso_habitual",
+        tipo: "texto",
+        label: "¿Cuál ha sido tu peso habitual? ¿Ha variado con los años o a raíz de algún evento?",
+        placeholder: "Ej: 92 kg, subí a raíz de los embarazos",
         requerido: false
       }
     ]
