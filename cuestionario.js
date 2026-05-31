@@ -18,7 +18,7 @@
 
 const PASOS_CUESTIONARIO = [
 
-  // ---- PASO 1: Datos básicos ----
+// ---- PASO 1: Datos básicos ----
   {
     titulo: "Cuéntanos sobre ti",
     preguntas: [
@@ -37,17 +37,10 @@ const PASOS_CUESTIONARIO = [
         requerido: true
       },
       {
-        id: "correo electronico",
+        id: "correo_electronico",
         tipo: "texto",
         label: "Correo electrónico",
         placeholder: "E-mail",
-        requerido: true
-      },
-      {
-        id: "peso_habitual",
-        tipo: "texto",
-        label: "¿Cuál ha sido tu peso habitual? ¿Ha variado con los años o a raíz de algún evento?",
-        placeholder: "Ej: 92 kg, subí a raíz de los embarazos",
         requerido: false
       }
     ]
@@ -55,41 +48,44 @@ const PASOS_CUESTIONARIO = [
 
   // ---- PASO 2: Alimentación últimas 24h ----
   {
-  id: "desayuno",
-  tipo: "texto_largo",
-  label: "Desayuno",
-  placeholder: "¿Qué tomaste? ¿A qué hora? ¿Con pan? ¿Postre?",
-  requerido: false
-},
-{
-  id: "media_manana",
-  tipo: "texto_largo",
-  label: "Media mañana",
-  placeholder: "¿Tomaste algo? ¿El qué?",
-  requerido: false
-},
-{
-  id: "almuerzo",
-  tipo: "texto_largo",
-  label: "Almuerzo",
-  placeholder: "¿Qué tomaste? ¿A qué hora? ¿Con pan? ¿Postre?",
-  requerido: false
-},
-{
-  id: "merienda",
-  tipo: "texto_largo",
-  label: "Merienda",
-  placeholder: "¿Tomaste algo? ¿El qué?",
-  requerido: false
-},
-{
-  id: "cena",
-  tipo: "texto_largo",
-  label: "Cena",
-  placeholder: "¿Qué tomaste? ¿A qué hora? ¿Con pan? ¿Postre?",
-  requerido: false
-}
-{
+    titulo: "¿Qué comiste ayer?",
+    preguntas: [
+      {
+        id: "desayuno",
+        tipo: "texto_largo",
+        label: "Desayuno",
+        placeholder: "¿Qué tomaste? ¿A qué hora? ¿Con pan? ¿Postre?",
+        requerido: false
+      },
+      {
+        id: "media_manana",
+        tipo: "texto_largo",
+        label: "Media mañana",
+        placeholder: "¿Tomaste algo? ¿El qué?",
+        requerido: false
+      },
+      {
+        id: "almuerzo",
+        tipo: "texto_largo",
+        label: "Almuerzo",
+        placeholder: "¿Qué tomaste? ¿A qué hora? ¿Con pan? ¿Postre?",
+        requerido: false
+      },
+      {
+        id: "merienda",
+        tipo: "texto_largo",
+        label: "Merienda",
+        placeholder: "¿Tomaste algo? ¿El qué?",
+        requerido: false
+      },
+      {
+        id: "cena",
+        tipo: "texto_largo",
+        label: "Cena",
+        placeholder: "¿Qué tomaste? ¿A qué hora? ¿Con pan? ¿Postre?",
+        requerido: false
+      },
+      {
         id: "picoteo",
         tipo: "texto_largo",
         label: "¿Sueles picotear entre horas? ¿Qué tipo de alimentos?",
@@ -99,7 +95,7 @@ const PASOS_CUESTIONARIO = [
     ]
   },
 
-// ---- PASO 3: Historial de peso e hidratación ----
+  // ---- PASO 3: Peso e hidratación ----
   {
     titulo: "Peso e hidratación",
     preguntas: [
@@ -125,7 +121,7 @@ const PASOS_CUESTIONARIO = [
     ]
   },
 
-  // ---- PASO 4: Ejercicio físico ----
+  // ---- PASO 4: Actividad física ----
   {
     titulo: "Actividad física",
     preguntas: [
@@ -146,7 +142,7 @@ const PASOS_CUESTIONARIO = [
     ]
   },
 
-  // ---- PASO 5: Historial de dietas y hábitos ----
+  // ---- PASO 5: Dietas y hábitos ----
   {
     titulo: "Dietas y hábitos",
     preguntas: [
