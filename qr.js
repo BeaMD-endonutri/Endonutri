@@ -25,7 +25,7 @@ function generarQR(canvasId, url, size) {
         text: url,
         width: size || 110,
         height: size || 110,
-        colorDark: "#5d252c",
+        colorDark: "#064e3b",
         colorLight: "#ffffff",
         correctLevel: QRCode.CorrectLevel.M
       });
@@ -37,10 +37,10 @@ function generarQR(canvasId, url, size) {
       <div style="
         font-size:0.65rem;
         word-break:break-all;
-        color:#5d252c;
+        color:#064e3b;
         text-align:center;
         padding:8px;
-        border:2px dashed #c2934d;
+        border:2px dashed #56bd86;
         border-radius:8px;
         max-width:110px;
       ">${url}</div>
