@@ -240,6 +240,24 @@ const GALERIAS = {
 };
 
 // =============================================
+// RUTINAS DESCARGABLES EN PDF
+// =============================================
+/**
+ * 1. Sube el PDF a /pdfs/rutinas/
+ * 2. Añade una ficha al array. Ejemplo:
+ * {
+ *   titulo: "Rutina de iniciación",
+ *   descripcion: "Trabajo global · 2 días por semana",
+ *   nivel: "Nivel inicial",
+ *   icono: "🌱",
+ *   archivo: "pdfs/rutinas/rutina-iniciacion.pdf"
+ * }
+ */
+const RUTINAS = [
+  // Añade aquí tus rutinas en PDF.
+];
+
+// =============================================
 // PREGUNTAS FRECUENTES (FAQ)
 // =============================================
 /**
@@ -310,6 +328,29 @@ function cargarContenidos() {
     });
   });
 
+  // Rutinas descargables
+  const routinesGrid = document.getElementById("routinesGrid");
+  if (routinesGrid) {
+    if (RUTINAS.length === 0) {
+      routinesGrid.innerHTML = `
+        <div class="routines-empty">
+          <span>📄</span>
+          <h3>Próximamente, nuevas rutinas</h3>
+          <p>Este espacio está preparado para incorporar rutinas descargables en PDF y organizarlas por nivel u objetivo.</p>
+        </div>`;
+    } else {
+      routinesGrid.innerHTML = RUTINAS.map(rutina => `
+        <article class="routine-card">
+          <div class="routine-icon">${rutina.icono || "🏃"}</div>
+          <span class="eyebrow">${rutina.nivel || "RUTINA"}</span>
+          <h3>${rutina.titulo}</h3>
+          <p>${rutina.descripcion || "Descarga la rutina para consultarla cuando quieras."}</p>
+          <a href="${rutina.archivo}" class="pdf-btn" target="_blank" rel="noopener">Descargar PDF ↓</a>
+        </article>
+      `).join("");
+    }
+  }
+
   // FAQ
   const faqContainer = document.getElementById("faqContainer");
   if (faqContainer) {
@@ -371,6 +412,14 @@ function cargarContenidos() {
           <div class="contact-value">${c.whatsapp}</div>
         </div>
       </a>`;
-    contactGrid.innerHTML = cards;
+    contactGrid.innerHTML = cards || `
+      <div class="contact-card contact-empty">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-info">
+          <div class="contact-label">Contacto</div>
+          <div class="contact-value">Próximamente</div>
+          <div class="contact-sub">Este espacio se actualizará con una vía de contacto de Endonutri.</div>
+        </div>
+      </div>`;
   }
 }

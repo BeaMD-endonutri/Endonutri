@@ -1,5 +1,5 @@
 # Portal de Endocrinología y Nutrición Clínica
-## Hospital Juan Ramón Jiménez · Huelva
+## Tu espacio sobre Endocrinología, Nutrición y Ejercicio
 
 ---
 
@@ -252,4 +252,10 @@ Para cambiar los colores principales, abre `css/style.css` y edita las variables
 - El formulario usa `mailto:` para enviar los datos — requiere que el dispositivo tenga un cliente de correo configurado. Para mayor fiabilidad, se recomienda usar **Google Forms** y enlazarlo con el QR.
 
 ---
-*Portal desarrollado para el Servicio de Endocrinología y Nutrición Clínica del Hospital Juan Ramón Jiménez de Huelva.*
+### Añadir rutinas en PDF
+
+1. Sube el archivo a `pdfs/rutinas/`.
+2. Abre `contenidos.js` y añade una ficha dentro del array `RUTINAS` siguiendo el ejemplo incluido.
+3. La nueva rutina aparecerá automáticamente en **Movimiento y Ejercicio → Rutinas descargables**.
+
+*Endonutri · Recursos claros y prácticos para aprender, cuidarse y avanzar.*

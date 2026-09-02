@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Endocrinología y Nutrición Clínica · HJR Huelva</title>
+  <title>Endonutri · Endocrinología, Nutrición y Ejercicio</title>
+  <meta name="description" content="Recursos claros y prácticos sobre endocrinología, nutrición y ejercicio para mejorar tu salud y calidad de vida." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -17,9 +18,9 @@
 <!-- ===== SIDEBAR ===== -->
 <aside class="sidebar" id="sidebar">
   <div class="sidebar-header">
-    <div class="sidebar-logo">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#4a9b6f"/><path d="M16 8v16M10 14h12M13 10c0 0 3-2 3 2s3 2 3-2" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
-      <span>Nutrición HJR</span>
+    <div class="sidebar-logo" onclick="showSection('home')">
+      <span class="brand-mark">E</span>
+      <span class="brand-copy"><strong>Endonutri</strong><small>Aprende · Cuídate · Avanza</small></span>
     </div>
     <button class="sidebar-close" onclick="closeSidebar()" aria-label="Cerrar menú">✕</button>
   </div>
@@ -86,6 +87,7 @@
         <a href="#" onclick="showSection('ejercicio-cardio')">Cardio</a>
         <a href="#" onclick="showSection('ejercicio-casa')">Ejercicio en casa</a>
         <a href="#" onclick="showSection('ejercicio-pasos')">Pasos diarios</a>
+        <a href="#" onclick="showSection('ejercicio-rutinas')">Rutinas descargables</a>
         <a href="#" onclick="showSection('ejercicio-videos')">Vídeos</a>
       </div>
     </div>
@@ -147,10 +149,10 @@
       <span></span><span></span><span></span>
     </button>
     <div class="topbar-title">
-      <span class="topbar-short">Endocrinología · HJR Huelva</span>
+      <span class="topbar-short">Endonutri <small>Tu salud, explicada fácil</small></span>
     </div>
     <div class="topbar-logo">
-      <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#4a9b6f"/><path d="M16 8v16M10 14h12" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+      <span class="brand-mark brand-mark-small">E</span>
     </div>
   </header>
 
@@ -160,10 +162,21 @@
     <!-- ======= HOME ======= -->
     <section class="section active" id="section-home">
       <div class="hero">
-        <div class="hero-badge">Hospital Juan Ramón Jiménez · Huelva</div>
-        <h1 class="hero-title">Servicio de Endocrinología<br><span>y Nutrición Clínica</span></h1>
-        <p class="hero-subtitle">Tu espacio de recursos, información y apoyo en el camino hacia una vida más saludable.</p>
-        <div class="hero-decoration"></div>
+        <div class="hero-copy">
+          <div class="hero-badge">Bienvenida a tu espacio de salud</div>
+          <h1 class="hero-title"><span class="hero-brand">Endonutri</span><br>Tu espacio para aprender y reforzar conocimientos sobre <em>Endocrinología, Nutrición y Ejercicio</em>, mejorando tu calidad de vida.</h1>
+          <p class="hero-subtitle">Información clara, herramientas prácticas y recursos pensados para acompañarte sin juicios y a tu ritmo.</p>
+          <button class="hero-action" onclick="showSection('obesidad-que-es')">Empezar a explorar <span>→</span></button>
+        </div>
+        <div class="hero-visual">
+          <img src="img/hero-endonutri.webp" alt="Personas de distintas edades y cuerpos caminando, entrenando y preparando alimentos saludables" />
+        </div>
+      </div>
+
+      <div class="welcome-strip" aria-label="Principios de Endonutri">
+        <span>✦ Información comprensible</span>
+        <span>✦ Hábitos sostenibles</span>
+        <span>✦ Salud sin estigma</span>
       </div>
 
       <div class="home-cards">
@@ -188,6 +201,14 @@
           <div class="hcard-text">
             <h3>Planes de Alimentación</h3>
             <p>Descarga tu plan personalizado</p>
+          </div>
+          <span class="hcard-arrow">→</span>
+        </div>
+        <div class="home-card accent-coral" onclick="showSection('ejercicio-rutinas')">
+          <div class="hcard-icon">🏃</div>
+          <div class="hcard-text">
+            <h3>Movimiento y Ejercicio</h3>
+            <p>Guías y rutinas descargables</p>
           </div>
           <span class="hcard-arrow">→</span>
         </div>
@@ -485,6 +506,21 @@
       </div>
       <div class="content-card editable-zone" id="content-ejercicio-pasos">
         <p class="placeholder-text">📄 Edita <strong>js/contenidos.js</strong> → sección <code>ejercicio-pasos</code></p>
+      </div>
+    </section>
+
+    <section class="section" id="section-ejercicio-rutinas">
+      <div class="section-header">
+        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
+        <h2>Rutinas descargables</h2>
+      </div>
+      <div class="routines-intro">
+        <span class="eyebrow">MUÉVETE A TU RITMO</span>
+        <h3>Elige una rutina adaptada a tu punto de partida</h3>
+        <p>Descarga las propuestas en PDF para consultarlas cuando quieras. Empieza con una intensidad que te resulte asumible y progresa poco a poco.</p>
+      </div>
+      <div class="routines-grid" id="routinesGrid">
+        <!-- Las rutinas se cargan desde contenidos.js -->
       </div>
     </section>
 
