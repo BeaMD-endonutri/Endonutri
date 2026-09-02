@@ -248,13 +248,57 @@ const GALERIAS = {
  * {
  *   titulo: "Rutina de iniciación",
  *   descripcion: "Trabajo global · 2 días por semana",
- *   nivel: "Nivel inicial",
+ *   nivel: "principiante",
  *   icono: "🌱",
  *   archivo: "pdfs/rutinas/rutina-iniciacion.pdf"
  * }
  */
 const RUTINAS = [
-  // Añade aquí tus rutinas en PDF.
+  {
+    titulo: "Rutina con bandas · Día A",
+    descripcion: "8 ejercicios de cuerpo completo con bandas y material doméstico.",
+    nivel: "principiante",
+    etiqueta: "DÍA A",
+    icono: "A",
+    archivo: "pdfs/rutinas/rutina-principiante-dia-a.pdf"
+  },
+  {
+    titulo: "Rutina con bandas · Día B",
+    descripcion: "8 ejercicios complementarios para continuar la semana de entrenamiento.",
+    nivel: "principiante",
+    etiqueta: "DÍA B",
+    icono: "B",
+    archivo: "pdfs/rutinas/rutina-principiante-dia-b.pdf"
+  },
+  {
+    titulo: "Rutina con bandas · Día C",
+    descripcion: "8 ejercicios para completar la programación semanal de iniciación.",
+    nivel: "principiante",
+    etiqueta: "DÍA C",
+    icono: "C",
+    archivo: "pdfs/rutinas/rutina-principiante-dia-c.pdf"
+  }
+];
+
+const NIVELES_RUTINA = [
+  {
+    id: "principiante",
+    titulo: "Principiante",
+    descripcion: "Tres sesiones semanales para aprender la técnica y crear una base de fuerza.",
+    icono: "🌱"
+  },
+  {
+    id: "intermedio",
+    titulo: "Intermedio",
+    descripcion: "Rutinas para seguir progresando cuando domines el nivel inicial.",
+    icono: "🌿"
+  },
+  {
+    id: "avanzado",
+    titulo: "Avanzado",
+    descripcion: "Propuestas de mayor exigencia para personas con experiencia previa.",
+    icono: "🌳"
+  }
 ];
 
 // =============================================
@@ -331,24 +375,43 @@ function cargarContenidos() {
   // Rutinas descargables
   const routinesGrid = document.getElementById("routinesGrid");
   if (routinesGrid) {
-    if (RUTINAS.length === 0) {
-      routinesGrid.innerHTML = `
-        <div class="routines-empty">
-          <span>📄</span>
-          <h3>Próximamente, nuevas rutinas</h3>
-          <p>Este espacio está preparado para incorporar rutinas descargables en PDF y organizarlas por nivel u objetivo.</p>
-        </div>`;
-    } else {
-      routinesGrid.innerHTML = RUTINAS.map(rutina => `
-        <article class="routine-card">
-          <div class="routine-icon">${rutina.icono || "🏃"}</div>
-          <span class="eyebrow">${rutina.nivel || "RUTINA"}</span>
-          <h3>${rutina.titulo}</h3>
-          <p>${rutina.descripcion || "Descarga la rutina para consultarla cuando quieras."}</p>
-          <a href="${rutina.archivo}" class="pdf-btn" target="_blank" rel="noopener">Descargar PDF ↓</a>
-        </article>
-      `).join("");
-    }
+    const levelNav = `
+      <nav class="routine-level-nav" aria-label="Niveles de las rutinas">
+        ${NIVELES_RUTINA.map(nivel => `<a href="#routine-level-${nivel.id}">${nivel.titulo}</a>`).join("")}
+      </nav>`;
+
+    const levelSections = NIVELES_RUTINA.map(nivel => {
+      const rutinasNivel = RUTINAS.filter(rutina => rutina.nivel === nivel.id);
+      const cards = rutinasNivel.length
+        ? `<div class="routines-grid">${rutinasNivel.map(rutina => `
+            <article class="routine-card">
+              <div class="routine-icon" aria-hidden="true">${rutina.icono || "🏃"}</div>
+              <span class="eyebrow">${rutina.etiqueta || "RUTINA"}</span>
+              <h3>${rutina.titulo}</h3>
+              <p>${rutina.descripcion || "Consulta la rutina cuando quieras."}</p>
+              <div class="routine-actions">
+                <a href="${rutina.archivo}" class="pdf-btn" target="_blank" rel="noopener">Ver PDF ↗</a>
+                <a href="${rutina.archivo}" class="pdf-download" download>Descargar ↓</a>
+              </div>
+            </article>
+          `).join("")}</div>`
+        : `<div class="routines-empty">
+            <span>${nivel.icono}</span>
+            <h3>Rutinas en preparación</h3>
+            <p>Próximamente añadiremos propuestas para el nivel ${nivel.titulo.toLowerCase()}.</p>
+          </div>`;
+
+      return `
+        <section class="routine-level" id="routine-level-${nivel.id}">
+          <header class="routine-level-header">
+            <span class="routine-level-icon" aria-hidden="true">${nivel.icono}</span>
+            <div><span class="eyebrow">NIVEL</span><h3>${nivel.titulo}</h3><p>${nivel.descripcion}</p></div>
+          </header>
+          ${cards}
+        </section>`;
+    }).join("");
+
+    routinesGrid.innerHTML = levelNav + levelSections;
   }
 
   // FAQ
