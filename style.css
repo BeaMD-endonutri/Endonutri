@@ -1376,6 +1376,45 @@ body {
 .tips-banner h3 { margin-top: 0; color: #fff; }
 .tips-banner p { margin-bottom: 0; color: rgba(255,255,255,.86); }
 
+/* Tipos de dietas */
+.diets-hero { position: relative; overflow: hidden; margin: -4px 0 18px; padding: clamp(26px,5vw,48px); border-radius: 26px; background: linear-gradient(135deg,#064e3b 0%,#087f5b 68%,#c86442 140%); color: white; }
+.diets-hero::after { content: '¿?'; position: absolute; right: 28px; top: -42px; font: 800 9rem var(--fuente-titulo); color: rgba(255,255,255,.06); transform: rotate(8deg); }
+.diets-hero h3 { position: relative; z-index: 1; margin: 8px 0 10px; max-width: 700px; color: white; font: 700 clamp(1.65rem,3.5vw,2.6rem)/1.08 var(--fuente-titulo); }
+.diets-hero p { position: relative; z-index: 1; max-width: 780px; margin: 0; color: rgba(255,255,255,.86); }
+.diets-hero .eyebrow { color: #f4d06f; }
+.evidence-legend { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 25px; }
+.evidence-legend span { padding: 7px 11px; border-radius: 999px; background: #f5f1e7; font-size: .75rem; font-weight: 750; }
+.ev-high { color: #147a4c; }
+.ev-medium { color: #8b6508; }
+.ev-low { color: #b45309; }
+.ev-none { color: #b43b2b; }
+.diet-accordions { display: grid; gap: 13px; }
+.diet-card { overflow: hidden; border: 1px solid var(--beige-borde); border-radius: 21px; background: white; box-shadow: var(--sombra-suave); }
+.diet-card summary { display: grid; grid-template-columns: 112px 1fr 36px; align-items: center; gap: 18px; padding: 12px 17px 12px 12px; cursor: pointer; list-style: none; transition: background .2s ease; }
+.diet-card summary::-webkit-details-marker { display: none; }
+.diet-card summary:hover, .diet-card summary:focus-visible { background: #f6faf7; }
+.diet-card summary img { width: 112px; height: 92px; border-radius: 14px; object-fit: cover; }
+.diet-card summary span, .diet-card summary b, .diet-card summary em, .diet-card summary small { display: block; }
+.diet-card summary small { margin-bottom: 3px; font-size: .66rem; font-weight: 800; letter-spacing: .08em; }
+.diet-card summary b { color: var(--verde-oscuro); font: 700 1.15rem/1.2 var(--fuente-titulo); }
+.diet-card summary em { margin-top: 4px; color: var(--gris-suave); font-size: .83rem; font-style: normal; }
+.diet-card summary i { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--verde-palido); color: var(--verde-oscuro); font-size: 1.25rem; font-style: normal; transition: transform .25s ease,background .25s ease; }
+.diet-card[open] summary { background: #f1f8f3; }
+.diet-card[open] summary i { transform: rotate(45deg); background: #f5d7c9; }
+.diet-body { padding: 4px clamp(20px,4vw,42px) 26px; border-top: 1px solid #edf0ed; animation: dietReveal .28s ease both; }
+.diet-body p { margin: 15px 0 0; line-height: 1.62; }
+.diet-tip, .diet-myth, .diet-alert { padding: 13px 15px; border-radius: 13px; background: #edf7f0; }
+.diet-myth { background: #fff4df; }
+.diet-alert { background: #fff0eb; border-left: 4px solid #d96c4c; }
+.diet-myth span { color: var(--gris-suave); }
+@keyframes dietReveal { from { opacity: 0; transform: translateY(-7px); } to { opacity: 1; transform: translateY(0); } }
+.diets-conclusion { display: grid; grid-template-columns: 68px 1fr; gap: 20px; margin: 34px 0 18px; padding: clamp(24px,4vw,38px); border-radius: 25px; background: linear-gradient(135deg,#064e3b,#087f5b); color: white; box-shadow: var(--sombra-media); }
+.diets-conclusion > span { display: grid; place-items: center; width: 62px; height: 62px; border-radius: 19px; background: rgba(255,255,255,.12); font-size: 2rem; }
+.diets-conclusion small { color: #f4d06f; font-size: .68rem; font-weight: 800; letter-spacing: .12em; }
+.diets-conclusion h3 { margin: 5px 0 10px; color: white; font-family: var(--fuente-titulo); }
+.diets-conclusion p { margin: 8px 0; color: rgba(255,255,255,.88); }
+.diets-safety { margin: 18px 0; padding: 17px 19px; border-radius: 15px; background: #fff0eb; border-left: 5px solid #d96c4c; line-height: 1.55; }
+
 @media (min-width: 768px) {
   .home-cards { grid-template-columns: repeat(4, 1fr); }
   .qr-card { max-width: 1020px; margin-left: auto; margin-right: auto; }
@@ -1410,4 +1449,15 @@ body {
   .info-grid, .compare-grid, .basket-grid, .scenario-grid, .traffic-cards, .outside-timeline, .tips-ten ol { grid-template-columns: 1fr; }
   .shopping-route { grid-template-columns: 1fr 1fr; }
   .myth-row { gap: 5px; }
+  .diet-card summary { grid-template-columns: 80px 1fr 28px; gap: 11px; padding: 10px; }
+  .diet-card summary img { width: 80px; height: 78px; }
+  .diet-card summary b { font-size: .98rem; }
+  .diet-card summary em { font-size: .73rem; }
+  .diet-card summary i { width: 27px; height: 27px; }
+  .diets-conclusion { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .diet-body { animation: none; }
+  .diet-card summary i { transition: none; }
 }

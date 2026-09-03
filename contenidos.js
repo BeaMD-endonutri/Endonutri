@@ -163,6 +163,99 @@ const CONTENIDOS = {
     </div>
   `,
 
+  "obesidad-dietas": `
+    <div class="diets-page">
+      <div class="diets-hero">
+        <span class="eyebrow">MODAS, MÉTODOS Y PATRONES ALIMENTARIOS</span>
+        <h3>No todas las “dietas” son lo mismo</h3>
+        <p>Algunas describen <strong>qué alimentos</strong> se priorizan; otras cambian <strong>cuándo se come</strong>; y otras venden una solución sin respaldo. Pulsa cada ficha para conocer en qué consiste, qué sabemos sobre la pérdida de peso y qué precauciones requiere.</p>
+      </div>
+
+      <div class="evidence-legend" aria-label="Leyenda del nivel de evidencia">
+        <span class="ev-high">● Evidencia sólida</span><span class="ev-medium">● Puede funcionar</span><span class="ev-low">● Evidencia limitada</span><span class="ev-none">● Sin respaldo / riesgo</span>
+      </div>
+
+      <div class="diet-accordions">
+        <details class="diet-card">
+          <summary><img src="img/tipos-dietas/mediterranea.webp" alt="Alimentos propios del patrón mediterráneo"><span><small class="ev-high">EVIDENCIA SÓLIDA</small><b>Dieta mediterránea</b><em>Un patrón saludable, no una dieta rápida</em></span><i>＋</i></summary>
+          <div class="diet-body"><p><strong>¿En qué consiste?</strong> Prioriza verduras, fruta, legumbres, cereales integrales, frutos secos y aceite de oliva; incluye pescado con frecuencia y limita carnes procesadas, bebidas azucaradas y productos de baja calidad nutricional.</p><p><strong>Pérdida de peso:</strong> puede producirla cuando las cantidades generan un déficit energético. Su gran ventaja es la evidencia cardiovascular y metabólica y que admite variedad.</p><p class="diet-tip"><strong>Ejemplo:</strong> lentejas con verduras; pescado con patata y ensalada; yogur natural con fruta.</p><p class="diet-myth"><strong>Mito:</strong> “Como el aceite y los frutos secos son saludables, no cuentan”. <span>Son saludables y también energéticos; la cantidad sigue importando.</span></p></div>
+        </details>
+
+        <details class="diet-card">
+          <summary><img src="img/tipos-dietas/keto.webp" alt="Salmón, huevos, aguacate, verduras y frutos secos"><span><small class="ev-medium">PUEDE FUNCIONAR</small><b>Cetogénica o keto</b><em>Muy pocos hidratos y mucha grasa</em></span><i>＋</i></summary>
+          <div class="diet-body"><p><strong>¿En qué consiste?</strong> Reduce mucho los hidratos —habitualmente por debajo de 20–50 g al día— para producir cetosis. Predominan grasas y proteínas, con una selección limitada de frutas, legumbres y cereales.</p><p><strong>Pérdida de peso:</strong> puede lograr una bajada inicial mayor, en parte por pérdida de agua. A 12–24 meses no muestra una superioridad clara frente a dietas equilibradas cuando la energía y el apoyo son comparables.</p><p class="diet-tip"><strong>Puede encajar</strong> si la persona la prefiere y está bien planificada. No es imprescindible y suele ser difícil de mantener.</p><p class="diet-alert"><strong>Precaución:</strong> supervisión si hay diabetes, medicación, embarazo, enfermedad renal/hepática o antecedentes de trastorno alimentario. No es lo mismo que la dieta cetogénica terapéutica para epilepsia.</p></div>
+        </details>
+
+        <details class="diet-card">
+          <summary><img src="img/tipos-dietas/ayuno.webp" alt="Plato equilibrado junto a un reloj"><span><small class="ev-medium">PUEDE FUNCIONAR</small><b>Ayuno intermitente</b><em>Cambia el horario, no define la calidad</em></span><i>＋</i></summary>
+          <div class="diet-body"><p><strong>¿En qué consiste?</strong> Alterna periodos sin comer y ventanas de ingesta: 12:12, 16:8, 5:2 o días alternos. Es un horario, no una dieta por sí misma.</p><p><strong>Pérdida de peso:</strong> la revisión Cochrane de 2026 concluye que, en promedio, no adelgaza más que una restricción energética continua. Puede servir si facilita comer menos y se mantiene.</p><p class="diet-myth"><strong>Mito:</strong> “Activa la autofagia y quema grasa aunque coma lo mismo”. <span>No se ha demostrado una ventaja clínica especial para adelgazar independiente de la energía total.</span></p><p class="diet-alert"><strong>No se recomienda sin valoración</strong> en embarazo, infancia, personas frágiles, diabetes tratada con riesgo de hipoglucemia o trastorno de la conducta alimentaria.</p></div>
+        </details>
+
+        <details class="diet-card">
+          <summary><img src="img/tipos-dietas/paleo.webp" alt="Carne, pescado, huevos, verduras, frutos rojos y frutos secos"><span><small class="ev-low">EVIDENCIA LIMITADA</small><b>Dieta paleo</b><em>Excluye cereales, legumbres y lácteos</em></span><i>＋</i></summary>
+          <div class="diet-body"><p><strong>¿En qué consiste?</strong> Intenta imitar una interpretación de la alimentación paleolítica. Incluye carne, pescado, huevos, frutas, verduras y frutos secos, y suele excluir cereales, legumbres, lácteos y muchos procesados.</p><p><strong>Pérdida de peso:</strong> algunos estudios pequeños encuentran descensos a corto plazo, pero no hay evidencia de que excluir grupos completos aporte una ventaja propia. Puede bajar la energía al reducir muchas opciones.</p><p class="diet-myth"><strong>Mito:</strong> “Nuestro cuerpo no está adaptado a cereales o legumbres”. <span>No es correcto como regla general; ambos pueden formar parte de un patrón saludable.</span></p></div>
+        </details>
+
+        <details class="diet-card">
+          <summary><img src="img/tipos-dietas/vegetariana.webp" alt="Plato vegetal con legumbres, tofu, cereales, verduras y frutos secos"><span><small class="ev-high">BUENA EVIDENCIA SI ESTÁ PLANIFICADA</small><b>Vegetariana o vegana</b><em>Reduce o elimina alimentos animales</em></span><i>＋</i></summary>
+          <div class="diet-body"><p><strong>¿En qué consiste?</strong> La vegetariana puede incluir huevos y lácteos; la vegana excluye todos los productos animales. La calidad depende de los alimentos elegidos, no solo de la ausencia de carne.</p><p><strong>Pérdida de peso:</strong> puede ayudar por su riqueza en fibra y menor densidad energética, pero también necesita déficit. Una dieta vegana basada en bollería, bebidas azucaradas y fritos no garantiza salud ni pérdida de peso.</p><p class="diet-tip"><strong>Claves:</strong> legumbres, tofu/tempeh, cereales, frutos secos, verduras y fruta. En veganismo, vitamina B12 suplementada de forma obligatoria y revisión de yodo, calcio, hierro, vitamina D y omega-3 según el caso.</p></div>
+        </details>
+
+        <details class="diet-card">
+          <summary><img src="img/tipos-dietas/dash.webp" alt="Pescado, legumbres, cereales, fruta, verduras y yogur"><span><small class="ev-high">EVIDENCIA SÓLIDA</small><b>Dieta DASH</b><em>Diseñada para cuidar la presión arterial</em></span><i>＋</i></summary>
+          <div class="diet-body"><p><strong>¿En qué consiste?</strong> Prioriza fruta, verdura, legumbres, cereales integrales, frutos secos, lácteos bajos en grasa y proteínas magras; limita sodio, carnes procesadas y azúcares.</p><p><strong>Pérdida de peso:</strong> no nació como dieta de adelgazamiento, pero puede ayudar cuando se adapta a un déficit. Tiene evidencia sólida para reducir la presión arterial.</p><p class="diet-tip"><strong>Ideal para:</strong> personas que desean un patrón flexible y especialmente quienes necesitan cuidar tensión arterial, siempre individualizando.</p></div>
+        </details>
+
+        <details class="diet-card">
+          <summary><img src="img/tipos-dietas/baja-grasa.webp" alt="Alimentos variados con poca grasa visible"><span><small class="ev-medium">PUEDE FUNCIONAR</small><b>Dieta baja en grasa</b><em>Reduce un nutriente muy energético</em></span><i>＋</i></summary>
+          <div class="diet-body"><p><strong>¿En qué consiste?</strong> Disminuye la proporción de grasa, especialmente productos fritos, salsas, carnes grasas y bollería. No debería eliminar las grasas insaturadas necesarias.</p><p><strong>Pérdida de peso:</strong> puede funcionar al reducir la densidad energética, pero no es claramente superior a una dieta baja en hidratos a largo plazo. La preferencia y adherencia deciden mucho.</p><p class="diet-myth"><strong>Mito:</strong> “La grasa que como se convierte directamente en grasa corporal”. <span>El almacenamiento depende del balance energético; la calidad de la grasa importa para la salud.</span></p></div>
+        </details>
+
+        <details class="diet-card">
+          <summary><img src="img/tipos-dietas/alta-proteina.webp" alt="Fuentes variadas de proteína con verduras y cereales"><span><small class="ev-medium">ÚTIL COMO AJUSTE</small><b>Dieta alta en proteína</b><em>Más saciedad y protección muscular</em></span><i>＋</i></summary>
+          <div class="diet-body"><p><strong>¿En qué consiste?</strong> Aumenta la proporción de proteína mediante legumbres, pescado, huevos, lácteos, tofu o carnes no procesadas.</p><p><strong>Pérdida de peso:</strong> puede mejorar la saciedad y ayudar a conservar masa muscular durante un déficit, sobre todo junto al entrenamiento de fuerza. Más proteína no compensa un exceso energético.</p><p class="diet-tip"><strong>Consejo:</strong> repartir fuentes proteicas en las comidas suele ser más útil que depender de batidos. Individualizar en enfermedad renal.</p></div>
+        </details>
+
+        <details class="diet-card">
+          <summary><img src="img/tipos-dietas/antiinflamatoria.webp" alt="Alimentos mediterráneos con verduras, pescado, aceite de oliva y frutos rojos"><span><small class="ev-low">TÉRMINO IMPRECISO</small><b>“Dieta antiinflamatoria”</b><em>Suele ser mediterránea con otro nombre</em></span><i>＋</i></summary>
+          <div class="diet-body"><p><strong>¿En qué consiste?</strong> No existe una única dieta antiinflamatoria validada. Las versiones sensatas priorizan alimentos vegetales, aceite de oliva, frutos secos y pescado, y limitan tabaco, alcohol y productos de baja calidad: se parecen al patrón mediterráneo.</p><p><strong>Pérdida de peso:</strong> no “desinflama la grasa” ni adelgaza por ingredientes especiales. Funciona si mejora la calidad y produce déficit.</p><p class="diet-myth"><strong>Mito:</strong> “Gluten, lácteos o tomate inflaman a todo el mundo”. <span>No hay base para excluirlos de forma general; solo si existe diagnóstico, intolerancia o indicación individual.</span></p></div>
+        </details>
+
+        <details class="diet-card">
+          <summary><img src="img/tipos-dietas/anticancer.webp" alt="Plato vegetal equilibrado junto a un lazo simbólico"><span><small class="ev-none">NO EXISTE UNA DIETA QUE CURE EL CÁNCER</small><b>“Dieta anticancerígena”</b><em>Prevención no significa tratamiento</em></span><i>＋</i></summary>
+          <div class="diet-body"><p><strong>¿En qué consiste?</strong> Es un nombre comercial o divulgativo, no un tratamiento definido. Un patrón rico en vegetales, fibra y legumbres, con poca carne procesada y alcohol, puede reducir el riesgo poblacional de algunos cánceres.</p><p><strong>Pérdida de peso:</strong> solo ocurrirá si existe déficit. Ningún alimento, suplemento, ayuno o alcalinización cura el cáncer.</p><p class="diet-alert"><strong>Muy importante:</strong> durante el tratamiento oncológico no se deben hacer restricciones sin el equipo sanitario. Pueden empeorar desnutrición, pérdida muscular o interferir con el tratamiento.</p></div>
+        </details>
+
+        <details class="diet-card">
+          <summary><img src="img/tipos-dietas/sin-gluten-lactosa.webp" alt="Alimentos naturalmente sin gluten y lácteos sin lactosa"><span><small class="ev-low">SOLO CON INDICACIÓN</small><b>Sin gluten o sin lactosa</b><em>Eliminar no equivale a adelgazar</em></span><i>＋</i></summary>
+          <div class="diet-body"><p><strong>¿En qué consiste?</strong> La dieta sin gluten es tratamiento para celiaquía y otras indicaciones concretas. Reducir lactosa ayuda si hay intolerancia sintomática; muchas personas toleran cierta cantidad.</p><p><strong>Pérdida de peso:</strong> no aportan una ventaja propia. Algunos productos “sin” tienen igual o mayor energía, menos fibra o más azúcar/grasa.</p><p class="diet-alert"><strong>No retires el gluten antes de estudiar una posible celiaquía:</strong> puede falsear las pruebas. Consulta si hay síntomas persistentes.</p></div>
+        </details>
+
+        <details class="diet-card">
+          <summary><img src="img/tipos-dietas/detox-monodieta.webp" alt="Zumos verdes y una selección repetitiva de una sola fruta"><span><small class="ev-none">SIN RESPALDO</small><b>Detox, zumos y monodietas</b><em>Piña, alcachofa, sopa, potitos…</em></span><i>＋</i></summary>
+          <div class="diet-body"><p><strong>¿En qué consisten?</strong> Limitan la alimentación a zumos, caldos o uno o pocos alimentos durante varios días. Prometen “limpiar toxinas” o perder peso con rapidez.</p><p><strong>Pérdida de peso:</strong> la bajada rápida suele incluir agua, glucógeno y contenido intestinal. No hay evidencia de que eliminen toxinas; hígado, riñones, pulmones e intestino ya cumplen esas funciones.</p><p class="diet-alert"><strong>Riesgos:</strong> hambre, mareos, pérdida muscular, carencias, efecto rebote y peor relación con la comida. No son una estrategia saludable.</p></div>
+        </details>
+
+        <details class="diet-card">
+          <summary><img src="img/tipos-dietas/carnivora.webp" alt="Plato compuesto únicamente por carnes, pescado y huevos"><span><small class="ev-none">EVIDENCIA INSUFICIENTE Y RESTRICTIVA</small><b>Dieta carnívora</b><em>Elimina prácticamente todos los vegetales</em></span><i>＋</i></summary>
+          <div class="diet-body"><p><strong>¿En qué consiste?</strong> Solo o casi solo alimentos animales. Excluye fruta, verdura, legumbres y cereales, por lo que aporta muy poca fibra y puede contener mucha grasa saturada y sal.</p><p><strong>Pérdida de peso:</strong> puede reducir espontáneamente la ingesta por monotonía o saciedad proteica, no por una propiedad exclusiva. Faltan ensayos robustos sobre seguridad y eficacia a largo plazo.</p><p class="diet-alert"><strong>No es recomendable como patrón general.</strong> Puede empeorar el perfil lipídico en algunas personas y dificulta cubrir una dieta variada.</p></div>
+        </details>
+
+        <details class="diet-card">
+          <summary><img src="img/tipos-dietas/milagro-homeopatia.webp" alt="Productos adelgazantes sin marca junto a un plato vacío y una cinta métrica"><span><small class="ev-none">SIN EVIDENCIA / POSIBLE RIESGO</small><b>Dietas milagro, homeopatía y “quemagrasas”</b><em>Promesas grandes, pruebas pequeñas o inexistentes</em></span><i>＋</i></summary>
+          <div class="diet-body"><p><strong>Señales de alarma:</strong> promete muchos kilos en pocos días, usa testimonios, prohíbe grupos enteros, habla de “toxinas”, exige productos propios, asegura servir a todo el mundo o dice que no necesita déficit.</p><p><strong>Evidencia:</strong> la homeopatía no ha demostrado eficacia para adelgazar más allá del placebo. Los suplementos “quemagrasas” suelen producir efectos pequeños o nulos y pueden causar taquicardia, ansiedad, daño hepático o interacciones.</p><p class="diet-alert"><strong>No sustituyen</strong> el tratamiento nutricional, psicológico, farmacológico o quirúrgico indicado. “Natural” no significa seguro.</p></div>
+        </details>
+      </div>
+
+      <div class="diets-conclusion">
+        <span>⚖️</span><div><small>RESUMEN FINAL</small><h3>¿Qué tienen en común las dietas que hacen perder grasa?</h3><p>Funcionan cuando consiguen mantener durante suficiente tiempo un <strong>déficit energético adecuado</strong>: ingerir algo menos de energía de la que se gasta. La distribución de hidratos y grasas, el horario o el nombre de la dieta pueden cambiar, pero no sustituyen ese requisito.</p><p>Eso no significa que “solo importen las calorías”. Para la salud y para sostener el proceso también importan la proteína, la fibra, los micronutrientes, el entrenamiento de fuerza, el sueño, el entorno, las preferencias y la relación con la comida. <strong>La mejor opción es la segura, nutricionalmente completa, individualizada y sostenible.</strong></p></div>
+      </div>
+
+      <div class="diets-safety"><strong>Consulta antes de hacer restricciones importantes</strong> si hay embarazo o lactancia, infancia/adolescencia, diabetes con medicación, enfermedad renal o hepática, cáncer, fragilidad, desnutrición o antecedentes de trastorno alimentario.</div>
+      <div class="evidence-box"><h3>Fuentes y evidencia</h3><p><a href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD013334.pub2/information" target="_blank" rel="noopener">Cochrane: bajo contenido en hidratos frente a dieta equilibrada</a> · <a href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD015610.pub2/full" target="_blank" rel="noopener">Cochrane 2026: ayuno intermitente</a> · <a href="https://www.nice.org.uk/guidance/ng246/chapter/Physical-activity-and-diet" target="_blank" rel="noopener">NICE: tratamiento dietético de la obesidad</a> · <a href="https://www.wcrf.org/diet-activity-and-cancer/cancer-prevention-recommendations/" target="_blank" rel="noopener">World Cancer Research Fund</a> · <a href="https://www.nccih.nih.gov/health/homeopathy" target="_blank" rel="noopener">NCCIH: homeopatía</a>.</p></div>
+    </div>
+  `,
+
   // ---------- EJERCICIO ----------
 
   "ejercicio-empezar": `
