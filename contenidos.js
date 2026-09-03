@@ -283,25 +283,110 @@ const CONTENIDOS = {
   // ---------- HERRAMIENTAS ----------
 
   "herramientas-etiquetas": `
-    <h3>Cómo leer una etiqueta nutricional</h3>
-    <p>Cuando leas una etiqueta, fíjate en este orden:</p>
-    <p>1️⃣ <strong>Tamaño de ración:</strong> toda la información se refiere a esa cantidad. Si comes el doble, duplicas todo.</p>
-    <p>2️⃣ <strong>Calorías por ración:</strong> orientativo, no es lo único importante.</p>
-    <p>3️⃣ <strong>Azúcares:</strong> menos de 5g/100g = bajo en azúcar. Más de 22,5g = alto.</p>
-    <p>4️⃣ <strong>Grasas saturadas:</strong> menos de 1,5g/100g = bajo. Más de 5g = alto.</p>
-    <p>5️⃣ <strong>Sal:</strong> menos de 0,3g/100g = bajo. Más de 1,5g = alto.</p>
-    <p>6️⃣ <strong>Lista de ingredientes:</strong> van de mayor a menor cantidad. Si el azúcar o la grasa aparecen en los primeros 3, es un producto de consumo ocasional.</p>
+    <div class="tool-hero tool-hero--label">
+      <span class="eyebrow">GUÍA PARA EL SUPERMERCADO</span>
+      <h3>Leer una etiqueta sin convertir la compra en un examen</h3>
+      <p>La etiqueta sirve para <strong>comparar productos parecidos</strong>, no para decidir si un alimento es “bueno” o “malo”. Primero mira el alimento y su papel en tu dieta; después, los números.</p>
+    </div>
+
+    <div class="label-map" aria-label="Orden recomendado para leer una etiqueta">
+      <div class="label-sheet">
+        <span class="label-kicker">INFORMACIÓN NUTRICIONAL</span>
+        <strong>Valores medios por 100 g</strong>
+        <div><span>Energía</span><b>620 kJ / 148 kcal</b></div>
+        <div><span>Grasas</span><b>4,2 g</b></div>
+        <div class="label-indent"><span>de las cuales saturadas</span><b>0,7 g</b></div>
+        <div><span>Hidratos de carbono</span><b>18 g</b></div>
+        <div class="label-indent"><span>de los cuales azúcares</span><b>3,8 g</b></div>
+        <div><span>Fibra</span><b>5,6 g</b></div>
+        <div><span>Proteínas</span><b>7,1 g</b></div>
+        <div><span>Sal</span><b>0,42 g</b></div>
+      </div>
+      <ol class="label-steps">
+        <li><b>1. Qué producto es</b><span>No compares yogur con galletas: compara yogures entre sí.</span></li>
+        <li><b>2. Ingredientes</b><span>Aparecen de mayor a menor cantidad. Los alérgenos van destacados.</span></li>
+        <li><b>3. Por 100 g o 100 ml</b><span>Es la referencia más útil para comparar dos envases.</span></li>
+        <li><b>4. La cantidad que tomas</b><span>La “ración” del fabricante puede no coincidir con la tuya.</span></li>
+      </ol>
+    </div>
+
+    <h3>¿Qué significa cada apartado?</h3>
+    <div class="info-grid">
+      <article><span>🧾</span><h4>Lista de ingredientes</h4><p>El primero es el más abundante. Un porcentaje junto a un ingrediente indica cuánto contiene cuando aparece en el nombre o se destaca en el envase. “Sin azúcares añadidos” no significa “sin azúcar”: puede contener el azúcar propio de la fruta o la leche.</p></article>
+      <article><span>🔥</span><h4>Energía</h4><p>Se expresa en kJ y kcal. Ayuda a comparar, pero no mide por sí sola la calidad: aceite, frutos secos o queso aportan energía y pueden formar parte de una dieta saludable.</p></article>
+      <article><span>🌾</span><h4>Hidratos y azúcares</h4><p>Los hidratos incluyen almidones y azúcares. “De los cuales azúcares” suma los naturales y los añadidos; la tabla europea no los separa. Para detectar azúcares añadidos hay que mirar ingredientes: azúcar, jarabe, miel, dextrosa, concentrado de zumo, etc.</p></article>
+      <article><span>🥑</span><h4>Grasas y saturadas</h4><p>“Grasas” incluye saturadas e insaturadas. Conviene priorizar aceite de oliva, frutos secos, semillas y pescado, y limitar el exceso de saturadas. Las grasas trans industriales están restringidas en la UE, pero el patrón completo sigue siendo lo importante.</p></article>
+      <article><span>🫘</span><h4>Proteínas y fibra</h4><p>La proteína ayuda a conservar masa muscular y aporta saciedad. La fibra favorece el tránsito y la salud cardiometabólica. La fibra puede aparecer de forma voluntaria; si no figura, no significa necesariamente que sea cero.</p></article>
+      <article><span>🧂</span><h4>Sal</h4><p>La etiqueta declara sal, no sodio. Como orientación poblacional, la OMS recomienda menos de 5 g de sal al día. Mira especialmente panes, salsas, caldos, quesos, conservas y embutidos.</p></article>
+      <article><span>⚠️</span><h4>Alérgenos y trazas</h4><p>Los 14 alérgenos de declaración obligatoria aparecen resaltados. “Puede contener” avisa de una posible contaminación cruzada; es relevante para alergias, no una señal de peor calidad.</p></article>
+      <article><span>📅</span><h4>Fechas y conservación</h4><p>“Caducidad” se relaciona con seguridad: no lo consumas después. “Consumo preferente” habla de calidad; si se ha conservado bien, puede seguir siendo seguro tras esa fecha.</p></article>
+    </div>
+
+    <div class="compare-board">
+      <h3>Ejemplos reales de pasillo</h3>
+      <div class="compare-grid">
+        <article><b>Yogur natural</b><p>Compara yogures naturales: leche y fermentos es una opción sencilla. Un yogur con fruta puede tener más azúcar sin que todo sea añadido; confirma en ingredientes.</p></article>
+        <article><b>Pan integral</b><p>Busca “harina integral” como primer ingrediente y comprueba el porcentaje. El color oscuro, las semillas o la palabra “multicereal” no garantizan que sea integral.</p></article>
+        <article><b>Tomate triturado o frito</b><p>Ambos pueden encajar. En el frito compara tomate, aceite, sal y azúcares añadidos. Escoge según uso, frecuencia y cantidad.</p></article>
+        <article><b>Conservas y legumbres</b><p>Son opciones prácticas. Escurrir y enjuagar garbanzos o verduras reduce parte de la sal. En pescado, alterna al natural, en aceite de oliva y otras variedades.</p></article>
+        <article><b>Cereales de desayuno</b><p>Compara por 100 g: cereal integral, fibra, azúcares y sal. “Fitness”, “natural” o dibujos de fruta son publicidad, no criterios nutricionales.</p></article>
+        <article><b>Fiambre y hamburguesas</b><p>Mira el porcentaje de carne/pescado/legumbre, sal y grasas saturadas. Las carnes procesadas conviene reservarlas para un consumo ocasional.</p></article>
+      </div>
+    </div>
+
+    <h3>Ingredientes añadidos: qué merece más atención</h3>
+    <div class="traffic-cards">
+      <article class="traffic-card traffic-card--amber"><b>Conviene limitar en el conjunto de la dieta</b><p>Azúcares libres, mucha sal, grasas saturadas y carnes procesadas. El riesgo depende de la <strong>cantidad y la frecuencia</strong>, no de que una palabra aparezca una vez.</p></article>
+      <article class="traffic-card traffic-card--green"><b>No hay que temer automáticamente</b><p>Un número E indica un aditivo autorizado y evaluado en la UE. Que un ingrediente sea largo, “químico” o no esté en tu cocina no demuestra que sea perjudicial.</p></article>
+      <article class="traffic-card traffic-card--red"><b>Atención individual</b><p>Alérgenos si existe alergia, cafeína en niños/embarazo o sensibilidad, polialcoholes si provocan molestias digestivas y alcohol. Sigue la indicación sanitaria que corresponda.</p></article>
+    </div>
+
+    <div class="tips-ten">
+      <h3>10 trucos para elegir mejor —sin buscar la perfección—</h3>
+      <ol>
+        <li>Compara alimentos de la <strong>misma categoría</strong>.</li>
+        <li>Usa la columna <strong>por 100 g/ml</strong> para comparar.</li>
+        <li>Comprueba cuál es el <strong>primer ingrediente</strong>.</li>
+        <li>En pan, busca un buen porcentaje de <strong>harina integral</strong>.</li>
+        <li>En yogur, diferencia el azúcar natural de la leche de los <strong>azúcares añadidos</strong>.</li>
+        <li>En conservas, caldos y salsas, compara la <strong>sal</strong>.</li>
+        <li>Prioriza alimentos que aporten <strong>fibra y/o proteína</strong> cuando tenga sentido.</li>
+        <li>No te dejes guiar solo por “light”, “bio”, “fitness”, “artesano” o “sin azúcar”.</li>
+        <li>Piensa en la <strong>frecuencia y la cantidad</strong>, no en ingredientes aislados.</li>
+        <li>Deja sitio a productos por placer: un procesado puede encajar en una alimentación saludable.</li>
+      </ol>
+    </div>
+    <p class="kind-note"><strong>Idea clave:</strong> procesado no es sinónimo de perjudicial. El aceite de oliva, el yogur, el pan integral, las legumbres cocidas o las verduras congeladas también están procesados. Importan el tipo de producto, su composición y el patrón habitual.</p>
+    <div class="evidence-box"><h3>Fuentes y evidencia</h3><p><a href="https://eur-lex.europa.eu/legal-content/ES/TXT/?uri=CELEX:32011R1169" target="_blank" rel="noopener">Reglamento (UE) 1169/2011 sobre información alimentaria</a> · <a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener">OMS: dieta saludable</a> · <a href="https://www.efsa.europa.eu/es/topics/topic/food-additives" target="_blank" rel="noopener">EFSA: seguridad de los aditivos</a>.</p></div>
   `,
 
   "herramientas-compra": `
-    <h3>Claves para una compra saludable</h3>
-    <p>🛒 <strong>Planifica antes de ir:</strong> haz una lista. Comprar con hambre lleva a decisiones impulsivas.</p>
-    <p>🥦 <strong>Empieza por frutas y verduras:</strong> que ocupen la mayor parte del carro.</p>
-    <p>🐟 <strong>Proteínas variadas:</strong> pescado, huevos, legumbres, pollo, pavo.</p>
-    <p>🌾 <strong>Cereales integrales:</strong> pan, arroz, pasta, avena. Más fibra, más saciedad.</p>
-    <p>🥜 <strong>Frutos secos sin sal:</strong> en cantidad moderada, son excelentes.</p>
-    <p>🚫 <strong>Limita:</strong> ultraprocesados, bebidas azucaradas, bollería industrial, embutidos grasos.</p>
-    <p>💡 <strong>Regla práctica:</strong> Si el producto tiene más de 5 ingredientes que no reconoces, mejor dejarlo.</p>
+    <div class="media-hero">
+      <div><span class="eyebrow">PLANIFICAR · ELEGIR · DISFRUTAR</span><h3>Una compra saludable empieza antes de entrar</h3><p>No hace falta llenar el carro de productos perfectos. Una buena compra es la que facilita comidas completas, se adapta al presupuesto y deja también espacio al disfrute.</p></div>
+      <img src="img/compra-saludable-endonutri.png" alt="Cesta de compra con alimentos mediterráneos variados, frescos y envasados">
+    </div>
+    <div class="shopping-route" aria-label="Infografía de cuatro pasos para organizar la compra">
+      <article><span>1</span><b>Antes</b><p>Revisa despensa y congelador, decide 3–4 comidas y prepara una lista flexible.</p></article>
+      <article><span>2</span><b>Momento</b><p>Ve con tiempo y, si puedes, después de haber comido. El hambre puede favorecer compras impulsivas, pero no es una norma rígida.</p></article>
+      <article><span>3</span><b>En tienda</b><p>Compara precio por kilo/litro y etiquetas de productos similares. La marca más cara no siempre es mejor.</p></article>
+      <article><span>4</span><b>En casa</b><p>Deja lo saludable visible y fácil: fruta lavada, verdura accesible y raciones listas para congelar.</p></article>
+    </div>
+    <h3>La cesta mediterránea: una base práctica</h3>
+    <div class="basket-grid">
+      <article><span>🥦</span><b>Verduras y frutas</b><p>Frescas, congeladas o en conserva. Elige variedad de colores, temporada y opciones que realmente vayas a usar.</p></article>
+      <article><span>🫘</span><b>Legumbres</b><p>Secas o cocidas: lentejas, garbanzos, alubias y guisantes. Baratas, versátiles y ricas en fibra.</p></article>
+      <article><span>🌾</span><b>Cereales y tubérculos</b><p>Avena, pan y pasta integrales, arroz, patata o boniato. Alterna según preferencias y tolerancia.</p></article>
+      <article><span>🐟</span><b>Proteínas variadas</b><p>Pescado, huevos, aves, tofu, yogur natural y legumbres. Limita la frecuencia de carnes procesadas.</p></article>
+      <article><span>🫒</span><b>Grasas de calidad</b><p>Aceite de oliva virgen, frutos secos y semillas. Son saludables, aunque energéticos: ajusta la cantidad a tus necesidades.</p></article>
+      <article><span>🍫</span><b>Alimentos por placer</b><p>También pueden estar en la cesta. Elegirlos conscientemente ayuda más que prohibirlos y llegar después con sensación de pérdida de control.</p></article>
+    </div>
+    <div class="two-col-list">
+      <section><h3>Consejos que facilitan la semana</h3><ul><li>Compra verduras ya cortadas, congeladas o en bote si te ayudan a consumirlas.</li><li>Ten “comodines”: huevos, legumbres cocidas, conservas de pescado, gazpacho, verduras congeladas y arroz de cocción rápida.</li><li>No compres grandes formatos solo por oferta si terminarán desperdiciándose.</li><li>Haz una compra principal y deja una pequeña reposición para frescos.</li><li>Online o presencial: usa favoritos y lista para reducir decisiones repetidas.</li></ul></section>
+      <section><h3>Presupuesto y seguridad</h3><ul><li>Compara el precio por kg o litro, no solo el precio del envase.</li><li>Los productos de temporada, legumbres y congelados suelen ser aliados económicos.</li><li>Compra refrigerados y congelados al final; llévalos pronto a casa.</li><li>Separa alimentos crudos de los listos para comer.</li><li>Planifica cómo aprovechar sobras antes de comprar más.</li></ul></section>
+    </div>
+    <div class="myth-row"><b>Mito: “solo es saludable lo fresco”.</b><span>Realidad: congelados y conservas sencillas mantienen buena calidad nutricional y pueden reducir tiempo y desperdicio.</span></div>
+    <div class="myth-row"><b>Mito: “si está en los pasillos centrales es malo”.</b><span>Realidad: allí también están legumbres, avena, arroz, conservas, frutos secos y aceite de oliva.</span></div>
+    <div class="evidence-box"><h3>Fuentes y evidencia</h3><p>Basado en las <a href="https://www.aesan.gob.es/AECOSAN/docs/documentos/nutricion/RECOMENDACIONES_DIETETICAS.pdf" target="_blank" rel="noopener">recomendaciones dietéticas de AESAN</a>, la <a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener">guía de dieta saludable de la OMS</a> y principios de planificación, accesibilidad y reducción del desperdicio.</p></div>
   `,
 
   "herramientas-raciones": `
@@ -316,15 +401,32 @@ const CONTENIDOS = {
   `,
 
   "herramientas-fuera": `
-    <h3>Estrategias para comer fuera de casa</h3>
-    <p>Comer en restaurantes no tiene por qué arruinar tu alimentación. Con estas claves lo manejarás bien:</p>
-    <p>🔍 <strong>Mira el menú antes:</strong> decide en casa, sin presión ni hambre.</p>
-    <p>🥗 <strong>Empieza por ensalada o verdura:</strong> ayuda a comer menos del plato principal.</p>
-    <p>💧 <strong>Bebe agua antes y durante:</strong> reduce el apetito y evita el consumo de refrescos.</p>
-    <p>🍽️ <strong>Pide la salsa aparte:</strong> controlas mejor la cantidad.</p>
-    <p>🐟 <strong>Elige preparaciones sencillas:</strong> a la plancha, al vapor, al horno. Evita rebozados y fritos.</p>
-    <p>🍰 <strong>Postres:</strong> fruta o compartir si quieres algo dulce.</p>
-    <p>🚫 <strong>No hay alimentos prohibidos:</strong> un día puntual no define tu alimentación.</p>
+    <div class="media-hero media-hero--reverse">
+      <div><span class="eyebrow">FLEXIBILIDAD SIN CULPA</span><h3>Comer fuera también forma parte de una vida saludable</h3><p>Una comida no define tu salud ni necesitas “compensarla”. Si comes fuera a menudo, unas decisiones sencillas pueden ayudarte; si es algo puntual, disfruta y vuelve a tu rutina habitual.</p></div>
+      <img src="img/comer-fuera-endonutri.png" alt="Mesa mediterránea compartida con pescado, ensalada, verduras, pan, agua y postre">
+    </div>
+    <div class="outside-timeline">
+      <article><span>ANTES</span><h4>Llega con hambre normal</h4><p>No te saltes comidas para “guardar calorías”. Si llegarás muy tarde, toma antes fruta con yogur o un pequeño bocadillo.</p></article>
+      <article><span>DURANTE</span><h4>Elige lo que te apetece y te sienta bien</h4><p>Mira el menú, incluye alguna verdura si es posible, come despacio y para cuando estés cómodamente satisfecho.</p></article>
+      <article><span>DESPUÉS</span><h4>Continúa, no compenses</h4><p>La siguiente comida puede ser la habitual. No hace falta ayunar, entrenar de más ni pesarse al día siguiente.</p></article>
+    </div>
+    <h3>Herramientas según la situación</h3>
+    <div class="scenario-grid">
+      <article><span>🍽️</span><h4>Menú del día</h4><p>Combina verdura o legumbre con pescado, huevo o carne no procesada. Pan, arroz o patata pueden encajar. Agua como bebida habitual.</p></article>
+      <article><span>🥘</span><h4>Tapas y raciones</h4><p>Pide primero una cantidad razonable y añade después si hace falta. Alterna verduras, marisco, pescado, tortilla o guisos con opciones fritas si te apetecen.</p></article>
+      <article><span>🍔</span><h4>Hamburguesería</h4><p>Una hamburguesa no “estropea” la dieta. Si buscas equilibrio, añade ensalada o verdura, elige agua y decide patatas o postre según hambre y apetencia.</p></article>
+      <article><span>🍕</span><h4>Pizza o italiano</h4><p>Comparte una ensalada, elige el tamaño con calma y come hasta sentirte satisfecho. No es obligatorio escoger masa integral ni dejar los bordes.</p></article>
+      <article><span>🥡</span><h4>Comida asiática</h4><p>Combina arroz o fideos con verduras y una fuente de proteína. Salsas y caldos pueden aportar mucha sal: ajusta la frecuencia, no hace falta eliminarlos.</p></article>
+      <article><span>🎉</span><h4>Celebraciones</h4><p>Prioriza la experiencia social. Sírvete lo que realmente quieras, prueba despacio y recuerda que puedes dejar comida o repetir: ambas opciones son válidas.</p></article>
+    </div>
+    <div class="tips-banner"><h3>Pequeños gestos útiles cuando comes fuera con frecuencia</h3><p>Consulta el menú antes · comparte entrantes · pide verduras como guarnición · solicita salsas aparte si lo prefieres · alterna alcohol con agua · evita el “todo o nada” · escucha hambre y saciedad.</p></div>
+    <h3>Mitos que conviene dejar fuera de la mesa</h3>
+    <div class="myth-row"><b>“A la plancha siempre adelgaza”.</b><span>La técnica ayuda, pero importan el alimento, el aceite, las salsas, la cantidad y el conjunto del día.</span></div>
+    <div class="myth-row"><b>“El pan es el problema”.</b><span>El pan puede encajar. Valora hambre, cantidad y el resto de la comida sin señalar un único alimento.</span></div>
+    <div class="myth-row"><b>“Mañana lo quemo”.</b><span>El ejercicio no es un castigo. Volver a tus hábitos habituales es más sostenible que compensar.</span></div>
+    <div class="myth-row"><b>“Si estoy perdiendo peso no puedo salir”.</b><span>Puede hacerse compatible. Si las salidas son frecuentes, planificar elecciones y cantidades facilita mantener un déficit energético moderado.</span></div>
+    <p class="kind-note"><strong>Si tienes diabetes, enfermedad renal, celiaquía, alergias u otra indicación clínica:</strong> pregunta por ingredientes, alérgenos y preparación. La flexibilidad debe adaptarse a tu tratamiento.</p>
+    <div class="evidence-box"><h3>Fuentes y evidencia</h3><p>Recomendaciones coherentes con la <a href="https://www.who.int/news-room/fact-sheets/detail/healthy-diet" target="_blank" rel="noopener">OMS</a> y con la evidencia sobre <a href="https://www.cochrane.org/evidence/CD011045_portion-package-or-tableware-size-changing-selection-and-consumption-food-alcohol-and-tobacco" target="_blank" rel="noopener">tamaño de porciones y consumo</a>. Las estrategias son herramientas opcionales, no reglas morales.</p></div>
   `,
 
   "herramientas-plato": ""  // el plato tiene diseño propio en el HTML
