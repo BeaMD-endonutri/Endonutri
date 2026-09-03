@@ -559,37 +559,52 @@
         <button class="back-btn" onclick="showSection('home')">← Inicio</button>
         <h2>🍽️ Método del plato</h2>
       </div>
-      <div class="content-card">
-        <div class="plate-method">
-          <div class="plate-visual">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="plate-svg">
-              <circle cx="100" cy="100" r="95" fill="#f5fbf6" stroke="#b9ddc9" stroke-width="2"/>
-              <!-- mitad verduras -->
-              <path d="M100,100 L100,5 A95,95 0 0,1 195,100 Z" fill="#47ad75" opacity="0.88"/>
-              <path d="M100,100 L195,100 A95,95 0 0,1 100,195 Z" fill="#77c995" opacity="0.78"/>
-              <!-- cuarto proteína -->
-              <path d="M100,100 L100,195 A95,95 0 0,1 5,100 Z" fill="#e7765f" opacity="0.88"/>
-              <!-- cuarto carbohidratos -->
-              <path d="M100,100 L5,100 A95,95 0 0,1 100,5 Z" fill="#e8c35b" opacity="0.9"/>
-              <!-- etiquetas -->
-              <text x="140" y="60" text-anchor="middle" font-size="10" fill="#064e3b" font-weight="bold">VERDURAS</text>
-              <text x="140" y="72" text-anchor="middle" font-size="9" fill="#064e3b">50%</text>
-              <text x="140" y="150" text-anchor="middle" font-size="10" fill="#064e3b" font-weight="bold">VERDURAS</text>
-              <text x="55" y="150" text-anchor="middle" font-size="10" fill="#5b2c23" font-weight="bold">PROTEÍNA</text>
-              <text x="55" y="162" text-anchor="middle" font-size="9" fill="#5b2c23">25%</text>
-              <text x="55" y="60" text-anchor="middle" font-size="9" fill="#664611" font-weight="bold">HIDRATOS</text>
-              <text x="55" y="72" text-anchor="middle" font-size="8" fill="#664611">25%</text>
-              <circle cx="100" cy="100" r="8" fill="white" stroke="#ccc" stroke-width="1"/>
-            </svg>
+      <div class="plate-page">
+        <div class="plate-copy-card">
+          <span class="eyebrow">UNA GUÍA VISUAL PARA EL DÍA A DÍA</span>
+          <h3>¿De dónde procede?</h3>
+          <p>El llamado <strong>plato saludable</strong> fue desarrollado en 2011 por especialistas en nutrición de la Escuela de Salud Pública de Harvard y por Harvard Health Publishing. Nació como una forma sencilla de convertir las recomendaciones sobre alimentación saludable en una imagen fácil de recordar.</p>
+
+          <h3>¿En qué consiste?</h3>
+          <p>Imagina el plato dividido en tres partes: ocupa <strong>la mitad con verduras y hortalizas</strong>, un cuarto con una <strong>fuente de proteína saludable</strong> y el cuarto restante con <strong>cereales, mejor integrales, o tubérculos</strong>. Completa la comida con agua, fruta entera y aceite de oliva virgen extra.</p>
+          <p>No es necesario que todos los alimentos estén separados. Puedes aplicar las mismas proporciones a un guiso, una sopa, un pisto, una ensalada completa o una hamburguesa casera.</p>
+
+          <div class="plate-weight-callout">
+            <span aria-hidden="true">⚖️</span>
+            <div>
+              <h3>¿Sirve para perder peso?</h3>
+              <p><strong>Puede ayudar, pero no produce una pérdida de peso por sí solo.</strong> Facilita aumentar las verduras, elegir alimentos saciantes y controlar las proporciones sin tener que pesar cada ingrediente. Para perder grasa es necesario que, en el conjunto de los días, exista un <strong>ligero déficit calórico</strong>: consumir algo menos de energía de la que el cuerpo gasta. El objetivo es que sea moderado, sostenible y adaptado a cada persona.</p>
+            </div>
           </div>
-          <div class="plate-legend">
-            <div class="legend-item green"><span>🥦 50% Verduras y hortalizas</span><p>La mitad del plato siempre verde</p></div>
-            <div class="legend-item orange"><span>🍗 25% Proteína</span><p>Pollo, pescado, legumbres, huevo</p></div>
-            <div class="legend-item yellow"><span>🍚 25% Hidratos de carbono</span><p>Arroz, pasta, pan, patata (preferiblemente integral)</p></div>
-          </div>
+
+          <h3>¿Qué ventajas tiene?</h3>
+          <ul class="plate-benefits">
+            <li><strong>Es visual y fácil de recordar:</strong> no exige contar calorías en cada comida.</li>
+            <li><strong>Ayuda a organizar las cantidades:</strong> da más espacio a verduras y hortalizas.</li>
+            <li><strong>Mejora la calidad de la dieta:</strong> favorece alimentos ricos en fibra, proteínas saludables y cereales integrales.</li>
+            <li><strong>Es flexible:</strong> se adapta a recetas tradicionales, comidas fuera de casa y diferentes culturas.</li>
+            <li><strong>Puede favorecer la saciedad:</strong> especialmente cuando incluye verduras, legumbres, proteína y alimentos poco procesados.</li>
+          </ul>
         </div>
-        <div class="editable-zone" id="content-herramientas-plato">
-          <p class="placeholder-text">Añade más texto o recursos en <strong>js/contenidos.js</strong> → <code>herramientas-plato</code></p>
+
+        <div class="plate-infographics" aria-label="Infografías del método del plato">
+          <figure class="plate-infographic-card">
+            <img src="img/metodo-plato.webp" alt="Infografía del método del plato: mitad verduras, un cuarto proteína saludable y un cuarto cereales integrales o tubérculos" loading="lazy">
+            <figcaption>Cómo formar un plato saludable</figcaption>
+          </figure>
+          <figure class="plate-infographic-card">
+            <img src="img/ejemplos-plato-saludable.webp" alt="Ocho ejemplos mediterráneos de platos saludables, incluidos guisos, sopa, pisto, revuelto y hamburguesa completa" loading="lazy">
+            <figcaption>Más ejemplos para variar durante la semana</figcaption>
+          </figure>
+        </div>
+
+        <aside class="plate-note">
+          <strong>Recuerda:</strong> las proporciones son una orientación, no una regla rígida. Las necesidades cambian según la edad, el estado de salud, la actividad física y los objetivos de cada persona.
+        </aside>
+
+        <div class="plate-sources">
+          <h3>Fuentes y evidencia</h3>
+          <p>Contenido revisado a partir de la <a href="https://nutritionsource.hsph.harvard.edu/healthy-eating-plate/" target="_blank" rel="noopener">guía del Plato para Comer Saludable de Harvard</a>, una <a href="https://www.mdpi.com/2072-6643/14/4/892" target="_blank" rel="noopener">revisión científica sobre platos para controlar las porciones</a> y las <a href="https://diabetesjournals.org/care/article/48/Supplement_1/S167/157555/8-Obesity-and-Weight-Management-for-the-Prevention" target="_blank" rel="noopener">recomendaciones de la American Diabetes Association sobre pérdida de peso</a>.</p>
         </div>
       </div>
     </section>

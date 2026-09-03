@@ -544,6 +544,45 @@ img { max-width: 100%; border-radius: 8px; }
 .legend-item.orange { background: #ead9bd; }
 .legend-item.yellow { background: #f4e6c7; }
 
+.plate-page { display: grid; gap: 22px; padding: 0 16px 24px; }
+.plate-copy-card, .plate-sources {
+  background: rgba(255,255,255,.9); border: 1.5px solid var(--beige-borde);
+  border-radius: var(--radio-card); box-shadow: var(--sombra-suave); padding: 22px 20px;
+}
+.plate-copy-card h3, .plate-sources h3 {
+  color: var(--verde-oscuro); font-family: var(--fuente-titulo);
+  font-size: 1.15rem; margin: 22px 0 8px;
+}
+.plate-copy-card .eyebrow + h3 { margin-top: 10px; }
+.plate-copy-card p, .plate-sources p, .plate-note { font-size: 1rem; line-height: 1.72; }
+.plate-weight-callout {
+  display: flex; gap: 14px; margin: 24px 0 4px; padding: 18px;
+  border-radius: 16px; background: linear-gradient(135deg,#eef9f1,#fff8df);
+  border-left: 5px solid var(--verde-primario);
+}
+.plate-weight-callout > span { font-size: 1.8rem; line-height: 1; }
+.plate-weight-callout h3 { margin-top: 0; }
+.plate-weight-callout p { margin-bottom: 0; }
+.plate-benefits { display: grid; gap: 10px; margin: 10px 0 0; padding-left: 22px; font-size: 1rem; line-height: 1.6; }
+.plate-benefits li::marker { color: var(--verde-primario); }
+.plate-infographics { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; align-items: start; }
+.plate-infographic-card {
+  overflow: hidden; margin: 0; background: #fffdf7; border: 1.5px solid var(--beige-borde);
+  border-radius: 18px; box-shadow: var(--sombra-media);
+}
+.plate-infographic-card img { display: block; width: 100%; height: auto; background: #fbf6e9; }
+.plate-infographic-card figcaption { padding: 13px 16px; color: var(--verde-oscuro); font-size: .95rem; font-weight: 750; text-align: center; }
+.plate-note { padding: 17px 19px; color: #664611; background: #fff7dc; border: 1.5px solid #ead18a; border-radius: 14px; }
+.plate-sources { color: var(--gris-suave); }
+.plate-sources h3 { margin-top: 0; }
+.plate-sources p { margin-bottom: 0; font-size: .9rem; }
+.plate-sources a { color: var(--verde-oscuro); font-weight: 700; text-decoration: underline; }
+@media (max-width: 720px) {
+  .plate-infographics { grid-template-columns: 1fr; }
+  .plate-copy-card, .plate-sources { padding: 19px 17px; }
+  .plate-weight-callout { align-items: flex-start; }
+}
+
 /* =============================================
    CUESTIONARIO
    ============================================= */
