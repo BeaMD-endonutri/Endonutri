@@ -127,15 +127,63 @@ const CONTENIDOS = {
   `,
 
   "ejercicio-pasos": `
-    <h3>El poder de los pasos diarios</h3>
-    <p>Caminar es el ejercicio más accesible, seguro y sostenible. No subestimes su impacto.</p>
-    <p>🎯 <strong>Objetivo recomendado:</strong> 7.000 – 10.000 pasos diarios</p>
-    <p>💡 <strong>Cómo llegar:</strong><br>
-    · Sube escaleras en lugar del ascensor<br>
-    · Baja una parada antes del autobús<br>
-    · Pasea después de comer (reduce el pico de glucosa)<br>
-    · Usa un contador de pasos (móvil, reloj)</p>
-    <p>Incluso 5.000 pasos diarios marcan una diferencia importante en salud.</p>
+    <div class="steps-page">
+      <span class="eyebrow">MUÉVETE MÁS A LO LARGO DEL DÍA</span>
+      <h3>Los pasos diarios también cuentan</h3>
+      <p>Entrenar fuerza es fundamental para conservar el músculo, cuidar los huesos y mantener la autonomía. Sin embargo, hacer fuerza dos o tres días por semana <strong>no compensa por completo pasar el resto del tiempo sentado</strong>. Caminar añade movimiento cotidiano, mejora la resistencia y ayuda a reducir el sedentarismo.</p>
+
+      <div class="steps-combo">
+        <div><span>👟</span><strong>Pasos diarios</strong><small>Corazón, resistencia y menos tiempo sentado</small></div>
+        <b aria-hidden="true">+</b>
+        <div><span>🏋️</span><strong>Entrenamiento de fuerza</strong><small>Músculo, huesos y capacidad para el día a día</small></div>
+      </div>
+
+      <h3>¿Cuántos pasos hay que dar?</h3>
+      <p><strong>No existe una cifra mágica ni una meta igual para todo el mundo.</strong> La evidencia más reciente indica que aumentar los pasos desde un nivel bajo ya se relaciona con beneficios para la salud. Para muchos adultos, acercarse a <strong>7.000 pasos diarios</strong> puede ser una referencia útil y alcanzable.</p>
+      <p>Los conocidos 10.000 pasos también son una buena cantidad si encajan en tu vida, pero <strong>no son obligatorios</strong>. Una persona que pasa de 3.000 a 4.000 o 5.000 pasos ya está progresando, aunque todavía no llegue a 7.000.</p>
+
+      <div class="steps-goal-card">
+        <span aria-hidden="true">🎯</span>
+        <div>
+          <strong>Una forma sencilla de empezar</strong>
+          <p>Mira tu media de los últimos siete días y añade aproximadamente <strong>500–1.000 pasos diarios</strong>. Cuando te resulte fácil, puedes volver a subir poco a poco. Tu objetivo debe adaptarse a tu estado de salud, movilidad, tiempo disponible y punto de partida.</p>
+        </div>
+      </div>
+
+      <h3>¿Por qué es beneficioso caminar?</h3>
+      <ul class="steps-benefits">
+        <li>Ayuda a cuidar la salud cardiovascular y metabólica.</li>
+        <li>Mejora la capacidad para caminar, subir escaleras y realizar tareas cotidianas.</li>
+        <li>Reduce parte del tiempo que pasamos sentados.</li>
+        <li>Puede favorecer el bienestar mental y la calidad del sueño.</li>
+        <li>Aumenta el gasto energético y puede ayudar a controlar el peso, aunque la pérdida de grasa requiere un déficit calórico.</li>
+      </ul>
+      <p class="steps-evidence-note"><strong>Importante:</strong> gran parte de los estudios sobre número de pasos son observacionales. Esto significa que muestran una relación clara entre caminar más y una mejor salud, pero no permiten asegurar que toda la diferencia se deba únicamente a los pasos.</p>
+
+      <figure class="steps-infographic">
+        <img src="img/pasos-diarios.webp" alt="Infografía con una meta orientativa de 7.000 pasos, la combinación de caminar y entrenar fuerza y consejos para sumar pasos" loading="lazy">
+        <figcaption>Utiliza la cifra como orientación, no como un examen diario.</figcaption>
+      </figure>
+
+      <h3>Ideas para sumar pasos sin hacerlos todos de una vez</h3>
+      <div class="steps-tips">
+        <div><span>🕒</span><p><strong>Reparte el movimiento.</strong> Tres paseos de 10 minutos también cuentan.</p></div>
+        <div><span>🍽️</span><p><strong>Pasea después de comer.</strong> Una vuelta corta es más fácil de mantener que una caminata larga.</p></div>
+        <div><span>🪜</span><p><strong>Usa las escaleras</strong> en lugar del ascensor cuando sea posible.</p></div>
+        <div><span>🚌</span><p><strong>Baja una parada antes</strong> o aparca un poco más lejos.</p></div>
+        <div><span>📞</span><p><strong>Camina mientras hablas</strong> por teléfono o escuchas un audio.</p></div>
+        <div><span>📱</span><p><strong>Usa el móvil, un reloj o un podómetro.</strong> Las aplicaciones de salud pueden registrar tus pasos automáticamente.</p></div>
+        <div><span>⏰</span><p><strong>Pon recordatorios.</strong> Levántate y muévete unos minutos después de periodos largos sentado.</p></div>
+        <div><span>👥</span><p><strong>Busca compañía.</strong> Caminar con otra persona puede hacerlo más agradable y constante.</p></div>
+      </div>
+
+      <aside class="steps-safety"><strong>Adáptalo a ti:</strong> si tienes dolor, problemas de movilidad, mareos o una enfermedad que limite el ejercicio, consulta con un profesional sanitario antes de aumentar mucho la actividad.</aside>
+
+      <div class="steps-sources">
+        <h3>Fuentes y evidencia</h3>
+        <p>Contenido basado en la <a href="https://pubmed.ncbi.nlm.nih.gov/40713949/" target="_blank" rel="noopener">revisión sistemática de 2025 sobre pasos y salud</a>, el <a href="https://pubmed.ncbi.nlm.nih.gov/37555441/" target="_blank" rel="noopener">metaanálisis sobre pasos y mortalidad cardiovascular</a> y las <a href="https://www.who.int/europe/publications/i/item/9789240014886" target="_blank" rel="noopener">recomendaciones de actividad física de la OMS</a>.</p>
+      </div>
+    </div>
   `,
 
   "ejercicio-videos": `
