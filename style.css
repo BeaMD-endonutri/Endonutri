@@ -527,6 +527,81 @@ img { max-width: 100%; border-radius: 8px; }
 .mt-1 { margin-top: 12px; }
 
 /* =============================================
+   PIRÁMIDE DE BUENOS HÁBITOS
+   ============================================= */
+.habits-page { display: grid; gap: 18px; }
+.habits-page > h3 { margin: 4px 0 -8px; color: var(--verde-oscuro); font-size: 1.35rem; }
+.habits-page > p { font-size: 1rem; line-height: 1.72; }
+.habits-intro-note { display: flex; align-items: center; gap: 12px; padding: 15px 17px; border-radius: 14px; background: #eef9f1; border: 1.5px solid #c8e8d1; }
+.habits-intro-note span { font-size: 1.55rem; animation: habitPoint 1.5s ease-in-out infinite; }
+.habits-intro-note p { margin: 0; line-height: 1.55; }
+@keyframes habitPoint { 50% { transform: translateY(4px); } }
+.habits-pyramid { display: flex; flex-direction: column; align-items: center; gap: 5px; padding: 22px 8px 8px; }
+.habit-level {
+  position: relative; display: grid; grid-template-columns: 32px 1fr; grid-template-rows: auto auto;
+  column-gap: 8px; align-items: center; min-height: 66px; padding: 10px 13%; border: 0;
+  color: #173f35; font-family: var(--fuente); font-size: clamp(.86rem,2vw,1.02rem); font-weight: 800;
+  text-align: center; cursor: pointer; clip-path: polygon(7% 0,93% 0,100% 100%,0 100%);
+  transition: transform .22s ease, filter .22s ease; box-shadow: none;
+}
+.habit-level:hover, .habit-level:focus-visible { transform: translateY(-2px) scale(1.012); filter: saturate(1.12) brightness(1.02); }
+.habit-level:focus-visible { outline: 3px solid var(--verde-oscuro); outline-offset: 3px; }
+.habit-level.active { animation: habitPulse .45s ease; filter: saturate(1.16); }
+@keyframes habitPulse { 50% { transform: scale(1.025); } }
+.habit-level > span { grid-row: 1 / 3; width: 29px; height: 29px; display: grid; place-items: center; border-radius: 50%; background: rgba(255,255,255,.82); color: var(--verde-oscuro); }
+.habit-level small { grid-column: 2; display: block; margin-top: 2px; font-size: .72rem; font-weight: 650; opacity: .82; }
+.habit-level-6 { width: 47%; background: #f2d986; }
+.habit-level-5 { width: 57%; background: #b9dbe8; }
+.habit-level-4 { width: 67%; background: #edb4a7; }
+.habit-level-3 { width: 77%; background: #94d2aa; }
+.habit-level-2 { width: 87%; background: #53b57c; color: #073f30; }
+.habit-level-1 { width: 97%; background: #087f5b; color: white; }
+.habit-level-1 > span { color: #087f5b; }
+.habit-panels { display: grid; }
+.habit-panel {
+  position: relative; max-height: 0; opacity: 0; overflow: hidden; margin: 0;
+  padding: 0 20px; border-radius: 18px; background: #fffdf8; border: 0 solid var(--beige-borde);
+  transform: translateY(-8px); transition: max-height .5s ease, opacity .35s ease, transform .35s ease, padding .35s ease, border-width .1s;
+}
+.habit-panel.open { max-height: 1200px; opacity: 1; padding: 22px 20px; border-width: 1.5px; transform: translateY(0); box-shadow: var(--sombra-media); }
+.habit-panel.open::after {
+  content: '🍎  🥦  🌾'; position: absolute; right: 18px; top: 14px; font-size: 1rem;
+  opacity: 0; pointer-events: none; animation: habitSprinkle .9s ease-out;
+}
+@keyframes habitSprinkle { 0% { opacity: 0; transform: translateY(-16px) rotate(-6deg); } 45% { opacity: .75; } 100% { opacity: 0; transform: translateY(18px) rotate(5deg); } }
+.habit-panel-title { display: flex; gap: 12px; align-items: center; padding-right: 70px; }
+.habit-panel-title > span { width: 46px; height: 46px; flex: 0 0 46px; display: grid; place-items: center; border-radius: 14px; background: var(--verde-palido); font-size: 1.4rem; }
+.habit-panel-title small { color: var(--verde-primario); font-weight: 800; letter-spacing: .08em; }
+.habit-panel-title h3 { margin: 2px 0 0; color: var(--verde-oscuro); font-size: 1.18rem; }
+.habit-panel > p { font-size: .98rem; line-height: 1.66; }
+.habit-example, .habit-tip, .habit-myth { padding: 13px 15px; border-radius: 13px; line-height: 1.56; }
+.habit-example { background: #f4f9f5; border-left: 4px solid #79bf92; }
+.habit-tip { background: #fff7dc; border-left: 4px solid #deb84e; }
+.habit-myth { background: #fff0ec; border-left: 4px solid #dd806f; }
+.habit-myth span { color: var(--verde-oscuro); font-weight: 800; }
+.habits-summary { padding: 17px 19px; border-radius: 14px; background: linear-gradient(135deg,#e9f7ed,#fff7dc); border: 1.5px solid #cce5d3; font-size: .98rem; line-height: 1.62; }
+.habits-sources { color: var(--gris-suave); }
+.habits-sources h3 { color: var(--verde-oscuro); font-size: 1rem; margin-bottom: 5px; }
+.habits-sources p { margin: 0; font-size: .86rem; line-height: 1.6; }
+.habits-sources a { color: var(--verde-oscuro); font-weight: 700; text-decoration: underline; }
+@media (prefers-reduced-motion: reduce) {
+  .habits-intro-note span, .habit-level.active, .habit-panel.open::after { animation: none; }
+  .habit-panel, .habit-level { transition: none; }
+}
+@media (max-width: 600px) {
+  .habits-pyramid { padding-inline: 0; }
+  .habit-level { min-height: 59px; padding-inline: 8%; font-size: .8rem; }
+  .habit-level small { font-size: .64rem; }
+  .habit-level-6 { width: 58%; }
+  .habit-level-5 { width: 66%; }
+  .habit-level-4 { width: 74%; }
+  .habit-level-3 { width: 82%; }
+  .habit-level-2 { width: 90%; }
+  .habit-level-1 { width: 100%; }
+  .habit-panel.open { padding: 18px 16px; }
+}
+
+/* =============================================
    PASOS DIARIOS
    ============================================= */
 .steps-page { display: grid; gap: 18px; }

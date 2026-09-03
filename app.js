@@ -66,6 +66,26 @@ function toggleFaq(btn) {
   btn.setAttribute("aria-expanded", !isOpen);
 }
 
+// ---- PIRÁMIDE DE BUENOS HÁBITOS ----
+function toggleHabitLevel(panelId, btn) {
+  const panel = document.getElementById(panelId);
+  if (!panel) return;
+  const willOpen = !panel.classList.contains("open");
+
+  document.querySelectorAll(".habit-panel.open").forEach(item => item.classList.remove("open"));
+  document.querySelectorAll(".habit-level.active").forEach(item => {
+    item.classList.remove("active");
+    item.setAttribute("aria-expanded", "false");
+  });
+
+  if (willOpen) {
+    panel.classList.add("open");
+    btn.classList.add("active");
+    btn.setAttribute("aria-expanded", "true");
+    setTimeout(() => panel.scrollIntoView({ behavior: "smooth", block: "nearest" }), 120);
+  }
+}
+
 // ---- LIGHTBOX ----
 function openLightbox(src, alt) {
   const lb = document.getElementById("lightbox");

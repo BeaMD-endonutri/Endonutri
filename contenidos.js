@@ -86,6 +86,83 @@ const CONTENIDOS = {
     <p>📊 <strong>IMC:</strong> útil como orientación, pero no suficiente por sí solo</p>
   `,
 
+  "obesidad-piramide": `
+    <div class="habits-page">
+      <span class="eyebrow">DE LO MÁS IMPORTANTE A LO MÁS PEQUEÑO</span>
+      <h3>Construye desde la base</h3>
+      <p>Esta pirámide adapta la lógica del modelo de prioridades de Eric Helms al tratamiento actual del sobrepeso y la obesidad. Su idea principal es sencilla: <strong>primero deben funcionar los hábitos básicos; después se afinan los detalles</strong>.</p>
+      <p>No es una escala clínica oficial ni significa que todas las personas necesiten lo mismo. La obesidad es una enfermedad compleja y, además de los hábitos, puede requerir apoyo psicológico, medicación o cirugía cuando estén indicados.</p>
+
+      <div class="habits-intro-note"><span>👇</span><p><strong>Pulsa cada nivel</strong> para ver ejemplos, consejos y un mito frecuente. Empieza por la base, no por la punta.</p></div>
+
+      <div class="habits-pyramid" aria-label="Pirámide interactiva de buenos hábitos">
+        <button class="habit-level habit-level-6" onclick="toggleHabitLevel('habit-panel-6', this)" aria-expanded="false" aria-controls="habit-panel-6"><span>6</span>Detalles y suplementos<small>Opcionales</small></button>
+        <button class="habit-level habit-level-5" onclick="toggleHabitLevel('habit-panel-5', this)" aria-expanded="false" aria-controls="habit-panel-5"><span>5</span>Sueño y recuperación<small>Facilitan el proceso</small></button>
+        <button class="habit-level habit-level-4" onclick="toggleHabitLevel('habit-panel-4', this)" aria-expanded="false" aria-controls="habit-panel-4"><span>4</span>Fuerza y movimiento<small>Protegen la salud y el músculo</small></button>
+        <button class="habit-level habit-level-3" onclick="toggleHabitLevel('habit-panel-3', this)" aria-expanded="false" aria-controls="habit-panel-3"><span>3</span>Calidad y saciedad<small>Alimentos que nutren y llenan</small></button>
+        <button class="habit-level habit-level-2" onclick="toggleHabitLevel('habit-panel-2', this)" aria-expanded="false" aria-controls="habit-panel-2"><span>2</span>Déficit moderado<small>La condición para perder grasa</small></button>
+        <button class="habit-level habit-level-1" onclick="toggleHabitLevel('habit-panel-1', this)" aria-expanded="false" aria-controls="habit-panel-1"><span>1</span>Constancia, entorno y apoyo<small>La base que sostiene todo</small></button>
+      </div>
+
+      <div class="habit-panels" aria-live="polite">
+        <article class="habit-panel" id="habit-panel-1">
+          <div class="habit-panel-title"><span>🌱</span><div><small>NIVEL 1 · LA BASE</small><h3>Constancia, entorno y apoyo</h3></div></div>
+          <p>El mejor plan no es el más perfecto, sino el que puedes mantener. Los cambios pequeños y repetidos suelen ser más útiles que empezar con muchas prohibiciones y abandonar a las pocas semanas.</p>
+          <div class="habit-example"><strong>Ejemplos:</strong> planificar dos o tres comidas sencillas, tener opciones saludables visibles, pedir ayuda en casa o acudir a seguimiento profesional.</div>
+          <p class="habit-tip"><strong>Tip:</strong> elige solo uno o dos cambios para esta semana y anota cuándo los vas a realizar.</p>
+          <p class="habit-myth"><strong>Mito:</strong> “Si tuviera fuerza de voluntad, podría hacerlo solo”.<br><span>Realidad:</span> el entorno, el hambre, el sueño, la salud mental, la biología y los recursos disponibles influyen. Pedir apoyo no es fracasar.</p>
+        </article>
+
+        <article class="habit-panel" id="habit-panel-2">
+          <div class="habit-panel-title"><span>⚖️</span><div><small>NIVEL 2</small><h3>Un déficit energético moderado</h3></div></div>
+          <p>Para perder grasa, el cuerpo necesita recibir algo menos de energía de la que gasta durante un tiempo. <strong>Déficit no significa pasar hambre ni comer lo mínimo posible.</strong> Debe ser asumible, individualizado y proteger la salud.</p>
+          <div class="habit-example"><strong>Ejemplos:</strong> ajustar raciones, limitar bebidas calóricas y picoteos poco saciantes, cocinar más en casa o aplicar el método del plato.</div>
+          <p class="habit-tip"><strong>Tip:</strong> observa la tendencia durante varias semanas. El peso puede variar de un día a otro por agua, sal, menstruación o contenido intestinal.</p>
+          <p class="habit-myth"><strong>Mito:</strong> “Cuanto menos coma, más sano y rápido adelgazaré”.<br><span>Realidad:</span> una restricción excesiva aumenta el hambre, dificulta cubrir nutrientes y favorece la pérdida de masa muscular y el abandono.</p>
+        </article>
+
+        <article class="habit-panel" id="habit-panel-3">
+          <div class="habit-panel-title"><span>🥗</span><div><small>NIVEL 3</small><h3>Calidad de la dieta y saciedad</h3></div></div>
+          <p>La energía importa para el peso, pero la calidad importa para la salud, el hambre y la capacidad de mantener el plan. Prioriza verduras, fruta entera, legumbres, alimentos proteicos, cereales integrales, frutos secos y aceite de oliva virgen extra.</p>
+          <div class="habit-example"><strong>Ejemplos:</strong> yogur natural con fruta; lentejas con verduras; pescado con patata y ensalada; tortilla con pisto y pan integral.</div>
+          <p class="habit-tip"><strong>Tip:</strong> incluye una fuente de proteína y algún alimento rico en fibra en las comidas principales.</p>
+          <p class="habit-myth"><strong>Mito:</strong> “Para adelgazar tengo que eliminar los carbohidratos”.<br><span>Realidad:</span> pan, arroz, pasta, patata o legumbres pueden formar parte del plan. Importan la cantidad, la calidad y el conjunto de la dieta.</p>
+        </article>
+
+        <article class="habit-panel" id="habit-panel-4">
+          <div class="habit-panel-title"><span>🏋️</span><div><small>NIVEL 4</small><h3>Fuerza, pasos y actividad física</h3></div></div>
+          <p>La actividad física aporta beneficios aunque la báscula cambie poco. Durante la pérdida de peso, el entrenamiento de fuerza ayuda a conservar masa muscular. Caminar, subir escaleras y hacer actividad aeróbica cuidan el corazón y reducen el tiempo sentado.</p>
+          <div class="habit-example"><strong>Ejemplo semanal:</strong> fuerza dos o tres días, pasos adaptados a tu nivel y paseos, bicicleta o baile repartidos durante la semana.</div>
+          <p class="habit-tip"><strong>Tip:</strong> progresa poco a poco. Empieza con una cantidad que puedas repetir incluso en una semana complicada.</p>
+          <p class="habit-myth"><strong>Mito:</strong> “Si no sudo mucho, no sirve”.<br><span>Realidad:</span> sudar regula la temperatura; no mide la grasa perdida ni la calidad del entrenamiento.</p>
+        </article>
+
+        <article class="habit-panel" id="habit-panel-5">
+          <div class="habit-panel-title"><span>🌙</span><div><small>NIVEL 5</small><h3>Sueño, estrés y recuperación</h3></div></div>
+          <p>Dormir mejor no crea por sí solo un déficit calórico, pero el cansancio puede aumentar el hambre, empeorar las elecciones y reducir las ganas de moverse. El estrés también puede dificultar la planificación y favorecer comer de forma automática.</p>
+          <div class="habit-example"><strong>Ejemplos:</strong> horarios de sueño regulares, menos pantallas al final del día, luz natural por la mañana y estrategias de relajación que te resulten realistas.</div>
+          <p class="habit-tip"><strong>Tip:</strong> si roncas mucho, haces pausas al respirar o tienes somnolencia intensa, consulta: la apnea del sueño es frecuente y tiene tratamiento.</p>
+          <p class="habit-myth"><strong>Mito:</strong> “El cortisol me impide adelgazar haga lo que haga”.<br><span>Realidad:</span> el estrés influye, pero no anula las leyes de la energía. Conviene tratarlo por salud y porque facilita mantener los hábitos.</p>
+        </article>
+
+        <article class="habit-panel" id="habit-panel-6">
+          <div class="habit-panel-title"><span>🧩</span><div><small>NIVEL 6 · LA PUNTA</small><h3>Horarios, aplicaciones y suplementos</h3></div></div>
+          <p>Son ajustes secundarios. El número de comidas y sus horarios pueden adaptarse a tus preferencias, medicación, hambre y rutina. Las aplicaciones pueden ayudar a registrar hábitos, pero no son necesarias para todo el mundo.</p>
+          <div class="habit-example"><strong>Ejemplos:</strong> preparar la comida con antelación, repartir la proteína durante el día o usar una alarma para recordar caminar.</div>
+          <p class="habit-tip"> <strong>Tip:</strong> utiliza suplementos solo cuando exista una indicación concreta o sea difícil cubrir una necesidad con alimentos.</p>
+          <p class="habit-myth"><strong>Mito:</strong> “Un quemagrasas, un detox o comer a una hora exacta desbloqueará mi metabolismo”.<br><span>Realidad:</span> ningún suplemento compensa una base que no funciona y algunos productos pueden producir efectos adversos.</p>
+        </article>
+      </div>
+
+      <aside class="habits-summary"><strong>Orden práctico:</strong> si algo no avanza, revisa primero la base. Cambiar suplementos o el horario de una comida tendrá poco efecto si el plan no es sostenible o no existe un déficit energético.</aside>
+
+      <div class="habits-sources">
+        <h3>Modelo y evidencia</h3>
+        <p>Adaptación educativa inspirada en <a href="https://muscleandstrengthpyramids.com/" target="_blank" rel="noopener">The Muscle &amp; Strength Pyramid</a> de Eric Helms y actualizada con las <a href="https://www.nice.org.uk/guidance/ng246/chapter/Physical-activity-and-diet" target="_blank" rel="noopener">recomendaciones NICE 2025</a>, los <a href="https://diabetesjournals.org/care/article/49/Supplement_1/S166/163915/8-Obesity-and-Weight-Management-for-the-Prevention" target="_blank" rel="noopener">Standards of Care 2026 de la ADA</a> y la <a href="https://bmjopensem.bmj.com/content/11/3/e002363" target="_blank" rel="noopener">revisión sobre fuerza durante la pérdida de peso</a>.</p>
+      </div>
+    </div>
+  `,
+
   // ---------- EJERCICIO ----------
 
   "ejercicio-empezar": `
