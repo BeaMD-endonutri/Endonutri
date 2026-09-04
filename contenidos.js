@@ -366,11 +366,131 @@ const CONTENIDOS = {
   `,
 
   "ejercicio-cardio": `
-    <h3>Cardio: mueve tu corazón</h3>
-    <p>El ejercicio cardiovascular mejora la salud del corazón, la capacidad pulmonar y el estado de ánimo. También ayuda a crear un déficit calórico.</p>
-    <p>Ejemplos de cardio de bajo impacto (ideal para empezar):</p>
-    <p>🚶 Caminar rápido · 🚴 Bicicleta (estática o normal) · 🏊 Natación · 💃 Baile</p>
-    <p>El cardio moderado (puedes hablar pero notas el esfuerzo) durante 30 minutos, 5 días a la semana, es el objetivo recomendado.</p>
+    <div class="cardio-page">
+      <span class="cardio-eyebrow">MOVERSE PARA VIVIR MEJOR</span>
+      <h3>Cardio: entrenar el corazón, los pulmones y la resistencia</h3>
+      <p class="cardio-lead">Llamamos cardio o ejercicio aeróbico a cualquier actividad repetida que implica grandes grupos musculares y aumenta la respiración y el pulso durante varios minutos. <strong>No es solo correr:</strong> caminar, pedalear, nadar, bailar, remar o mover brazos y piernas desde una silla también pueden ser cardio.</p>
+
+      <section class="cardio-benefit-band" aria-label="Beneficios principales del ejercicio cardiovascular">
+        <div><span aria-hidden="true">♥</span><strong>Corazón</strong><small>Mejora la capacidad cardiorrespiratoria y ayuda a controlar la tensión.</small></div>
+        <div><span aria-hidden="true">⚡</span><strong>Metabolismo</strong><small>Favorece el control de glucosa, grasa visceral y perfil lipídico.</small></div>
+        <div><span aria-hidden="true">☀</span><strong>Vida diaria</strong><small>Da más resistencia para caminar, subir escaleras y mantener autonomía.</small></div>
+        <div><span aria-hidden="true">☺</span><strong>Bienestar</strong><small>Puede mejorar sueño, ánimo, función cognitiva y calidad de vida.</small></div>
+      </section>
+
+      <div class="cardio-target">
+        <div class="target-dial" aria-hidden="true"><strong>150–300</strong><span>min/semana</span></div>
+        <div>
+          <span class="cardio-eyebrow">META DE SALUD, NO PUNTO DE PARTIDA</span>
+          <h3>La referencia semanal para adultos</h3>
+          <p>La OMS recomienda entre <strong>150 y 300 minutos de actividad moderada</strong>, o entre <strong>75 y 150 minutos de actividad vigorosa</strong>, o una combinación. Se puede repartir durante la semana y <strong>cualquier cantidad es mejor que ninguna</strong>. Si partes de cero, no tienes que alcanzar esta cifra de golpe.</p>
+        </div>
+      </div>
+
+      <h3>¿Cómo sé a qué intensidad estoy?</h3>
+      <div class="talk-test" role="img" aria-label="Infografía del test del habla para medir la intensidad">
+        <article class="talk-zone zone-light"><span>1–2/10</span><strong>Suave</strong><p>Hablas y cantas con facilidad.</p><small>Paseo tranquilo, pedaleo muy suave.</small></article>
+        <article class="talk-zone zone-moderate"><span>3–5/10</span><strong>Moderada</strong><p>Hablas en frases, pero cantar cuesta.</p><small>Paso ligero, bici cómoda, baile continuo.</small></article>
+        <article class="talk-zone zone-hard"><span>6–8/10</span><strong>Vigorosa</strong><p>Solo dices pocas palabras seguidas.</p><small>Subir cuestas, correr, intervalos intensos.</small></article>
+        <article class="talk-zone zone-max"><span>9–10/10</span><strong>Máxima</strong><p>Casi no puedes hablar.</p><small>No es necesaria para cuidar la salud ni adecuada para empezar.</small></article>
+      </div>
+
+      <h3>Tipos de cardio: distintas herramientas, no una competición</h3>
+      <div class="cardio-types">
+        <article>
+          <div class="type-head"><span class="type-icon">🌿</span><div><small>LISS</small><h4>Continuo suave</h4></div></div>
+          <p>Ritmo estable y fácil, normalmente durante más tiempo. Es cómodo para empezar, recuperarse o acumular movimiento.</p>
+          <div class="type-example"><strong>Ejemplo:</strong> 25–45 min caminando, pedaleando o nadando suave; esfuerzo 2–3/10.</div>
+        </article>
+        <article>
+          <div class="type-head"><span class="type-icon">🚶</span><div><small>MICT</small><h4>Continuo moderado</h4></div></div>
+          <p>Mantienes un ritmo medio sin pausas. Es una de las formas con más evidencia y permite regular bien el esfuerzo.</p>
+          <div class="type-example"><strong>Ejemplo:</strong> 20–40 min a paso ligero o en bicicleta; esfuerzo 3–5/10.</div>
+        </article>
+        <article>
+          <div class="type-head"><span class="type-icon">↔</span><div><small>INTERVALOS</small><h4>Trabajo y recuperación</h4></div></div>
+          <p>Alterna tramos algo exigentes con otros suaves. No todos los intervalos son HIIT y pueden adaptarse a niveles bajos.</p>
+          <div class="type-example"><strong>Ejemplo:</strong> 1 min ligero + 2 min suave, repetido 6 veces.</div>
+        </article>
+        <article>
+          <div class="type-head"><span class="type-icon">⚡</span><div><small>HIIT</small><h4>Intervalos intensos</h4></div></div>
+          <p>Los tramos de trabajo son vigorosos y breves. Ahorra tiempo y mejora la capacidad aeróbica, pero no es imprescindible ni siempre apropiado.</p>
+          <div class="type-example"><strong>Ejemplo iniciado:</strong> 30 s intensos + 90 s suaves, 6–8 rondas, después de calentar.</div>
+        </article>
+        <article>
+          <div class="type-head"><span class="type-icon">💧</span><div><small>BAJO IMPACTO</small><h4>Menos carga articular</h4></div></div>
+          <p>Reduce saltos y golpes sin dejar de trabajar la resistencia. Puede realizarse suave, moderado o intenso.</p>
+          <div class="type-example"><strong>Ejemplo:</strong> bici reclinada, elíptica, ejercicios acuáticos o marcha sentada.</div>
+        </article>
+      </div>
+      <p class="cardio-evidence-note"><strong>Lo que dice la evidencia:</strong> en personas con sobrepeso u obesidad, HIIT y cardio continuo moderado producen cambios parecidos en peso y grasa corporal. El mejor método es el que resulte seguro, tolerable y sostenible. Además, hacer cardio puede mejorar la salud aunque la báscula apenas cambie.</p>
+
+      <h3>Adaptar el cardio cuando existe una patología o limitación</h3>
+      <p>No hay un ejercicio universal. Estas orientaciones ayudan a elegir una opción inicial, pero el diagnóstico, los síntomas y la medicación pueden exigir una valoración individual.</p>
+      <div class="cardio-adaptations">
+        <details open>
+          <summary><span>🫁</span><div><strong>Problemas respiratorios</strong><small>EPOC, asma o disnea</small></div><i>+</i></summary>
+          <div><p><strong>Suele funcionar:</strong> caminar o bicicleta estática, calentamiento más largo e intervalos cortos con recuperación. Por ejemplo, 1 minuto de trabajo y 1–2 minutos suaves.</p><p><strong>Adapta:</strong> regula el esfuerzo con la disnea; debe costar, pero seguir siendo controlable. En EPOC estable, tanto el entrenamiento continuo como el interválico pueden mejorar la capacidad física. La rehabilitación pulmonar es el contexto ideal cuando la limitación es importante.</p><p><strong>Precaución:</strong> sigue el plan de inhaladores indicado y evita entrenar durante una exacerbación.</p></div>
+        </details>
+        <details>
+          <summary><span>🧠</span><div><strong>Problemas neurológicos</strong><small>Ictus, Parkinson o esclerosis múltiple</small></div><i>+</i></summary>
+          <div><p><strong>Suele funcionar:</strong> bicicleta estática o reclinada, pedalier de brazos/piernas, marcha con apoyo o ejercicios acuáticos supervisados.</p><p><strong>Adapta:</strong> usa sesiones cortas, descansos planificados, señales rítmicas si ayudan a la marcha y una intensidad moderada que no empeore la técnica. La fatiga neurológica y el calor pueden requerir más pausas.</p><p><strong>Precaución:</strong> después de un ictus o con síntomas inestables, la progresión debe individualizarla rehabilitación o fisioterapia.</p></div>
+        </details>
+        <details>
+          <summary><span>⚖</span><div><strong>Problemas de equilibrio o riesgo de caída</strong><small>Vértigo, fragilidad o inestabilidad</small></div><i>+</i></summary>
+          <div><p><strong>Suele funcionar:</strong> bicicleta reclinada, pedalier sentado, piscina con apoyo o marcha junto a una barandilla y acompañamiento.</p><p><strong>Adapta:</strong> prioriza un entorno despejado, buena iluminación, calzado estable y tareas simples. El entrenamiento del equilibrio debe añadirse aparte; el cardio sentado mejora resistencia, pero no entrena por sí solo todas las reacciones de equilibrio.</p><p><strong>Evita al inicio:</strong> cinta sin supervisión, cambios rápidos de dirección y combinar marcha con tareas cognitivas si aumentan la inestabilidad.</p></div>
+        </details>
+        <details>
+          <summary><span>🦴</span><div><strong>Dolor articular, obesidad o movilidad reducida</strong><small>Rodilla, cadera, espalda o baja tolerancia</small></div><i>+</i></summary>
+          <div><p><strong>Suele funcionar:</strong> ejercicio acuático, bicicleta, elíptica, marcha en llano o cardio sentado.</p><p><strong>Adapta:</strong> empieza con 5–10 minutos, menos impacto y una resistencia que permita moverse con control. Divide una sesión larga en bloques breves si el dolor o la fatiga lo requieren.</p><p><strong>Regla práctica:</strong> una molestia leve y estable puede ser tolerable; dolor agudo, cojera nueva o empeoramiento que dura más de 24 horas indica que conviene reducir y consultar.</p></div>
+        </details>
+        <details>
+          <summary><span>♥</span><div><strong>Cardiopatía, hipertensión o diabetes</strong><small>Con control clínico y ajuste individual</small></div><i>+</i></summary>
+          <div><p><strong>Suele funcionar:</strong> cardio continuo moderado y progresivo. Calienta y vuelve a la calma durante 5–10 minutos; no termines de forma brusca.</p><p><strong>Adapta:</strong> algunos fármacos alteran la frecuencia cardiaca, por lo que el test del habla o la percepción de esfuerzo pueden ser más útiles. En diabetes tratada con insulina o sulfonilureas hay que conocer el riesgo de hipoglucemia.</p><p><strong>Precaución:</strong> cardiopatía inestable, tensión no controlada o síntomas con el esfuerzo requieren indicación sanitaria antes de progresar.</p></div>
+        </details>
+      </div>
+
+      <section class="cardio-start" aria-label="Infografía para empezar a hacer cardio desde cero">
+        <div class="start-title"><span class="cardio-eyebrow">DESDE CERO, SIN PRISAS</span><h3>Un ejemplo de progresión en seis semanas</h3><p>Repite cada semana si todavía cuesta. Avanza primero en tiempo, después en frecuencia y, por último, en intensidad.</p></div>
+        <ol class="start-route">
+          <li><span>1</span><div><strong>Semanas 1–2</strong><p>5–10 min suaves, 3 días. Puedes dividirlos en bloques de 3–5 min.</p></div></li>
+          <li><span>2</span><div><strong>Semanas 3–4</strong><p>10–20 min, 3–4 días. Añade tramos moderados de 1–2 min.</p></div></li>
+          <li><span>3</span><div><strong>Semanas 5–6</strong><p>20–30 min, 4–5 días. La mayor parte moderada y controlada.</p></div></li>
+          <li><span>✓</span><div><strong>Después</strong><p>Acércate poco a poco a 150 min semanales y elige la modalidad que puedas mantener.</p></div></li>
+        </ol>
+        <div class="start-formula"><strong>Antes</strong><span>5–10 min de calentamiento</span><b>→</b><strong>Durante</strong><span>ritmo que controles</span><b>→</b><strong>Después</strong><span>5 min suaves</span></div>
+      </section>
+
+      <section class="neat-infographic" aria-label="Infografía sobre NEAT y salud">
+        <div class="neat-main"><span aria-hidden="true">↗</span><div><small>NEAT</small><h3>El movimiento que no llamamos ejercicio</h3><p>Es la energía que gastas al caminar por casa, trabajar de pie, limpiar, subir escaleras, hacer recados o jugar. <strong>No sustituye al entrenamiento</strong>, pero reduce el tiempo sedentario y suma actividad durante muchas horas del día.</p></div></div>
+        <div class="neat-examples">
+          <article><span>30 min</span><p>de entrenamiento es valioso</p></article>
+          <b>+</b>
+          <article><span>Todo el día</span><p>con pequeñas oportunidades para moverse</p></article>
+          <b>=</b>
+          <article class="neat-result"><span>Más salud</span><p>y menos sedentarismo</p></article>
+        </div>
+        <div class="neat-actions">
+          <div>📞 Camina al hablar</div><div>🪜 Usa escaleras</div><div>⏱ Levántate con frecuencia</div><div>🛒 Haz recados a pie</div><div>🏠 Participa en tareas domésticas</div><div>🚶 Da paseos breves tras comer</div>
+        </div>
+        <p class="neat-note">No existe una cifra mágica de NEAT. El objetivo útil es detectar dónde puedes sentarte menos y moverte algo más, sin convertir cada minuto en una obligación.</p>
+      </section>
+
+      <aside class="cardio-safety"><span aria-hidden="true">!</span><div><strong>Detén el ejercicio y solicita valoración</strong><p>si aparece dolor u opresión en el pecho, desmayo, confusión, debilidad súbita, palpitaciones mantenidas o una falta de aire intensa y distinta de la habitual. Ante síntomas graves, llama al 112.</p></div></aside>
+
+      <details class="cardio-sources">
+        <summary>Fuentes científicas utilizadas</summary>
+        <ul>
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/33239350/" target="_blank" rel="noopener">Guías de actividad física y comportamiento sedentario de la OMS (2020)</a>.</li>
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/39724371/" target="_blank" rel="noopener">Ejercicio aeróbico y pérdida de peso: revisión sistemática y metaanálisis dosis-respuesta de 116 ensayos (2024)</a>.</li>
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/37800068/" target="_blank" rel="noopener">HIIT frente a entrenamiento continuo moderado en sobrepeso y obesidad: revisión sistemática y metaanálisis (2023)</a>.</li>
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/40083154/" target="_blank" rel="noopener">Entrenamiento aeróbico en EPOC: revisión sistemática y metaanálisis en red (2025)</a>.</li>
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/30844920/" target="_blank" rel="noopener">Guías de ejercicio para esclerosis múltiple, ictus y Parkinson: revisión sistemática (2019)</a>.</li>
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/34709478/" target="_blank" rel="noopener">Ejercicio y equilibrio en ictus, Parkinson y esclerosis múltiple: revisión sistemática y metaanálisis (2022)</a>.</li>
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/31552570/" target="_blank" rel="noopener">Interrumpir periodos prolongados sentado: revisión sistemática y metaanálisis (2020)</a>.</li>
+        </ul>
+      </details>
+    </div>
   `,
 
   "ejercicio-casa": `
