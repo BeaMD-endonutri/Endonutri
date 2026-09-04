@@ -31,11 +31,100 @@ const CONTENIDOS = {
   // ---------- ENTENDIENDO LA OBESIDAD ----------
 
   "obesidad-que-es": `
-    <h3>La obesidad es una enfermedad crónica</h3>
-    <p>La obesidad es una <strong>enfermedad crónica, compleja y multifactorial</strong>. No es una cuestión de fuerza de voluntad. Está influenciada por factores genéticos, metabólicos, hormonales, psicológicos y sociales.</p>
-    <p>Se define cuando el Índice de Masa Corporal (IMC) es igual o superior a 30 kg/m². Pero el IMC es solo una herramienta, no el único indicador de salud.</p>
-    <p>El tratamiento de la obesidad requiere un enfoque integral: alimentación, actividad física, apoyo psicológico y, en algunos casos, tratamiento médico o quirúrgico.</p>
-    <!-- Añade más texto o imágenes aquí -->
+    <div class="obesity-lead">
+      <span class="obesity-kicker">COMPRENDER SIN CULPAR</span>
+      <h3>La obesidad es mucho más que un número en la báscula</h3>
+      <p>Es una condición crónica y compleja en la que existe un exceso de grasa corporal —o una distribución de esa grasa— que puede aumentar el riesgo de enfermedad o llegar a alterar el funcionamiento del organismo. <strong>No es una elección, ni una falta de voluntad.</strong></p>
+    </div>
+
+    <div class="obesity-callout">
+      <div class="obesity-callout-icon" aria-hidden="true">i</div>
+      <div>
+        <h4>El IMC orienta, pero no cuenta toda la historia</h4>
+        <p>El IMC sirve como primera señal y para estudiar poblaciones, pero no distingue grasa de músculo ni indica dónde se acumula la grasa. En una valoración individual conviene añadir el perímetro de cintura, la composición corporal, la historia clínica, las analíticas, los síntomas y cómo se desenvuelve la persona en su día a día.</p>
+      </div>
+    </div>
+
+    <h3 class="obesity-section-title">Obesidad preclínica y clínica: una forma más precisa de entenderla</h3>
+    <div class="obesity-state-grid">
+      <article class="obesity-state-card preclinical">
+        <span class="state-label">Riesgo aumentado</span>
+        <h4>Obesidad preclínica</h4>
+        <p>Hay exceso de grasa corporal, pero los órganos funcionan bien y no existen limitaciones atribuibles a ella. El objetivo es vigilar la salud y reducir riesgos futuros.</p>
+      </article>
+      <article class="obesity-state-card clinical">
+        <span class="state-label">Enfermedad presente</span>
+        <h4>Obesidad clínica</h4>
+        <p>El exceso de grasa ya contribuye a síntomas, alteraciones de órganos o dificultades importantes en actividades cotidianas. Requiere tratamiento basado en evidencia y seguimiento sanitario.</p>
+      </article>
+    </div>
+
+    <h3 class="obesity-section-title">¿Cómo puede afectar a la salud?</h3>
+    <p>El riesgo no es igual para todas las personas. Depende de la cantidad y localización de la grasa, del tiempo de evolución, la edad, la genética y otras enfermedades. Cuando aparecen complicaciones, pueden afectar a varios sistemas:</p>
+    <div class="health-impact-grid">
+      <article><span aria-hidden="true">♥</span><strong>Corazón y vasos</strong><small>Hipertensión, infarto, insuficiencia cardiaca, arritmias e ictus.</small></article>
+      <article><span aria-hidden="true">●</span><strong>Metabolismo</strong><small>Diabetes tipo 2, alteraciones del colesterol e hígado graso.</small></article>
+      <article><span aria-hidden="true">◒</span><strong>Sueño y respiración</strong><small>Apnea del sueño, peor descanso y dificultad respiratoria.</small></article>
+      <article><span aria-hidden="true">◆</span><strong>Articulaciones</strong><small>Más carga, dolor, artrosis y limitación de la movilidad.</small></article>
+      <article><span aria-hidden="true">✦</span><strong>Salud reproductiva</strong><small>Alteraciones menstruales, fertilidad y complicaciones del embarazo.</small></article>
+      <article><span aria-hidden="true">☼</span><strong>Bienestar y calidad de vida</strong><small>Fatiga, dolor, estigma y mayor riesgo de algunos trastornos mentales y cánceres.</small></article>
+    </div>
+
+    <div class="spain-prevalence" aria-label="Prevalencia de obesidad y exceso de peso en España">
+      <div class="spain-copy">
+        <span class="obesity-kicker">LA REALIDAD EN ESPAÑA</span>
+        <h3>Casi 1 de cada 5 personas adultas vive con obesidad</h3>
+        <p>El estudio nacional ENE-COVID, con 57.131 participantes adultos, estimó que en 2020 había cerca de <strong>9 millones</strong> de adultos con obesidad. Son datos basados en peso y talla declarados por los participantes, por lo que deben interpretarse como una estimación.</p>
+      </div>
+      <div class="prevalence-numbers">
+        <div><strong>18,7%</strong><span>obesidad</span></div>
+        <div><strong>55,8%</strong><span>exceso de peso</span></div>
+        <div><strong>4,9%</strong><span>obesidad severa</span></div>
+      </div>
+    </div>
+    <p class="prevalence-child-note"><strong>En la infancia:</strong> ALADINO 2023 encontró exceso de peso en más de un tercio de los escolares de 6 a 9 años, con mediciones directas en una muestra representativa de 12.678 niños y niñas.</p>
+
+    <div class="obesity-wheel-intro">
+      <span class="obesity-kicker">UNA RUEDA, MUCHAS INFLUENCIAS</span>
+      <h3>¿Qué factores intervienen en la obesidad?</h3>
+      <p>Pulsa cada elemento de la rueda. Ningún factor actúa solo y su importancia cambia de una persona a otra.</p>
+    </div>
+    <div class="obesity-wheel" id="obesityWheel" role="group" aria-label="Rueda interactiva de factores que influyen en la obesidad">
+      <div class="wheel-rings" aria-hidden="true"></div>
+      <div class="wheel-center"><strong>Tu historia es única</strong><span>No existe una sola causa</span></div>
+      <button class="wheel-factor active" data-factor="biology" style="--x:50%;--y:7%"><span>🧬</span>Biología y genética</button>
+      <button class="wheel-factor" data-factor="brain" style="--x:80%;--y:21%"><span>🧠</span>Hambre y metabolismo</button>
+      <button class="wheel-factor" data-factor="food" style="--x:93%;--y:50%"><span>🍽️</span>Alimentación y entorno</button>
+      <button class="wheel-factor" data-factor="movement" style="--x:80%;--y:79%"><span>🚶</span>Movimiento diario</button>
+      <button class="wheel-factor" data-factor="sleep" style="--x:50%;--y:93%"><span>🌙</span>Sueño y ritmos</button>
+      <button class="wheel-factor" data-factor="mind" style="--x:20%;--y:79%"><span>💭</span>Estrés y emociones</button>
+      <button class="wheel-factor" data-factor="medical" style="--x:7%;--y:50%"><span>💊</span>Salud y medicación</button>
+      <button class="wheel-factor" data-factor="social" style="--x:20%;--y:21%"><span>🏘️</span>Entorno social</button>
+    </div>
+    <div class="factor-detail" id="obesityFactorDetail" aria-live="polite">
+      <div class="factor-detail-icon" id="factorDetailIcon" aria-hidden="true">🧬</div>
+      <div>
+        <span class="factor-detail-label">FACTOR SELECCIONADO</span>
+        <h4 id="factorDetailTitle">Biología y genética</h4>
+        <p id="factorDetailText">Los genes influyen en el apetito, la saciedad, la distribución de la grasa y la respuesta del cuerpo al entorno. Predisposición no significa destino, pero explica por qué el mismo ambiente no afecta a todas las personas igual.</p>
+        <div class="factor-advice"><strong>¿Qué puede ayudar?</strong><p id="factorDetailAdvice">Evita compararte. Trabaja con objetivos y estrategias ajustados a tu historia, y pide una valoración profesional si existe obesidad de inicio muy temprano, hambre extrema o antecedentes familiares marcados.</p></div>
+      </div>
+    </div>
+
+    <div class="obesity-takeaway">
+      <strong>La idea importante</strong>
+      <p>El balance energético sigue siendo el mecanismo por el que cambia la grasa corporal, pero ese balance está condicionado por la biología, el entorno y las circunstancias de vida. Tratar la obesidad consiste en actuar sobre las piezas que sí pueden modificarse y ofrecer ayuda sanitaria cuando no basta con cambios de hábitos.</p>
+    </div>
+
+    <details class="evidence-sources">
+      <summary>Fuentes científicas y datos utilizados</summary>
+      <ul>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/39824205/" target="_blank" rel="noopener">Comisión de The Lancet sobre definición y criterios diagnósticos de obesidad clínica (2025)</a>.</li>
+        <li><a href="https://dom-pubs.onlinelibrary.wiley.com/doi/10.1111/dom.16263" target="_blank" rel="noopener">Revisión de complicaciones relacionadas con la obesidad (Blüher, 2025)</a>.</li>
+        <li><a href="https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2023.1195249/full" target="_blank" rel="noopener">Estudio ENE-COVID: prevalencia adulta y desigualdades geográficas en España (2023)</a>.</li>
+        <li><a href="https://aesan.gob.es/nutricion/datos-sobrepeso-obesidad" target="_blank" rel="noopener">AESAN: ENE-COVID y ALADINO 2023</a>.</li>
+      </ul>
+    </details>
   `,
 
   "obesidad-por-que": `

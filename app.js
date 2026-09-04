@@ -101,6 +101,81 @@ function closeLightbox() {
   document.body.style.overflow = "";
 }
 
+// ---- RUEDA INTERACTIVA: FACTORES DE LA OBESIDAD ----
+const OBESITY_FACTORS = {
+  biology: {
+    icon: "🧬",
+    title: "Biología y genética",
+    text: "Los genes influyen en el apetito, la saciedad, la distribución de la grasa y la respuesta del cuerpo al entorno. Predisposición no significa destino, pero explica por qué el mismo ambiente no afecta a todas las personas igual.",
+    advice: "Evita compararte. Trabaja con objetivos ajustados a tu historia y pide valoración profesional si existe obesidad de inicio muy temprano, hambre extrema o antecedentes familiares marcados."
+  },
+  brain: {
+    icon: "🧠",
+    title: "Hambre, saciedad y metabolismo",
+    text: "El cerebro integra señales del intestino, el tejido adiposo y otros órganos para regular hambre, saciedad y gasto energético. Tras perder peso puede aumentar el hambre y disminuir el gasto: es una adaptación biológica, no un fallo personal.",
+    advice: "Prioriza comidas saciantes con proteína, fibra y alimentos poco procesados; evita restricciones extremas y busca apoyo sanitario si el hambre dificulta mantener los cambios."
+  },
+  food: {
+    icon: "🍽️",
+    title: "Alimentación y entorno alimentario",
+    text: "La disponibilidad, el precio, el tamaño de las raciones, la publicidad y la alta palatabilidad de algunos productos influyen en cuánto y cómo comemos, muchas veces sin una decisión plenamente consciente.",
+    advice: "Haz que la opción cotidiana sea fácil: planifica algunas comidas, deja alimentos saciantes a la vista, compra con lista y reserva los productos más densos en energía para un consumo consciente, sin prohibiciones."
+  },
+  movement: {
+    icon: "🚶",
+    title: "Movimiento diario y sedentarismo",
+    text: "No solo cuenta el gimnasio. El trabajo, el transporte, el dolor, la discapacidad y el tiempo sentado modifican el gasto energético y la salud cardiometabólica. La inactividad también puede ser consecuencia, no solo causa, de la obesidad.",
+    advice: "Empieza desde tu nivel: pausas breves al estar sentado, caminar más y fuerza dos días por semana. Si hay dolor o limitación, adapta el ejercicio con un profesional."
+  },
+  sleep: {
+    icon: "🌙",
+    title: "Sueño y ritmos circadianos",
+    text: "Dormir poco o mal puede aumentar el apetito, reducir la saciedad, empeorar la regulación de la glucosa y dejar menos energía para moverse. Los turnos y la apnea del sueño también tienen un papel importante.",
+    advice: "Mantén horarios lo más regulares posible, reduce cafeína y pantallas al final del día y consulta si roncas, haces pausas respiratorias o tienes mucha somnolencia diurna."
+  },
+  mind: {
+    icon: "💭",
+    title: "Estrés, emociones y salud mental",
+    text: "El estrés mantenido, la ansiedad, la depresión, el trauma o comer para regular emociones pueden alterar el sueño, la actividad y la relación con la comida. El estigma por el peso añade otra carga y puede alejar de la atención sanitaria.",
+    advice: "Identifica situaciones que disparan el picoteo, practica alternativas breves de regulación emocional y solicita apoyo psicológico cuando la comida sea la principal forma de afrontar el malestar."
+  },
+  medical: {
+    icon: "💊",
+    title: "Enfermedades, hormonas y medicación",
+    text: "Algunas enfermedades y medicamentos pueden favorecer el aumento de peso o dificultar su pérdida. Entre ellos se encuentran determinados corticoides, antipsicóticos, antidepresivos, antiepilépticos y tratamientos para la diabetes.",
+    advice: "No suspendas ningún fármaco por tu cuenta. Coméntalo con tu profesional para revisar causas, alternativas y objetivos. Las alteraciones hormonales existen, pero explican solo una parte de los casos."
+  },
+  social: {
+    icon: "🏘️",
+    title: "Entorno social y condiciones de vida",
+    text: "Los ingresos, la educación, los horarios laborales, los cuidados, el barrio y el acceso a alimentos saludables, espacios seguros y atención sanitaria crean oportunidades muy diferentes para cuidar la salud.",
+    advice: "Elige cambios compatibles con tus recursos reales. Busca apoyos familiares y comunitarios y plantea al equipo sanitario las barreras económicas, de tiempo, movilidad o cuidados para adaptar el plan."
+  }
+};
+
+function initObesityWheel() {
+  const wheel = document.getElementById("obesityWheel");
+  const detail = document.getElementById("obesityFactorDetail");
+  if (!wheel || !detail || wheel.dataset.ready === "true") return;
+  wheel.dataset.ready = "true";
+
+  wheel.querySelectorAll(".wheel-factor").forEach(button => {
+    button.addEventListener("click", () => {
+      const factor = OBESITY_FACTORS[button.dataset.factor];
+      if (!factor) return;
+      wheel.querySelectorAll(".wheel-factor").forEach(item => item.classList.remove("active"));
+      button.classList.add("active");
+      detail.classList.remove("factor-enter");
+      void detail.offsetWidth;
+      document.getElementById("factorDetailIcon").textContent = factor.icon;
+      document.getElementById("factorDetailTitle").textContent = factor.title;
+      document.getElementById("factorDetailText").textContent = factor.text;
+      document.getElementById("factorDetailAdvice").textContent = factor.advice;
+      detail.classList.add("factor-enter");
+    });
+  });
+}
+
 // Cerrar lightbox con ESC
 document.addEventListener("keydown", e => {
   if (e.key === "Escape") {
@@ -114,7 +189,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Carga contenidos
   if (typeof cargarContenidos === "function") cargarContenidos();
 
-  // Sección inicial
+    initObesityWheel();
+
+// Sección inicial
   showSection("home");
 
   // En desktop, abrir el primer grupo del sidebar
