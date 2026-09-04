@@ -357,12 +357,107 @@ const CONTENIDOS = {
   `,
 
   "ejercicio-fuerza": `
-    <h3>El entrenamiento de fuerza: tu mejor aliado</h3>
-    <p>Desarrollar músculo es fundamental para la salud metabólica. El músculo consume energía incluso en reposo, ayuda a controlar la glucosa y mejora la composición corporal.</p>
-    <p>No necesitas pesas enormes. Puedes empezar con tu propio peso corporal.</p>
-    <p>🏋️ <strong>Ejercicios básicos para empezar:</strong><br>
-    Sentadillas · Zancadas · Flexiones · Plancha · Puente de glúteos</p>
-    <p>Recomendación: 2-3 sesiones por semana, dejando un día de descanso entre sesiones.</p>
+    <div class="strength-page">
+      <span class="strength-eyebrow">FUERZA PARA LA VIDA REAL</span>
+      <h3>Entrenar fuerza es enseñar a tu cuerpo a superar resistencias</h3>
+      <p class="strength-lead">No hace falta levantar enormes cantidades de peso ni tener experiencia. Entrenamos fuerza cada vez que nuestros músculos empujan, tiran, sostienen o frenan una carga: una mancuerna, una máquina, una banda, una mochila o el propio cuerpo. <strong>El objetivo inicial no es sufrir: es aprender, progresar y ganar capacidad.</strong></p>
+
+      <figure class="strength-hero">
+        <img src="img/fuerza-gimnasio-casa.webp" alt="Personas de distintas edades y tamaños corporales entrenando fuerza con mancuernas, una silla y bandas elásticas en el gimnasio y en casa" loading="lazy">
+        <figcaption>La fuerza puede adaptarse al lugar, al material y a las capacidades de cada persona.</figcaption>
+      </figure>
+
+      <section class="strength-benefits" aria-label="Beneficios del entrenamiento de fuerza">
+        <article><span>💪</span><strong>Más fuerza y músculo</strong><p>Facilita levantarse, cargar bolsas, subir escaleras y mantener la autonomía.</p></article>
+        <article><span>🦴</span><strong>Huesos y articulaciones</strong><p>Estimula el hueso y mejora la capacidad de los tejidos para tolerar cargas.</p></article>
+        <article><span>🩸</span><strong>Salud metabólica</strong><p>Mejora la sensibilidad a la insulina y ayuda a controlar glucosa y tensión arterial.</p></article>
+        <article><span>⚖</span><strong>Composición corporal</strong><p>Ayuda a conservar masa muscular durante una pérdida de peso y puede reducir grasa.</p></article>
+        <article><span>🧠</span><strong>Confianza y bienestar</strong><p>Comprobar que puedes hacer más mejora la seguridad, la función y la calidad de vida.</p></article>
+        <article><span>🛡</span><strong>Envejecimiento saludable</strong><p>Combate la pérdida de fuerza y masa muscular que aparece con la edad y la inactividad.</p></article>
+      </section>
+
+      <div class="strength-dose">
+        <div class="dose-copy"><span class="strength-eyebrow">¿CUÁNTOS DÍAS?</span><h3>Dos sesiones semanales son una base excelente</h3><p>La mayor mejora ocurre al pasar de no entrenar a entrenar con regularidad. No existe una frecuencia perfecta para todo el mundo: importa trabajar los grandes grupos musculares, recuperarse y poder mantenerlo.</p></div>
+        <div class="dose-steps" role="img" aria-label="Infografía sobre frecuencia semanal de fuerza">
+          <div><span>1</span><strong>día</strong><small>Ya puede aportar beneficios y es un comienzo válido.</small></div>
+          <div class="recommended"><span>2</span><strong>días</strong><small>Base recomendada para salud y progreso inicial.</small><b>BUEN PUNTO DE PARTIDA</b></div>
+          <div><span>3</span><strong>días</strong><small>Permite repartir más práctica y volumen si recuperas bien.</small></div>
+        </div>
+        <p class="dose-note"><strong>¿Y lo óptimo?</strong> Para la mayoría de principiantes, dos sesiones de cuerpo completo son eficaces y realistas. Tres pueden ser útiles si gustan y encajan. Más días no garantizan más resultados: suelen servir para repartir el trabajo, no para reemplazar descanso y constancia.</p>
+      </div>
+
+      <h3>Distintas formas de entrenar la fuerza</h3>
+      <div class="strength-modalities">
+        <details open><summary><span>🏋️</span><div><strong>Pesos libres</strong><small>Mancuernas, barras, kettlebells</small></div><i>+</i></summary><div><p>Permiten muchos movimientos y progresiones. Requieren aprender a estabilizar la carga, pero no son solo para personas avanzadas.</p><p><strong>Ejemplos:</strong> sentadilla a un banco con mancuerna, peso muerto con kettlebell, remo y press de hombro.</p></div></details>
+        <details><summary><span>⚙</span><div><strong>Máquinas</strong><small>Recorrido guiado y ajuste sencillo</small></div><i>+</i></summary><div><p>Ofrecen estabilidad y facilitan concentrarse en empujar o tirar. Son especialmente prácticas al empezar, con problemas de equilibrio o cuando interesa descargar una articulación.</p><p><strong>Ejemplos:</strong> prensa de piernas, remo sentado, jalón al pecho y press de pecho.</p></div></details>
+        <details><summary><span>↔</span><div><strong>Bandas elásticas</strong><small>Portátiles y adaptables</small></div><i>+</i></summary><div><p>La resistencia aumenta al estirar la banda. Funcionan para ganar fuerza si la tensión progresa y las últimas repeticiones requieren esfuerzo.</p><p><strong>Ejemplos:</strong> remo, sentadilla, press, pasos laterales y extensión de rodilla.</p></div></details>
+        <details><summary><span>🏠</span><div><strong>Peso corporal y objetos de casa</strong><small>Sin gimnasio</small></div><i>+</i></summary><div><p>Levantarse de una silla, empujar una pared o cargar una mochila también es fuerza. Para progresar puedes añadir repeticiones, reducir apoyos, aumentar recorrido o cargar la mochila.</p><p><strong>Ejemplos:</strong> sentarse y levantarse, flexión en pared, puente de glúteos, remo con banda y transporte de bolsas.</p></div></details>
+        <details><summary><span>⏸</span><div><strong>Isométricos</strong><small>Hacer fuerza sin mover la articulación</small></div><i>+</i></summary><div><p>Se mantiene una posición durante unos segundos. Pueden ser útiles cuando el movimiento está limitado o como complemento, aunque no sustituyen todo el trabajo dinámico.</p><p><strong>Ejemplos:</strong> empujar una pared, sostener una banda o mantener una sentadilla alta apoyada.</p></div></details>
+        <details><summary><span>⚡</span><div><strong>Potencia</strong><small>Producir fuerza con rapidez y control</small></div><i>+</i></summary><div><p>Es importante para reaccionar, subir un escalón o evitar una caída. Se entrena moviendo una carga manejable con intención rápida, después de dominar la técnica.</p><p><strong>Ejemplo:</strong> levantarse de una silla con rapidez y volver a sentarse lentamente, con supervisión si existe riesgo de caída.</p></div></details>
+      </div>
+
+      <section class="strength-recipe" aria-label="Infografía de una sesión inicial de fuerza">
+        <div class="recipe-title"><span class="strength-eyebrow">TU PRIMERA SESIÓN</span><h3>Una receta sencilla de cuerpo completo</h3><p>Elige una variante que puedas hacer con buena técnica y sin dolor agudo.</p></div>
+        <div class="movement-map">
+          <article><span>1</span><strong>Rodillas</strong><small>Sentarse y levantarse o prensa</small></article>
+          <article><span>2</span><strong>Empujar</strong><small>Pared, mancuernas o máquina</small></article>
+          <article><span>3</span><strong>Tirar</strong><small>Remo con banda o polea</small></article>
+          <article><span>4</span><strong>Cadera</strong><small>Puente de glúteos o peso muerto</small></article>
+          <article><span>5</span><strong>Transportar y estabilizar</strong><small>Cargar bolsas o ejercicios de tronco</small></article>
+        </div>
+        <div class="training-formula">
+          <div><strong>1–3</strong><span>series por ejercicio</span></div><b>×</b><div><strong>6–15</strong><span>repeticiones</span></div><b>·</b><div><strong>2–3</strong><span>repeticiones «en reserva»</span></div><b>·</b><div><strong>1–3 min</strong><span>de descanso</span></div>
+        </div>
+        <p class="recipe-explain"><strong>Repeticiones en reserva:</strong> termina la serie cuando notes que todavía podrías hacer dos o tres repeticiones correctas. No necesitas llegar al fallo muscular para progresar.</p>
+      </section>
+
+      <div class="gym-home">
+        <section><span class="place-icon">🏋️</span><h3>En el gimnasio</h3><p>Las máquinas aportan estabilidad y permiten cambiar la carga con facilidad. Pide que te enseñen a regular asiento y apoyos.</p><ol><li>Prensa o sentadilla a banco</li><li>Remo sentado</li><li>Press de pecho en máquina</li><li>Peso muerto con mancuerna</li><li>Jalón al pecho</li><li>Transporte de mancuernas</li></ol></section>
+        <section><span class="place-icon">🏠</span><h3>En casa</h3><p>Una silla estable, una banda y una mochila pueden ser suficientes. Comprueba que los anclajes no se suelten.</p><ol><li>Sentarse y levantarse</li><li>Remo con banda</li><li>Flexiones en pared o encimera</li><li>Puente de glúteos</li><li>Press con banda o botellas</li><li>Cargar una mochila o bolsas</li></ol></section>
+      </div>
+
+      <section class="progress-ladder" aria-label="Infografía para progresar en fuerza">
+        <span class="strength-eyebrow">PROGRESIÓN SIN PRISAS</span><h3>Cuando se vuelve fácil, sube un solo escalón</h3>
+        <ol><li><span>1</span><p>Aprende el movimiento y repítelo con control.</p></li><li><span>2</span><p>Añade alguna repetición dentro del rango.</p></li><li><span>3</span><p>Añade una serie si la recuperación es buena.</p></li><li><span>4</span><p>Sube ligeramente el peso o la tensión.</p></li><li><span>5</span><p>Vuelve a empezar en la parte baja del rango.</p></li></ol>
+        <p>Si completas todas las repeticiones con buena técnica y aún podrías hacer muchas más, la resistencia probablemente ya es demasiado fácil.</p>
+      </section>
+
+      <h3>¿Cuándo notaré resultados?</h3>
+      <div class="muscle-timeline">
+        <article><span>Primeras semanas</span><strong>Aprendes y coordinas mejor</strong><p>Es frecuente ganar fuerza antes de ver cambios corporales porque el sistema nervioso usa mejor la musculatura.</p></article>
+        <article><span>6–12 semanas</span><strong>Pueden aparecer cambios medibles</strong><p>Con entrenamiento progresivo, alimentación suficiente y descanso pueden empezar a detectarse cambios musculares.</p></article>
+        <article><span>3–6 meses y más</span><strong>Los cambios se hacen más claros</strong><p>La masa muscular aumenta lentamente. Edad, experiencia, genética, proteína, energía, sueño y constancia cambian el ritmo.</p></article>
+      </div>
+      <p class="timeline-note">No uses estas fechas como examen: son orientativas. La fuerza, la facilidad para moverte, la ropa y los perímetros pueden cambiar antes o de forma distinta al peso.</p>
+
+      <section class="recomp-card">
+        <div class="recomp-scale" aria-hidden="true"><span>GRASA</span><b>↘</b><i>⇄</i><b>↗</b><span>MÚSCULO</span></div>
+        <div><span class="strength-eyebrow">RECOMPOSICIÓN CORPORAL</span><h3>Perder grasa mientras se gana o conserva músculo</h3><p>La báscula puede bajar poco —o incluso mantenerse— mientras disminuye la grasa y mejora la masa muscular. Esto se llama recomposición corporal y suele ser más probable en personas principiantes, que vuelven tras una pausa o que tienen mayor reserva de grasa.</p><p>La favorecen un entrenamiento progresivo, suficiente proteína, un déficit energético moderado si se busca perder grasa y descanso adecuado. <strong>No ocurre a la misma velocidad en todo el mundo</strong> y conservar músculo durante una pérdida de peso ya es un resultado valioso.</p></div>
+      </section>
+
+      <h3>Mitos frecuentes: abre y comprueba</h3>
+      <div class="strength-myths">
+        <details><summary><span>“Para adelgazar solo necesito cardio”</span><i>+</i></summary><div><strong>Falso.</strong> La pérdida de grasa depende sobre todo del balance energético, pero la fuerza ayuda a conservar músculo, mejora la función y complementa al cardio. Lo más completo es combinar ambas formas de ejercicio.</div></details>
+        <details><summary><span>“Las pesas me harán demasiado grande”</span><i>+</i></summary><div><strong>Muy improbable.</strong> Ganar mucha masa muscular exige años de entrenamiento específico. Al comenzar suelen mejorar antes la fuerza, la postura y la capacidad para las tareas diarias.</div></details>
+        <details><summary><span>“Si no tengo agujetas, no ha servido”</span><i>+</i></summary><div><strong>Falso.</strong> Las agujetas reflejan novedad o daño muscular, no la calidad del entrenamiento. Progresar con buena técnica sin dolor incapacitante es mejor señal.</div></details>
+        <details><summary><span>“Tengo que llegar siempre al fallo”</span><i>+</i></summary><div><strong>Falso.</strong> Se puede ganar fuerza y músculo terminando la mayoría de series con algunas repeticiones posibles. El fallo aumenta fatiga y no es necesario para principiantes.</div></details>
+        <details><summary><span>“Poco peso no sirve”</span><i>+</i></summary><div><strong>Falso.</strong> Cargas ligeras también pueden estimular el músculo si la serie resulta suficientemente exigente y progresa. Las cargas mayores son especialmente útiles para maximizar fuerza, pero no son el único camino.</div></details>
+        <details><summary><span>“El músculo pesa más que la grasa”</span><i>+</i></summary><div><strong>Un kilo siempre pesa un kilo.</strong> El músculo es más denso y ocupa menos volumen que la grasa; por eso dos cuerpos con el mismo peso pueden tener formas y funciones diferentes.</div></details>
+        <details><summary><span>“Se puede eliminar grasa de una zona con ejercicios”</span><i>+</i></summary><div><strong>No de forma selectiva.</strong> Un ejercicio fortalece los músculos de la zona, pero el cuerpo decide de dónde moviliza la grasa según genética, hormonas y balance energético.</div></details>
+        <details><summary><span>“Con obesidad o edad avanzada es peligroso”</span><i>+</i></summary><div><strong>No si se adapta correctamente.</strong> La fuerza es especialmente útil para conservar autonomía y masa muscular. Deben ajustarse carga, rango, apoyos y ejercicios a la situación clínica.</div></details>
+      </div>
+
+      <aside class="strength-safety"><span>!</span><div><strong>Entrena con seguridad</strong><p>Respira durante el esfuerzo, evita aguantar el aire de forma prolongada, usa apoyos estables y detente ante dolor agudo, opresión torácica, desmayo o falta de aire anormal. Si existe cardiopatía inestable, hipertensión no controlada, cirugía reciente o limitación importante, pide una valoración profesional antes de progresar.</p></div></aside>
+
+      <details class="strength-sources"><summary>Fuentes científicas utilizadas</summary><ul>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/41843416/" target="_blank" rel="noopener">ACSM 2026: prescripción de fuerza para función, hipertrofia y rendimiento; síntesis de 137 revisiones</a>.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/37414459/" target="_blank" rel="noopener">Prescripción de fuerza e hipertrofia: revisión sistemática y metaanálisis en red (2023)</a>.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/33955140/" target="_blank" rel="noopener">Ejercicio, pérdida de peso y composición corporal en adultos con sobrepeso u obesidad: revisión de revisiones (2021)</a>.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/38841642/" target="_blank" rel="noopener">Entrenamiento combinado y composición corporal en sobrepeso y obesidad: revisión sistemática y metaanálisis (2024)</a>.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/35228201/" target="_blank" rel="noopener">Fortalecimiento muscular y riesgo de mortalidad y enfermedades crónicas: revisión sistemática y metaanálisis (2022)</a>.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/37057640/" target="_blank" rel="noopener">Ejercicio para sarcopenia en personas mayores: revisión sistemática y metaanálisis en red (2023)</a>.</li>
+      </ul></details>
+    </div>
   `,
 
   "ejercicio-cardio": `
