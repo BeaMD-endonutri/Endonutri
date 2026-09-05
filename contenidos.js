@@ -135,11 +135,79 @@ const CONTENIDOS = {
   `,
 
   "obesidad-hambre": `
-    <h3>Hambre real vs. hambre emocional</h3>
-    <p>Existen distintos tipos de hambre:</p>
-    <p>🟢 <strong>Hambre fisiológica:</strong> aparece gradualmente, cualquier alimento la calma, desaparece al comer.</p>
-    <p>🔴 <strong>Hambre emocional:</strong> aparece de repente, pide alimentos específicos (dulces, ultraprocesados), no desaparece aunque comas.</p>
-    <p>Las hormonas del hambre (grelina) y la saciedad (leptina, GLP-1, PYY) regulan cuándo y cuánto comemos. En la obesidad, estas señales pueden estar alteradas.</p>
+    <div class="hunger-page">
+      <div class="hunger-hero">
+        <div><span class="hunger-eyebrow">CUERPO · CEREBRO · ENTORNO</span><h3>El hambre no es falta de voluntad: es información</h3><p>Comer no depende de una sola hormona ni de tener “autocontrol”. El estómago, el intestino, el tejido adiposo, el cerebro, las emociones, el sueño y lo que nos rodea conversan continuamente. <strong>Aprender a escucharlos ayuda; culparse, no.</strong></p></div>
+        <img src="img/hambre-saciedad/eje-intestino-cerebro.webp" alt="Ilustración del diálogo entre intestino y cerebro mediante señales" loading="lazy">
+      </div>
+
+      <section class="hunger-key">
+        <span aria-hidden="true">≠</span><div><h3>“Hambre física” y “hambre emocional” no son dos cajas cerradas</h3><p>Una emoción puede aumentar un hambre que ya existía; una comida sabrosa puede apetecer aunque el estómago esté cómodo; y el cansancio puede dificultar reconocer las señales. No hay un síntoma que las separe siempre. La pregunta útil no es «¿este hambre es verdadera?», sino <strong>«¿qué necesito ahora y qué respuesta me puede cuidar?»</strong>.</p></div>
+      </section>
+
+      <figure class="hunger-map">
+        <img src="img/hambre-saciedad/tipos-hambre.webp" alt="Cuatro situaciones que pueden activar las ganas de comer: señales corporales, emociones, placer y hábitos" loading="lazy">
+        <figcaption>Varias formas de hambre o apetito pueden aparecer a la vez. Pulsa cada tarjeta para conocer sus pistas.</figcaption>
+      </figure>
+
+      <div class="hunger-types">
+        <details open>
+          <summary><span>🍽️</span><div><small>NECESIDAD ENERGÉTICA</small><strong>Hambre física</strong></div><i>+</i></summary>
+          <div><p>Suele crecer progresivamente tras varias horas sin comer. Puede acompañarse de vacío, ruidos abdominales, menor concentración, irritabilidad o poca energía. Normalmente acepta distintas comidas y disminuye al comer suficiente.</p><p><b>Qué ayuda:</b> horarios razonablemente regulares, comidas completas y no esperar siempre a llegar con hambre extrema.</p></div>
+        </details>
+        <details>
+          <summary><span>💛</span><div><small>REGULACIÓN EMOCIONAL</small><strong>Comer por emociones</strong></div><i>+</i></summary>
+          <div><p>La comida puede calmar, distraer, acompañar o celebrar. Puede aparecer con ansiedad, tristeza, aburrimiento, enfado, soledad… y también con alegría. A veces es repentina y busca un alimento concreto, pero no siempre.</p><p><b>Qué ayuda:</b> nombrar la emoción, elegir conscientemente si comer y sumar otras respuestas posibles. Comer sigue siendo una opción; no es un fracaso.</p></div>
+        </details>
+        <details>
+          <summary><span>✨</span><div><small>PLACER Y RECOMPENSA</small><strong>Apetito hedónico</strong></div><i>+</i></summary>
+          <div><p>Es el “me apetece” que aparece al ver, oler o imaginar algo agradable incluso sin déficit energético. El cerebro aprende qué alimentos dan placer y les presta atención. Es una función normal, no una adicción automática.</p><p><b>Qué ayuda:</b> decidir una cantidad, sentarse, saborearla sin pantallas y comprobar si el placer continúa o se vuelve automático.</p></div>
+        </details>
+        <details>
+          <summary><span>🕒</span><div><small>APRENDIZAJE Y ENTORNO</small><strong>Hambre condicionada</strong></div><i>+</i></summary>
+          <div><p>El cuerpo aprende asociaciones: palomitas con una película, picoteo al cocinar, postre tras comer o hambre al llegar una hora concreta. Envases grandes, comida visible y compañía también pueden aumentar lo que apetece o se sirve.</p><p><b>Qué ayuda:</b> cambiar la señal o el contexto: guardar alimentos fuera de la vista, servir en un cuenco o crear una rutina alternativa.</p></div>
+        </details>
+      </div>
+
+      <section class="hunger-scale-box">
+        <span class="hunger-eyebrow">PRUEBA INTERACTIVA</span><h3>¿Cómo está tu depósito ahora?</h3><p>Elige el número que más se aproxima. No necesitas acertar: practicar aumenta la conciencia corporal.</p>
+        <div class="hunger-scale" role="group" aria-label="Escala orientativa de hambre y saciedad">
+          <button onclick="setHungerSignal(0,this)"><b>0</b><small>vacío</small></button><button onclick="setHungerSignal(2,this)"><b>2</b><small>mucha hambre</small></button><button onclick="setHungerSignal(4,this)"><b>4</b><small>hambre suave</small></button><button onclick="setHungerSignal(6,this)"><b>6</b><small>cómoda</small></button><button onclick="setHungerSignal(8,this)"><b>8</b><small>llena</small></button><button onclick="setHungerSignal(10,this)"><b>10</b><small>muy incómoda</small></button>
+        </div>
+        <div class="hunger-scale-result" id="hungerScaleResult" aria-live="polite"><span>4–6</span><div><strong>Una zona tranquila para observar</strong><p>Puede ser buen momento para decidir con calma si empezar, continuar o terminar. La cifra no es una orden.</p></div></div>
+      </section>
+
+      <section class="hormone-world">
+        <img src="img/hambre-saciedad/mensajeros-hormonales.webp" alt="Mensajeros hormonales viajando desde estómago, intestino y tejido adiposo hacia el cerebro" loading="lazy">
+        <div><span class="hunger-eyebrow">EL CHAT INTERNO DEL CUERPO</span><h3>Las hormonas son mensajes, no jefas</h3><p>El cerebro integra muchas señales a la vez. Ninguna decide por sí sola cuándo debes comer.</p></div>
+      </section>
+      <div class="hormone-cards">
+        <details class="ghrelin"><summary><span>↑</span><div><small>ESTÓMAGO</small><strong>Grelina</strong><em>“Podría ser hora de buscar comida”</em></div><i>+</i></summary><div><p>Suele aumentar antes de las comidas y bajar después. Ayuda a iniciar la ingesta, pero también responde a horarios aprendidos, sueño y pérdida de peso. Tener más hambre tras adelgazar puede ser una adaptación biológica, no un fallo personal.</p></div></details>
+        <details class="leptin"><summary><span>↔</span><div><small>TEJIDO ADIPOSO</small><strong>Leptina</strong><em>“Estas son las reservas disponibles”</em></div><i>+</i></summary><div><p>Informa al cerebro sobre las reservas energéticas a medio y largo plazo. En muchas personas con obesidad hay leptina elevada, pero el cerebro responde menos a su señal: se denomina resistencia a la leptina. No se corrige tomando un alimento concreto.</p></div></details>
+        <details class="glp"><summary><span>↓</span><div><small>INTESTINO</small><strong>GLP‑1 y PYY</strong><em>“Ha llegado comida; baja el ritmo”</em></div><i>+</i></summary><div><p>Aumentan después de comer y participan en la saciedad y la comunicación intestino‑cerebro. Los medicamentos agonistas de GLP‑1 imitan o amplifican parte de estas señales, pero sus dosis y efectos no equivalen al GLP‑1 producido por un alimento.</p></div></details>
+        <details class="cck"><summary><span>●</span><div><small>INTESTINO DELGADO</small><strong>CCK</strong><em>“La comida está en marcha”</em></div><i>+</i></summary><div><p>Se libera durante la comida, especialmente ante grasas y proteínas, y ayuda a generar plenitud a corto plazo. La saciedad final surge del conjunto: volumen, nutrientes, velocidad, experiencia y contexto.</p></div></details>
+      </div>
+
+      <h3>La pausa de 90 segundos: curiosidad antes que prohibición</h3>
+      <div class="pause-route">
+        <article><span>1</span><strong>Para</strong><p>Respira y sal del piloto automático. Si hay hambre intensa, no la retrases innecesariamente.</p></article>
+        <article><span>2</span><strong>Pregunta</strong><p>¿Qué noto en el cuerpo? ¿Qué emoción hay? ¿Qué ha disparado el apetito? ¿Cuándo comí?</p></article>
+        <article><span>3</span><strong>Elige</strong><p>Comer, esperar, cambiar de actividad o pedir apoyo. Elige la respuesta que mejor cubra la necesidad.</p></article>
+        <article><span>4</span><strong>Aprende</strong><p>Después observa qué ocurrió. No conviertas el resultado en una nota de aprobado o suspenso.</p></article>
+      </div>
+
+      <section class="appetite-weather"><h3>El “tiempo” también cambia el apetito</h3><div><article><span>🌙</span><strong>Poco sueño</strong><p>Puede aumentar el apetito y la atracción por alimentos energéticos.</p></article><article><span>📉</span><strong>Restricción intensa</strong><p>Saltarse comidas o comer demasiado poco suele amplificar hambre y pensamientos sobre comida.</p></article><article><span>🧠</span><strong>Estrés y ánimo</strong><p>Pueden aumentar o reducir el apetito; cada persona responde de forma diferente.</p></article><article><span>💊</span><strong>Medicación</strong><p>Algunos fármacos cambian hambre, saciedad, náuseas o preferencias. No ajustes dosis por tu cuenta.</p></article><article><span>🥗</span><strong>Composición</strong><p>Proteína, fibra, agua y volumen suelen prolongar la saciedad, dentro de una alimentación suficiente.</p></article><article><span>👀</span><strong>Entorno</strong><p>Olores, anuncios, disponibilidad, tamaño servido y compañía influyen aunque no haya hambre física.</p></article></div></section>
+
+      <aside class="hunger-care"><span>!</span><div><strong>Cuándo pedir ayuda</strong><p>Consulta si hay episodios frecuentes de pérdida de control, atracones, vómitos, compensaciones, miedo intenso a comer, restricción marcada o gran malestar. No se resuelve con más disciplina: merece valoración sanitaria y psicológica especializada.</p></div></aside>
+
+      <details class="hunger-sources"><summary>Fuentes científicas y matices de la evidencia</summary><ul>
+        <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12479663/" target="_blank" rel="noopener">Braden et al. Emotional Eating and Obesity: An Update and New Insights (2025)</a>.</li>
+        <li><a href="https://bpspsychub.onlinelibrary.wiley.com/doi/10.1111/bjop.12768" target="_blank" rel="noopener">Revisión sistemática y metaanálisis sobre alimentación emocional en personas con sobrepeso u obesidad (2025)</a>.</li>
+        <li><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/obr.13531" target="_blank" rel="noopener">Metaanálisis de hormonas gastrointestinales y apetito en obesidad (Obesity Reviews, 2023)</a>.</li>
+        <li><a href="https://bpspubs.onlinelibrary.wiley.com/doi/10.1002/prp2.1243" target="_blank" rel="noopener">Revisión sobre grelina, PYY, CCK y otras señales de regulación del apetito (2024)</a>.</li>
+        <li><a href="https://www.nice.org.uk/guidance/ng246" target="_blank" rel="noopener">NICE: prevención y tratamiento del sobrepeso y la obesidad (2025)</a>.</li>
+      </ul><p>Las categorías de hambre son herramientas educativas, no diagnósticos biológicos separados. La evidencia sobre alimentación emocional utiliza cuestionarios y definiciones heterogéneas; por eso se evitan reglas rígidas.</p></details>
+    </div>
   `,
 
   "obesidad-metabolismo": `
@@ -1048,6 +1116,26 @@ const FAQ = [
 // =============================================
 // FUNCIÓN: Cargar todos los contenidos
 // =============================================
+function setHungerSignal(value, button) {
+  const result = document.getElementById("hungerScaleResult");
+  if (!result) return;
+  const messages = {
+    0: ["0", "Hambre extrema", "Tu cuerpo necesita energía. Si puedes, come pronto y elige algo fácil de tolerar; llegar habitualmente aquí puede dificultar parar con comodidad."],
+    2: ["2", "Mucha hambre", "Es un buen momento para comer. Una comida completa suele cuidar mejor esta señal que intentar distraerla."],
+    4: ["4", "Hambre suave", "Puedes empezar a comer o planificar qué tomarás. Todavía hay margen para elegir con calma."],
+    6: ["6", "Comodidad y saciedad", "Quizá estés satisfecha o satisfecho. Comprueba sabor, comodidad y ganas de continuar; no tienes que terminar ni dejar nada por obligación."],
+    8: ["8", "Bastante plenitud", "Puedes parar, guardar lo que queda y observar. Haber llegado aquí no es un error: solo aporta información para la próxima vez."],
+    10: ["10", "Plenitud incómoda", "Busca comodidad, evita compensar y deja que pase. Si ocurre a menudo o con pérdida de control, coméntalo con un profesional."]
+  };
+  const [number, title, copy] = messages[value] || messages[4];
+  result.innerHTML = `<span>${number}</span><div><strong>${title}</strong><p>${copy}</p></div>`;
+  document.querySelectorAll(".hunger-scale button").forEach(btn => btn.classList.remove("active"));
+  if (button) button.classList.add("active");
+  result.classList.remove("hunger-result-pop");
+  void result.offsetWidth;
+  result.classList.add("hunger-result-pop");
+}
+
 function cargarContenidos() {
   // Textos
   Object.entries(CONTENIDOS).forEach(([id, html]) => {
