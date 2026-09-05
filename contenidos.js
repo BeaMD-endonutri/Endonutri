@@ -1135,8 +1135,9 @@ function cargarContenidos() {
     const c = CONFIG.CONTACTO;
     let cards = `
       <div class="contact-intro">
-        <span aria-hidden="true">💬</span>
+        <img src="img/enfermera-contacto-endonutri.webp" alt="Ilustración de Bea, enfermera de Endonutri" loading="lazy">
         <div>
+          <span class="contact-kicker">CONTACTO ENDONUTRI</span>
           <h3>¿Tienes alguna duda?</h3>
           <p>Puedes contactar conmigo para resolver dudas relacionadas con la <strong>nutrición</strong>, el <strong>ejercicio</strong>, la <strong>medicación pautada por tu endocrino</strong> o el <strong>cambio de citas</strong>.</p>
         </div>
