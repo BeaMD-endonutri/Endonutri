@@ -211,12 +211,74 @@ const CONTENIDOS = {
   `,
 
   "obesidad-metabolismo": `
-    <h3>El metabolismo: ¿qué es exactamente?</h3>
-    <p>El metabolismo es el conjunto de procesos que usa tu cuerpo para obtener y gastar energía. Se divide en:</p>
-    <p>⚡ <strong>Metabolismo basal:</strong> la energía que gastas solo para vivir (respirar, latir el corazón...). Representa el 60-70% de tu gasto total.</p>
-    <p>🏃 <strong>Actividad física:</strong> el ejercicio y el movimiento del día a día.</p>
-    <p>🍽️ <strong>Efecto térmico de los alimentos:</strong> la energía que usas para digerir.</p>
-    <p>El metabolismo es individual y puede variar. No existe un "metabolismo lento" como excusa universal, pero sí hay factores que lo influyen: edad, masa muscular, hormonas tiroideas, sueño y más.</p>
+    <div class="metabolism-page">
+      <div class="metabolism-hero">
+        <div><span class="metabolism-eyebrow">ENERGÍA · ADAPTACIÓN · SALUD</span><h3>Tu metabolismo no es una hoguera: es una ciudad en funcionamiento</h3><p>Mientras duermes, tus células reparan, el corazón bombea, el cerebro trabaja y los pulmones respiran. Cuando comes, te mueves o entrenas, la ciudad cambia de ritmo. <strong>Metabolismo</strong> es el conjunto de reacciones que mantienen todo eso en marcha; el gasto de energía es solo una parte.</p></div>
+        <img src="img/metabolismo/gasto-energia.webp" alt="Ilustración de los componentes del gasto energético alrededor de una persona" loading="lazy">
+      </div>
+
+      <section class="metabolism-key"><span>⚡</span><div><h3>Metabolismo sano no significa “quemar muchas calorías”</h3><p>Significa poder obtener y usar energía, mantener glucosa y lípidos en rangos adecuados, conservar músculo y órganos funcionales y responder a comida, actividad, descanso y enfermedad. Una persona pequeña puede gastar menos y tener un metabolismo completamente sano.</p></div></section>
+
+      <section class="energy-lab">
+        <span class="metabolism-eyebrow">LABORATORIO INTERACTIVO</span><h3>¿En qué se gasta la energía de un día?</h3><p>Pulsa cada pieza. Los porcentajes exactos cambian mucho entre personas y días; aquí importa entender el mecanismo.</p>
+        <div class="energy-parts" role="group" aria-label="Componentes del gasto energético diario">
+          <button class="active" onclick="setMetabolismPart('rest',this)"><span>♥</span><strong>Reposo</strong><small>Mantenerte viva o vivo</small></button>
+          <button onclick="setMetabolismPart('food',this)"><span>🍲</span><strong>Digestión</strong><small>Procesar la comida</small></button>
+          <button onclick="setMetabolismPart('neat',this)"><span>👟</span><strong>NEAT</strong><small>Moverte sin entrenar</small></button>
+          <button onclick="setMetabolismPart('exercise',this)"><span>🏋️</span><strong>Ejercicio</strong><small>Actividad planificada</small></button>
+        </div>
+        <div class="energy-result" id="metabolismPartResult" aria-live="polite"><span>LA PARTE MAYOR</span><div><strong>Gasto en reposo</strong><p>Es la energía para cerebro, corazón, hígado, riñones, respiración, temperatura y reparación. Depende sobre todo del tamaño y composición corporal, además de edad, sexo biológico, genética y estado de salud.</p></div></div>
+      </section>
+
+      <div class="metabolism-factors">
+        <article><span>🧬</span><strong>Genética y biología</strong><p>Influyen en tamaño corporal, composición, apetito, eficiencia y respuesta al entorno. No determinan el destino, pero sí el punto de partida.</p></article>
+        <article><span>💪</span><strong>Masa libre de grasa</strong><p>Órganos y músculo consumen energía en reposo. Ganar músculo ayuda a la función y eleva algo el gasto, pero no convierte el cuerpo en un horno.</p></article>
+        <article><span>👟</span><strong>Movimiento diario</strong><p>Caminar, levantarte, limpiar, gesticular o usar escaleras. El NEAT es muy variable y puede bajar sin que lo notes cuando comes menos.</p></article>
+        <article><span>🦋</span><strong>Hormonas y enfermedad</strong><p>Tiroides, menopausia, síndrome de Cushing, diabetes y otras situaciones pueden influir directa o indirectamente. Requieren valoración, no autodiagnóstico.</p></article>
+        <article><span>💊</span><strong>Medicación</strong><p>Algunos fármacos modifican apetito, glucosa, fatiga o actividad. No los suspendas: el equipo sanitario puede revisar alternativas.</p></article>
+        <article><span>🌙</span><strong>Sueño y estrés</strong><p>Influyen más en hambre, decisiones, recuperación y ganas de moverse que en “apagar” directamente el metabolismo.</p></article>
+      </div>
+
+      <section class="metabolic-tomb">
+        <div class="tomb-title"><span class="metabolism-eyebrow">EL MITO DE LA “TUMBA METABÓLICA”</span><h3>El cuerpo se adapta; no queda enterrado ni roto</h3></div>
+        <div class="tomb-verdict"><span>NO</span><p>No existe evidencia de un bloqueo permanente en el que comer poco impida físicamente perder grasa pese a un déficit energético sostenido y correctamente medido.</p></div>
+        <div class="tomb-verdict real"><span>SÍ</span><p>Existe <strong>adaptación metabólica</strong>: tras perder peso, el gasto puede disminuir algo más de lo esperado por el nuevo tamaño corporal. También puede aumentar el hambre y reducirse el movimiento espontáneo.</p></div>
+        <img src="img/metabolismo/adaptacion-metabolica.webp" alt="Historia visual de la adaptación del gasto durante la pérdida de peso y cómo ajustar el plan" loading="lazy">
+        <div class="adaptation-steps"><article><span>1</span><strong>Menos cuerpo que mantener</strong><p>Un cuerpo más ligero necesita menos energía en reposo y para desplazarse.</p></article><article><span>2</span><strong>Menos comida que procesar</strong><p>Al comer menos, también baja el coste energético de la digestión.</p></article><article><span>3</span><strong>Ahorro adicional</strong><p>En algunas personas aparece termogénesis adaptativa y mayor eficiencia.</p></article><article><span>4</span><strong>Conducta compensatoria</strong><p>Puede haber más hambre, fatiga y menos NEAT. A menudo pesa tanto o más que el cambio basal.</p></article></div>
+        <p class="adaptation-note"><strong>¿Qué significa en la práctica?</strong> Que quizá haya que reajustar cantidades o actividad al avanzar, no que necesites comer cada vez menos sin límite. Las dietas extremas aumentan el coste físico y psicológico y favorecen perder músculo.</p>
+      </section>
+
+      <h3>Desmontando el “acelerador metabólico”</h3>
+      <div class="metabolism-myths">
+        <details><summary><strong>“Si como muy poco, entraré en modo hambre y engordaré”</strong><i>+</i></summary><div>Una restricción real produce pérdida de peso, pero puede disminuir el gasto, aumentar el hambre, reducir el movimiento y favorecer abandonos o episodios de sobreingesta. El problema no es que el cuerpo cree energía de la nada, sino que una pauta extrema es difícil de sostener y puede dañar músculo y salud.</div></details>
+        <details><summary><strong>“Hacer cinco o seis comidas acelera el metabolismo”</strong><i>+</i></summary><div>Con energía y nutrientes equivalentes, repartir la comida en más tomas no ofrece una ventaja metabólica importante. El número de comidas debe adaptarse a hambre, medicación, horarios y preferencias.</div></details>
+        <details><summary><strong>“El desayuno enciende el metabolismo”</strong><i>+</i></summary><div>Desayunar puede ser útil para algunas personas, pero no es obligatorio para activar el gasto ni garantiza perder peso. Importan la alimentación completa y la adherencia.</div></details>
+        <details><summary><strong>“El músculo quema cientos de calorías mientras descanso”</strong><i>+</i></summary><div>El músculo sí gasta energía y conviene conservarlo, pero cada kilo adicional produce un aumento modesto del gasto en reposo. Su gran valor está en fuerza, función, glucosa, autonomía y calidad de la pérdida de peso.</div></details>
+        <details><summary><strong>“Té verde, picante, café o agua fría derriten grasa”</strong><i>+</i></summary><div>Algunos producen cambios pequeños y transitorios en el gasto. No generan una pérdida relevante por sí solos y la cafeína puede empeorar sueño, ansiedad o palpitaciones.</div></details>
+        <details><summary><strong>“Sudar más significa quemar más grasa”</strong><i>+</i></summary><div>El sudor regula la temperatura. La bajada inmediata de peso es agua y se recupera al hidratarse. Fajas, saunas o ropa térmica no aumentan la pérdida de grasa.</div></details>
+        <details><summary><strong>“Después de los 40 el metabolismo se desploma”</strong><i>+</i></summary><div>El gasto no cae de repente en un cumpleaños. Los cambios con la edad se relacionan en parte con menor masa muscular, actividad, sueño, menopausia, enfermedad y medicación; varios son modificables.</div></details>
+        <details><summary><strong>“Si no adelgazo, seguro que tengo hipotiroidismo”</strong><i>+</i></summary><div>El hipotiroidismo puede favorecer cansancio y una ganancia generalmente moderada, en parte por líquidos. Si está bien tratado, no suele explicar por sí solo una obesidad persistente. Se confirma con analítica, no por síntomas aislados.</div></details>
+      </div>
+
+      <section class="metabolism-foundations">
+        <img src="img/metabolismo/pilares-metabolicos.webp" alt="Persona rodeada de alimentación, fuerza, movimiento diario, sueño y apoyo sanitario" loading="lazy">
+        <div><span class="metabolism-eyebrow">LO QUE SÍ IMPORTA</span><h3>Cinco pilares para perder grasa cuidando el metabolismo</h3><ol><li><b>Déficit moderado y ajustable:</b> suficiente para progresar sin convertir cada día en una lucha.</li><li><b>Proteína y alimentación completa:</b> ayudan a preservar músculo y saciedad; la pauta se individualiza si existe enfermedad renal.</li><li><b>Entrenamiento de fuerza:</b> protege masa libre de grasa, capacidad y autonomía durante la pérdida.</li><li><b>Movimiento cotidiano:</b> busca una base sostenible de pasos, pausas activas y tareas, además del ejercicio.</li><li><b>Sueño, seguimiento y tratamiento:</b> revisar evolución, medicación, síntomas y barreras permite ajustar antes de recurrir a extremos.</li></ol></div>
+      </section>
+
+      <section class="progress-dashboard"><h3>¿Cómo saber si el plan funciona?</h3><div><article><span>📉</span><strong>Tendencia, no un día</strong><p>Observa varias semanas: el agua, el ciclo, la sal y el tránsito mueven la báscula.</p></article><article><span>📏</span><strong>Más que el peso</strong><p>Cintura, ropa, fuerza, movilidad, analíticas, sueño y síntomas también cuentan.</p></article><article><span>🔧</span><strong>Ajustes pequeños</strong><p>Si no hay cambio durante suficiente tiempo y el plan se cumple, revisa ingesta, NEAT, medicación y objetivos.</p></article></div></section>
+
+      <aside class="metabolism-care"><span>!</span><div><strong>Solicita valoración si hay señales de alarma</strong><p>Consulta ante fatiga intensa nueva, intolerancia marcada al frío, cambios menstruales, debilidad, pérdida de peso no buscada, taquicardia, diarrea persistente, edema o cambios rápidos sin explicación. No tomes hormonas tiroideas ni “quemagrasas” sin prescripción.</p></div></aside>
+
+      <details class="metabolism-sources"><summary>Fuentes científicas y criterios utilizados</summary><ul>
+        <li><a href="https://www.cambridge.org/core/journals/british-journal-of-nutrition/article/does-adaptive-thermogenesis-occur-after-weight-loss-in-adults-a-systematic-review/726FC60518DA67349B9C3EC1D75A7156" target="_blank" rel="noopener">Revisión sistemática sobre termogénesis adaptativa tras pérdida de peso (2022)</a>.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/38664956/" target="_blank" rel="noopener">Lopez Torres et al. Adaptación del gasto en reposo tras dieta y cirugía bariátrica (Obesity, 2024)</a>.</li>
+        <li><a href="https://ajcn.nutrition.org/article/S0002-9165%2823%2966184-2/fulltext" target="_blank" rel="noopener">Martins et al. Adaptación metabólica, hambre y recuperación de peso (AJCN, 2023)</a>.</li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/books/NBK279077/" target="_blank" rel="noopener">NCBI: gasto energético, efecto térmico y NEAT</a>.</li>
+        <li><a href="https://pubmed.ncbi.nlm.nih.gov/40909191/" target="_blank" rel="noopener">Revisión sistemática y metaanálisis de ejercicio de fuerza durante pérdida de peso dietética (2025)</a>.</li>
+        <li><a href="https://www.nationalacademies.org/read/26818/chapter/6" target="_blank" rel="noopener">National Academies: factores que determinan el gasto y las necesidades energéticas</a>.</li>
+        <li><a href="https://www.nice.org.uk/guidance/ng246/chapter/Physical-activity-and-diet" target="_blank" rel="noopener">NICE 2025: dieta y actividad física en el tratamiento del sobrepeso y la obesidad</a>.</li>
+      </ul><p>El gasto individual no puede deducirse con exactitud de porcentajes genéricos ni relojes. La calorimetría indirecta es la referencia clínica para medir gasto en reposo; las ecuaciones son estimaciones.</p></details>
+    </div>
   `,
 
   "obesidad-mitos": `
@@ -1116,6 +1178,24 @@ const FAQ = [
 // =============================================
 // FUNCIÓN: Cargar todos los contenidos
 // =============================================
+function setMetabolismPart(part, button) {
+  const result = document.getElementById("metabolismPartResult");
+  if (!result) return;
+  const parts = {
+    rest: ["LA PARTE MAYOR", "Gasto en reposo", "Es la energía para cerebro, corazón, hígado, riñones, respiración, temperatura y reparación. Depende sobre todo del tamaño y composición corporal, además de edad, sexo biológico, genética y estado de salud."],
+    food: ["UNA PARTE PEQUEÑA", "Efecto térmico de los alimentos", "Digerir, absorber y almacenar nutrientes cuesta energía. En una dieta mixta suele rondar una fracción pequeña del total. La proteína requiere más procesamiento, pero no anula las calorías que aporta."],
+    neat: ["LA MÁS VARIABLE", "Movimiento cotidiano o NEAT", "Incluye caminar, estar de pie, limpiar, gesticular y cambiar de postura. Puede variar mucho y bajar durante una dieta sin que te des cuenta. Sumar movimiento accesible suele ser más realista que perseguir un “acelerador”."],
+    exercise: ["SALUD Y CAPACIDAD", "Ejercicio planificado", "Cardio y fuerza aumentan el gasto durante la actividad; la fuerza además protege músculo y función. El gasto posterior existe, pero suele ser mucho menor de lo que prometen algunos anuncios."]
+  };
+  const [tag, title, copy] = parts[part] || parts.rest;
+  result.innerHTML = `<span>${tag}</span><div><strong>${title}</strong><p>${copy}</p></div>`;
+  document.querySelectorAll(".energy-parts button").forEach(btn => btn.classList.remove("active"));
+  if (button) button.classList.add("active");
+  result.classList.remove("metabolism-result-pop");
+  void result.offsetWidth;
+  result.classList.add("metabolism-result-pop");
+}
+
 function setHungerSignal(value, button) {
   const result = document.getElementById("hungerScaleResult");
   if (!result) return;
