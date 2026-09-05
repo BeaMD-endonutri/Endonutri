@@ -787,14 +787,91 @@ const CONTENIDOS = {
   `,
 
   "herramientas-raciones": `
-    <h3>El tamaño de las raciones con la mano</h3>
-    <p>Puedes usar tu propia mano como guía de raciones, sin necesidad de báscula:</p>
-    <p>✊ <strong>Puño cerrado</strong> → una ración de hidratos (arroz, pasta, patata cocida)</p>
-    <p>🤲 <strong>Palma de la mano</strong> → una ración de proteína (carne, pescado)</p>
-    <p>👍 <strong>Pulgar</strong> → una ración de grasa (aceite, frutos secos)</p>
-    <p>🖐️ <strong>Mano abierta</strong> → una ración de verdura cruda</p>
-    <p>🤜 <strong>Puño</strong> → una ración de fruta</p>
-    <p>💡 Este método es aproximado pero práctico para el día a día.</p>
+    <div class="portion-page">
+      <span class="portion-eyebrow">MIRAR · SERVIR · AJUSTAR</span>
+      <h3>Tu mano: el medidor que siempre viaja contigo</h3>
+      <p class="portion-lead">No necesitas pesar cada ingrediente ni comer siempre la misma cantidad. Estas imágenes ofrecen un <strong>punto de partida visual</strong>: sírvete, come sin prisa y ajusta según tu hambre, saciedad, actividad y objetivos.</p>
+
+      <section class="portion-compass" aria-label="Cómo utilizar la guía de raciones">
+        <div class="portion-compass-icon" aria-hidden="true">✋</div>
+        <div><span>LA REGLA DE LAS 3 A</span><h3>Aproxima, atiende y adapta</h3><p><strong>Aproxima</strong> con la mano o el plato. <strong>Atiende</strong> a cómo llegas y cómo terminas. <strong>Adapta</strong>: repetir o dejar parte de la comida son opciones válidas.</p></div>
+      </section>
+
+      <h3 class="portion-section-title">Toca una tarjeta y descubre la ración</h3>
+      <p class="portion-intro">Las equivalencias no son exactas entre sí: ayudan a imaginar cantidades habituales sin convertir la comida en un examen.</p>
+      <div class="portion-gallery">
+        <details class="portion-card portion-card--veg" name="portion-guide">
+          <summary>
+            <img src="img/raciones/verduras.webp" alt="Dos manos en forma de cuenco sosteniendo verduras variadas" loading="lazy">
+            <span class="portion-card-copy"><small>VERDURAS Y HORTALIZAS</small><strong>Dos manos juntas</strong><em>Abre para ver ejemplos</em></span><i aria-hidden="true">+</i>
+          </summary>
+          <div class="portion-card-detail"><p><b>Visual:</b> dos manos en cuenco para verdura cocinada; en ensalada puede ocupar aproximadamente media superficie del plato.</p><p><b>Ejemplos:</b> brócoli, pisto, judías verdes, ensalada, gazpacho o verduras congeladas. Mezclar colores y texturas hace el plato más apetecible.</p><p class="portion-mission"><b>Mini misión:</b> añade hoy una verdura fácil a algo que ya comes. No hace falta crear una receta nueva.</p></div>
+        </details>
+        <details class="portion-card portion-card--fruit" name="portion-guide">
+          <summary>
+            <img src="img/raciones/fruta.webp" alt="Un puño junto a una manzana y un cuenco pequeño de fresas" loading="lazy">
+            <span class="portion-card-copy"><small>FRUTA</small><strong>Un puño</strong><em>Abre para ver ejemplos</em></span><i aria-hidden="true">+</i>
+          </summary>
+          <div class="portion-card-detail"><p><b>Visual:</b> una pieza mediana parecida a tu puño, dos piezas pequeñas o un cuenco de fruta troceada.</p><p><b>Ejemplos:</b> manzana, pera, naranja, melocotón, fresas, melón o fruta congelada. El zumo no sacia igual que la fruta entera.</p><p class="portion-mission"><b>Mini misión:</b> deja una pieza visible o lleva una en la bolsa para que elegirla sea fácil.</p></div>
+        </details>
+        <details class="portion-card portion-card--grain" name="portion-guide">
+          <summary>
+            <img src="img/raciones/cereales-tuberculos.webp" alt="Un puño junto a arroz cocido, una patata y pan integral" loading="lazy">
+            <span class="portion-card-copy"><small>CEREALES Y TUBÉRCULOS</small><strong>Un puño cerrado</strong><em>Abre para ver ejemplos</em></span><i aria-hidden="true">+</i>
+          </summary>
+          <div class="portion-card-detail"><p><b>Visual:</b> un puño orienta la cantidad ya cocinada de arroz, pasta, cuscús o patata. Para pan, empieza por una porción que ocupe aproximadamente la palma.</p><p><b>¿Hay que quitarlos?</b> No. Aportan energía y pueden encajar en el tratamiento de la obesidad. Las versiones integrales suelen aportar más fibra; elige también por tolerancia y gusto.</p><p class="portion-mission"><b>Mini misión:</b> prueba a acompañarlos de verdura y proteína para crear una comida más completa.</p></div>
+        </details>
+        <details class="portion-card portion-card--protein" name="portion-guide">
+          <summary>
+            <img src="img/raciones/proteinas.webp" alt="Una palma junto a pescado, lentejas y huevos" loading="lazy">
+            <span class="portion-card-copy"><small>ALIMENTOS PROTEICOS</small><strong>Una palma</strong><em>Abre para ver ejemplos</em></span><i aria-hidden="true">+</i>
+          </summary>
+          <div class="portion-card-detail"><p><b>Visual:</b> una pieza de carne, pescado o tofu del tamaño de la palma y su grosor. Para huevos y legumbres, usa la idea del plato: que la fuente proteica ocupe alrededor de un cuarto.</p><p><b>Alterna:</b> legumbres, pescado, huevos, aves, tofu y otras opciones. No todas aportan lo mismo, por eso la variedad importa.</p><p class="portion-mission"><b>Mini misión:</b> incluye legumbre como protagonista al menos en alguna comida semanal, adaptándola a tu digestión.</p></div>
+        </details>
+        <details class="portion-card portion-card--fat" name="portion-guide">
+          <summary>
+            <img src="img/raciones/grasas-frutos-secos.webp" alt="Un pulgar, una cucharada de aceite de oliva y una mano con frutos secos" loading="lazy">
+            <span class="portion-card-copy"><small>ACEITE, FRUTOS SECOS Y GRASAS</small><strong>Un pulgar o hueco de la mano</strong><em>Abre para ver ejemplos</em></span><i aria-hidden="true">+</i>
+          </summary>
+          <div class="portion-card-detail"><p><b>Visual:</b> el pulgar orienta para aceite, crema de frutos secos o salsas; un pequeño hueco de la mano para frutos secos.</p><p><b>Importante:</b> el aceite de oliva y los frutos secos son alimentos valiosos, pero concentran energía. Medirlos alguna vez puede ayudarte a entrenar el ojo, sin tener que hacerlo siempre.</p><p class="portion-mission"><b>Mini misión:</b> sirve el aceite con cuchara antes de cocinar y observa cuánto utilizas normalmente.</p></div>
+        </details>
+        <details class="portion-card portion-card--dairy" name="portion-guide">
+          <summary>
+            <img src="img/raciones/lacteos-alternativas.webp" alt="Cuenco de yogur, vaso de leche y bebida vegetal sin marca" loading="lazy">
+            <span class="portion-card-copy"><small>LÁCTEOS Y ALTERNATIVAS</small><strong>Un vaso o recipiente individual</strong><em>Abre para ver ejemplos</em></span><i aria-hidden="true">+</i>
+          </summary>
+          <div class="portion-card-detail"><p><b>Visual:</b> un vaso de leche o bebida vegetal, un yogur o una porción de queso del tamaño aproximado de dos dedos.</p><p><b>Si eliges bebida vegetal:</b> busca que esté enriquecida con calcio y vitamina D y, si es posible, sin azúcares añadidos. La bebida de soja suele aportar más proteína que otras alternativas.</p><p class="portion-mission"><b>Mini misión:</b> compara dos etiquetas y busca calcio, vitamina D, proteína y azúcares añadidos.</p></div>
+        </details>
+      </div>
+
+      <section class="portion-plate-game">
+        <div class="portion-plate" role="img" aria-label="Plato dividido visualmente en media parte de verduras, un cuarto de alimentos proteicos y un cuarto de cereales o tubérculos"><span class="plate-veg">½<small>verduras</small></span><span class="plate-protein">¼<small>proteína</small></span><span class="plate-grain">¼<small>cereal o tubérculo</small></span></div>
+        <div><span class="portion-eyebrow">EL ATAJO DEL PLATO</span><h3>¿Hay varios alimentos juntos? Piensa en proporciones</h3><p>Como orientación para una comida principal: media parte de verduras, un cuarto de alimentos proteicos y un cuarto de cereales o tubérculos. También funciona en guisos, bocadillos o platos mezclados: no hace falta separarlo todo.</p><p><strong>¿Y el postre, el pan o una salsa?</strong> Pueden formar parte de la comida. La rueda no es una frontera; solo ayuda a ver el conjunto.</p></div>
+      </section>
+
+      <section class="portion-check">
+        <h3>Tu ración cambia: prueba este semáforo</h3>
+        <div class="portion-check-grid">
+          <article><span>ANTES</span><strong>¿Cuánta hambre tengo?</strong><p>Empieza con una cantidad que te parezca razonable. Hambre intensa suele pedir más comida o un plato más completo.</p></article>
+          <article><span>DURANTE</span><strong>¿Sigo disfrutando?</strong><p>Haz una pausa a mitad. No para obedecer una regla, sino para notar sabor, comodidad y saciedad.</p></article>
+          <article><span>DESPUÉS</span><strong>¿Qué aprendo?</strong><p>Si faltó o sobró, no has fallado: acabas de obtener información útil para la próxima vez.</p></article>
+        </div>
+      </section>
+
+      <aside class="portion-care"><span aria-hidden="true">♥</span><div><strong>Una guía flexible, no una prescripción</strong><p>La mano se adapta aproximadamente al tamaño corporal, pero no calcula tus necesidades. Embarazo, infancia, deporte intenso, fragilidad, cirugía bariátrica, diabetes tratada, enfermedad renal o problemas de conducta alimentaria requieren ajustes profesionales. Tu pauta clínica siempre tiene prioridad.</p></div></aside>
+
+      <details class="portion-sources">
+        <summary>Fuentes científicas y criterios utilizados</summary>
+        <ul>
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/34687532/" target="_blank" rel="noopener">Higgins et al. Revisión sistemática y metaanálisis sobre tamaño y frecuencia de ingestas (Advances in Nutrition, 2022)</a>.</li>
+          <li><a href="https://www.cambridge.org/core/journals/british-journal-of-nutrition/article/downsizing-food-a-systematic-review-and-metaanalysis-examining-the-effect-of-reducing-served-food-portion-sizes-on-daily-energy-intake-and-body-weight/C6E701A6B87BC0AFBD3EF65AC5AE4FDA" target="_blank" rel="noopener">Robinson et al. Revisión sistemática y metaanálisis sobre reducción de porciones, ingesta diaria y peso (2023)</a>.</li>
+          <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8229078/" target="_blank" rel="noopener">Vargas-Alvarez et al. Revisión de herramientas para estimar y elegir porciones (Nutrients, 2021)</a>.</li>
+          <li><a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1476771/full" target="_blank" rel="noopener">Análisis internacional de recomendaciones de tamaño de ración en guías alimentarias (2024)</a>.</li>
+          <li><a href="https://www.aesan.gob.es/AECOSAN/docs/documentos/nutricion/RECOMENDACIONES_DIETETICAS.pdf" target="_blank" rel="noopener">AESAN. Recomendaciones dietéticas saludables y sostenibles para la población española</a>.</li>
+        </ul>
+        <p>La evidencia apoya que el tamaño servido influye en la ingesta, pero no existe una única ración universal. Las medidas con la mano y el plato se presentan como ayudas educativas aproximadas, no como equivalencias exactas ni tratamiento individual.</p>
+      </details>
+    </div>
   `,
 
   "herramientas-fuera": `
