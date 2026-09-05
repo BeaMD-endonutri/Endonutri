@@ -1133,7 +1133,14 @@ function cargarContenidos() {
   const contactGrid = document.getElementById("contactGrid");
   if (contactGrid && typeof CONFIG !== "undefined") {
     const c = CONFIG.CONTACTO;
-    let cards = "";
+    let cards = `
+      <div class="contact-intro">
+        <span aria-hidden="true">💬</span>
+        <div>
+          <h3>¿Tienes alguna duda?</h3>
+          <p>Puedes contactar conmigo para resolver dudas relacionadas con la <strong>nutrición</strong>, el <strong>ejercicio</strong>, la <strong>medicación pautada por tu endocrino</strong> o el <strong>cambio de citas</strong>.</p>
+        </div>
+      </div>`;
     if (c.telefono) cards += `
       <a href="tel:${c.telefono.replace(/\s/g,'')}" class="contact-card" style="text-decoration:none;">
         <div class="contact-icon">📞</div>

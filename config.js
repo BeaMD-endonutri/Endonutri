@@ -39,7 +39,7 @@ const CONFIG = {
   CONTACTO: {
     telefono:       "",
     telefono_ext:   "",
-    email:          "",
+    email:          "nutri.bea.md@gmail.com",
     horario:        "",
     direccion:      "",
     whatsapp:       "",   // Deja vacío si no quieres mostrar WhatsApp
