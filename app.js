@@ -53,6 +53,34 @@ function toggleGroup(btn) {
   }
 }
 
+// ---- GUÍA DE MEDICAMENTOS GLP-1 ----
+function filterGlpCards(kind, button) {
+  document.querySelectorAll(".glp-filter button").forEach(item => {
+    item.classList.toggle("active", item === button);
+  });
+  document.querySelectorAll("#glpMedicationList .glp-card").forEach(card => {
+    const visible = kind === "all" || card.dataset.glpKind === kind;
+    card.hidden = !visible;
+    if (!visible) card.open = false;
+  });
+}
+
+function calculateGlpBmi() {
+  const weight = Number.parseFloat(document.getElementById("glpWeight")?.value);
+  const heightCm = Number.parseFloat(document.getElementById("glpHeight")?.value);
+  const result = document.getElementById("glpBmiResult");
+  if (!result) return;
+  if (!Number.isFinite(weight) || !Number.isFinite(heightCm) || weight <= 0 || heightCm <= 0) {
+    result.textContent = "Introduce un peso y una altura válidos.";
+    return;
+  }
+  const bmi = weight / ((heightCm / 100) ** 2);
+  const threshold = bmi >= 30
+    ? "Alcanza el umbral de IMC usado en el visado, pero aún se necesita DM2, terapia combinada, control insuficiente y valoración profesional."
+    : "No alcanza el umbral general de IMC ≥30 usado para financiar arGLP-1 antidiabéticos en Andalucía.";
+  result.innerHTML = `<strong>IMC: ${bmi.toFixed(1)} kg/m².</strong> ${threshold}`;
+}
+
 // ---- FAQ ----
 function toggleFaq(btn) {
   const answer = btn.nextElementSibling;

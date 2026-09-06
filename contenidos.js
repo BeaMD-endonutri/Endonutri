@@ -475,6 +475,120 @@ const CONTENIDOS = {
     </div>
   `,
 
+  "medicacion-glp1": `
+    <div class="glp-page">
+      <div class="glp-hero">
+        <div>
+          <span class="glp-eyebrow">MEDICACIÓN PARA DIABETES Y OBESIDAD · ACTUALIZADO 06/09/2026</span>
+          <h3>GLP-1: una ayuda potente, no una varita mágica</h3>
+          <p>Estos medicamentos imitan señales naturales del intestino que hablan con el cerebro y el páncreas. Pueden reducir el hambre, aumentar la saciedad y mejorar la glucosa. <strong>No “derriten” grasa:</strong> facilitan que la persona ingiera menos energía.</p>
+          <div class="glp-hero-badges"><span>🧠 Menos hambre</span><span>🍽️ Más saciedad</span><span>🩸 Mejor glucosa</span></div>
+        </div>
+        <img src="img/glp1/semaglutida.webp" alt="Ilustración educativa del eje intestino, cerebro y páncreas junto a medicación, alimentación y actividad física">
+      </div>
+
+      <div class="glp-key">
+        <span aria-hidden="true">⚖️</span>
+        <div><small>LA IDEA MÁS IMPORTANTE</small><h3>El medicamento ayuda a crear el déficit; no lo sustituye</h3><p>La grasa corporal disminuye cuando, a lo largo del tiempo, el cuerpo utiliza más energía de la que recibe. Estos fármacos suelen conseguirlo al reducir hambre, antojos e ingesta. <strong>Si no existe déficit energético, no habrá pérdida de grasa.</strong> Y si no se protege la calidad de la alimentación, el músculo y los hábitos, puede bajar el número de la báscula sin cuidar bien la salud.</p></div>
+      </div>
+
+      <section class="glp-therapy-team">
+        <div><span>👩‍⚕️</span><strong>Endocrinología</strong><small>indica, ajusta y revisa seguridad</small></div>
+        <div><span>🩺</span><strong>Enfermería</strong><small>educación terapéutica, técnica y seguimiento</small></div>
+        <div><span>🥗</span><strong>Alimentación</strong><small>proteína, fibra, hidratación y tolerancia</small></div>
+        <div><span>🏋️</span><strong>Fuerza y movimiento</strong><small>función, salud y protección muscular</small></div>
+      </section>
+
+      <div class="glp-explainer">
+        <h3>¿Qué hacen exactamente?</h3>
+        <div>
+          <article><span>1</span><strong>Cerebro</strong><p>Reducen hambre, “ruido de comida” y recompensa alimentaria; aumenta la sensación de estar satisfecho.</p></article>
+          <article><span>2</span><strong>Páncreas</strong><p>Aumentan la insulina cuando la glucosa está elevada y reducen glucagón. Solos causan poca hipoglucemia; el riesgo sube con insulina o sulfonilureas.</p></article>
+          <article><span>3</span><strong>Estómago</strong><p>Enlentecen el vaciamiento, sobre todo al iniciar o subir dosis. De ahí parte de la saciedad y de los efectos digestivos.</p></article>
+          <article><span>4</span><strong>Tejido adiposo</strong><p>No actúan como un “quemagrasas”. La pérdida es consecuencia, principalmente, de comer menos energía durante suficiente tiempo.</p></article>
+        </div>
+      </div>
+
+      <section class="glp-chooser" aria-labelledby="glpChooserTitle">
+        <span class="glp-eyebrow">ACLAREMOS LOS NOMBRES</span>
+        <h3 id="glpChooserTitle">Misma molécula, marcas e indicaciones distintas</h3>
+        <div class="glp-filter" role="group" aria-label="Filtrar medicamentos por indicación">
+          <button class="active" type="button" data-glp-filter="all" onclick="filterGlpCards('all', this)">Ver todos</button>
+          <button type="button" data-glp-filter="obesity" onclick="filterGlpCards('obesity', this)">Autorizados para obesidad</button>
+          <button type="button" data-glp-filter="diabetes" onclick="filterGlpCards('diabetes', this)">Diabetes tipo 2</button>
+        </div>
+
+        <div class="glp-accordions" id="glpMedicationList">
+          <details class="glp-card" data-glp-kind="obesity">
+            <summary><img src="img/glp1/semaglutida.webp" alt="Representación educativa de semaglutida"><span><small class="glp-obesity">OBESIDAD · NO FINANCIADO</small><b>Wegovy®</b><em>Semaglutida · inyección semanal</em></span><i>＋</i></summary>
+            <div class="glp-card-body"><p><strong>Para quién está autorizado:</strong> adultos con IMC ≥30, o IMC ≥27 con al menos una complicación relacionada con el peso; también determinados adolescentes desde 12 años y más de 60 kg. Siempre junto a alimentación hipocalórica y actividad física.</p><p><strong>Qué puede esperarse:</strong> en ensayos, alrededor de un 15% de pérdida media a 68 semanas frente a un 2% con placebo. Es una media, no una promesa individual.</p><div class="glp-procon"><p><b>A favor</b>Semanal, eficacia alta y amplia evidencia cardiovascular/metabólica.</p><p><b>A tener en cuenta</b>Efectos digestivos, escalado lento, coste y probable necesidad de tratamiento prolongado.</p></div><p class="glp-funding no"><strong>Financiación SAS/SNS:</strong> no financiado para control del peso. Receta privada.</p></div>
+          </details>
+
+          <details class="glp-card" data-glp-kind="obesity">
+            <summary><img src="img/glp1/tirzepatida.webp" alt="Representación educativa de tirzepatida y sus dos vías hormonales"><span><small class="glp-obesity">OBESIDAD Y DM2 · NO FINANCIADO</small><b>Mounjaro®</b><em>Tirzepatida · agonista dual GIP/GLP-1 semanal</em></span><i>＋</i></summary>
+            <div class="glp-card-body"><p><strong>No es un GLP-1 “puro”:</strong> activa dos receptores, GIP y GLP-1. Está autorizado para diabetes tipo 2 desde los 10 años y, en adultos, para control del peso con IMC ≥30 o IMC ≥27 más una complicación relacionada.</p><p><strong>Qué puede esperarse:</strong> en el ensayo principal de obesidad, la pérdida media fue de al menos un 15% a 72 semanas según dosis, frente a un 3% con placebo.</p><div class="glp-procon"><p><b>A favor</b>Semanal y, actualmente, una de las opciones con mayor eficacia media.</p><p><b>A tener en cuenta</b>Náuseas, diarrea, estreñimiento o vómitos; acceso y coste. Requiere escalado y seguimiento.</p></div><p class="glp-funding no"><strong>Financiación SAS/SNS:</strong> no financiado por resolución, ni para obesidad ni para diabetes, según BIFIMED de septiembre de 2026.</p></div>
+          </details>
+
+          <details class="glp-card" data-glp-kind="obesity">
+            <summary><img src="img/glp1/liraglutida.webp" alt="Representación educativa de liraglutida de administración diaria"><span><small class="glp-obesity">OBESIDAD · NO FINANCIADO</small><b>Saxenda®</b><em>Liraglutida · inyección diaria</em></span><i>＋</i></summary>
+            <div class="glp-card-body"><p><strong>Para quién está autorizado:</strong> adultos con IMC ≥30, o IMC ≥27 con una complicación; también adolescentes desde 12 años y determinados niños desde 6 años con criterios específicos de obesidad y peso.</p><p><strong>Qué puede esperarse:</strong> alrededor de un 7,5% de pérdida media a 56 semanas frente a un 2,3% con placebo. En adultos debe reevaluarse si no se pierde al menos un 5% tras 12 semanas con 3 mg/día.</p><div class="glp-procon"><p><b>A favor</b>Muchos años de experiencia clínica y reglas claras para valorar respuesta.</p><p><b>A tener en cuenta</b>Inyección diaria y eficacia media menor que las opciones semanales más nuevas.</p></div><p class="glp-funding no"><strong>Financiación SAS/SNS:</strong> no financiado para control del peso. Receta privada.</p></div>
+          </details>
+
+          <details class="glp-card" data-glp-kind="diabetes">
+            <summary><img src="img/glp1/semaglutida.webp" alt="Representación educativa de semaglutida"><span><small class="glp-diabetes">DIABETES TIPO 2 · FINANCIACIÓN CON VISADO</small><b>Ozempic®</b><em>Semaglutida · inyección semanal</em></span><i>＋</i></summary>
+            <div class="glp-card-body"><p><strong>Indicación autorizada:</strong> diabetes tipo 2 insuficientemente controlada. <strong>No está autorizado como medicamento para la obesidad.</strong> Utilizarlo solo para adelgazar sería un uso fuera de ficha técnica.</p><p><strong>Financiación en Andalucía:</strong> DM2, IMC ≥30 kg/m², en combinación con otros antidiabéticos —no en monoterapia— cuando, junto con dieta y ejercicio, no se logra un control glucémico adecuado. Requiere visado e IMC documentado.</p><div class="glp-procon"><p><b>A favor</b>Buen control de HbA1c, administración semanal y beneficio de peso frecuente en DM2.</p><p><b>A tener en cuenta</b>No intercambiar con Wegovy por cuenta propia: comparten molécula, pero dosis e indicación no son iguales.</p></div></div>
+          </details>
+
+          <details class="glp-card" data-glp-kind="diabetes">
+            <summary><img src="img/glp1/semaglutida.webp" alt="Representación educativa de semaglutida oral"><span><small class="glp-diabetes">DIABETES TIPO 2 · FINANCIACIÓN CON VISADO</small><b>Rybelsus®</b><em>Semaglutida · comprimido diario</em></span><i>＋</i></summary>
+            <div class="glp-card-body"><p><strong>Indicación autorizada:</strong> diabetes tipo 2 en adultos. Es semaglutida oral, no una pastilla autorizada para adelgazar.</p><p><strong>Cómo se toma:</strong> en ayunas, con poca agua, y esperando al menos 30 minutos antes de comer, beber o tomar otros medicamentos; seguir exactamente el prospecto y la pauta profesional.</p><p><strong>Financiación en Andalucía:</strong> el mismo marco financiado de DM2 con IMC ≥30, terapia combinada, control insuficiente y visado. Las nuevas dosis o presentaciones pueden tener condiciones propias.</p></div>
+          </details>
+
+          <details class="glp-card" data-glp-kind="diabetes">
+            <summary><img src="img/glp1/diabetes-glp1.webp" alt="Representación educativa de medicación GLP-1 para diabetes"><span><small class="glp-diabetes">DIABETES TIPO 2 · FINANCIACIÓN CON VISADO</small><b>Trulicity®</b><em>Dulaglutida · inyección semanal</em></span><i>＋</i></summary>
+            <div class="glp-card-body"><p><strong>Indicación autorizada:</strong> diabetes tipo 2; no es un tratamiento autorizado específicamente para obesidad. Puede reducir el apetito y el peso, pero su objetivo principal es el control glucémico.</p><p><strong>Financiación en Andalucía:</strong> DM2 con IMC ≥30, en terapia combinada, cuando no se alcanza control adecuado pese a dieta y ejercicio; requiere visado.</p><div class="glp-procon"><p><b>A favor</b>Una vez por semana, amplia experiencia y beneficio cardiovascular demostrado en perfiles seleccionados.</p><p><b>A tener en cuenta</b>La pérdida media de peso suele ser menor que con semaglutida 2,4 mg o tirzepatida.</p></div></div>
+          </details>
+
+          <details class="glp-card" data-glp-kind="diabetes">
+            <summary><img src="img/glp1/diabetes-glp1.webp" alt="Representación educativa de otros medicamentos GLP-1 para diabetes"><span><small class="glp-diabetes">DIABETES TIPO 2 · USO MÁS RESIDUAL</small><b>Otros arGLP-1</b><em>Victoza®, exenatida y lixisenatida</em></span><i>＋</i></summary>
+            <div class="glp-card-body"><p><strong>Qué son:</strong> liraglutida a dosis de diabetes (Victoza®), exenatida (Byetta®/Bydureon®) y lixisenatida (Lyxumia®), además de combinaciones con insulina como Xultophy® o Suliqua®. Sus pautas, edad autorizada y función no son idénticas.</p><p><strong>Financiación:</strong> las presentaciones incluidas en la prestación para DM2 siguen el marco de IMC ≥30, terapia combinada/control insuficiente y visado. La disponibilidad comercial de algunas presentaciones antiguas puede cambiar; se comprueba en CIMA y BIFIMED al prescribir.</p><p class="glp-note"><strong>No todos sirven para adelgazar</strong> ni se deben sustituir entre sí. La enfermera enseña técnica, conservación, rotación de zonas y qué hacer ante incidencias.</p></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="glp-funding-panel">
+        <div><span class="glp-eyebrow">FINANCIACIÓN PÚBLICA EN ANDALUCÍA</span><h3>¿Cuándo lo cubre el SAS?</h3><p>La financiación no depende solo de “tener receta”. Para los arGLP-1 antidiabéticos financiados se exige, con carácter general:</p><ul><li>diagnóstico de <strong>diabetes mellitus tipo 2</strong>;</li><li><strong>IMC ≥30 kg/m²</strong>, calculado y registrado;</li><li>uso <strong>combinado con otros antidiabéticos</strong>, no como monoterapia;</li><li>control glucémico insuficiente pese al tratamiento, dieta y ejercicio;</li><li><strong>visado de inspección</strong> y revisión individual.</li></ul><p class="glp-funding-warning">Tener obesidad sin diabetes no financia Ozempic®. Y cumplir el IMC no garantiza que sea la opción adecuada: la elección depende de antecedentes, objetivos, tolerancia y seguridad.</p></div>
+        <div class="glp-bmi-tool">
+          <h4>Calculadora orientativa de IMC</h4><p>Solo ayuda a entender el umbral administrativo; no decide una prescripción.</p>
+          <label>Peso (kg)<input id="glpWeight" type="number" min="20" max="350" step="0.1" inputmode="decimal"></label>
+          <label>Altura (cm)<input id="glpHeight" type="number" min="100" max="230" step="0.1" inputmode="decimal"></label>
+          <button type="button" onclick="calculateGlpBmi()">Calcular</button>
+          <div id="glpBmiResult" class="glp-bmi-result" aria-live="polite">Introduce peso y altura.</div>
+          <small>Los datos no se guardan ni se envían.</small>
+        </div>
+      </section>
+
+      <section class="glp-roadmap">
+        <span class="glp-eyebrow">USO RESPONSABLE</span><h3>El plan seguro tiene cinco piezas</h3>
+        <div><article><span>1</span><strong>Valorar</strong><p>Indicación, historia clínica, medicación, embarazo, digestivo, vesícula, páncreas, riñón y retina según el fármaco.</p></article><article><span>2</span><strong>Empezar poco a poco</strong><p>No acelerar dosis ni “contar clics” por cuenta propia. Más dosis no siempre significa mejor resultado.</p></article><article><span>3</span><strong>Comer suficiente y bien</strong><p>Priorizar proteína, verduras, fruta, fibra y líquidos en cantidades tolerables. Evitar ayunos forzados por náuseas.</p></article><article><span>4</span><strong>Entrenar fuerza</strong><p>Junto con proteína y movimiento, ayuda a conservar función y masa muscular durante la pérdida de peso.</p></article><article><span>5</span><strong>Revisar y planificar</strong><p>La obesidad es crónica. Suspender sin plan suele favorecer recuperar peso; nunca se retira de golpe por decisión propia.</p></article></div>
+      </section>
+
+      <section class="glp-safety">
+        <div><h3>Molestias frecuentes</h3><p>Náuseas, sensación de llenura, diarrea, estreñimiento, vómitos, dolor abdominal, reflujo o eructos. Suelen ser más intensos al iniciar o subir dosis.</p><p><strong>Ayuda:</strong> raciones pequeñas, comer despacio, parar al sentirse lleno, buena hidratación y comunicar síntomas antes de escalar.</p></div>
+        <div class="urgent"><h3>Consulta urgente o precoz</h3><ul><li>dolor abdominal intenso y persistente, especialmente hacia la espalda;</li><li>vómitos mantenidos, poca orina o signos de deshidratación;</li><li>síntomas de hipoglucemia si usa insulina o sulfonilurea;</li><li>pérdida o empeoramiento repentino de visión;</li><li>reacción alérgica, ictericia o dolor tipo cólico intenso.</li></ul></div>
+      </section>
+
+      <div class="glp-alert"><span>🏥</span><div><strong>¿Te van a operar, sedar o hacer una endoscopia?</strong><p>Avisa siempre de que usas un GLP-1 o tirzepatida. Pueden retrasar el vaciamiento del estómago y el equipo debe valorar el plan de ayuno y medicación. No lo suspendas por tu cuenta.</p></div></div>
+      <div class="glp-alert counterfeit"><span>🚫</span><div><strong>No compres “semaglutida” o “tirzepatida” por redes sociales</strong><p>Usa únicamente farmacia legal y receta. No compartas plumas, no cambies dosis ni mezcles productos. Las falsificaciones pueden no contener lo anunciado o estar mal conservadas.</p></div></div>
+
+      <details class="glp-sources">
+        <summary>Fuentes oficiales y estudios utilizados</summary>
+        <ul><li><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/wegovy" target="_blank" rel="noopener">EMA: Wegovy (indicación, eficacia y seguridad)</a></li><li><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/mounjaro" target="_blank" rel="noopener">EMA: Mounjaro</a></li><li><a href="https://www.ema.europa.eu/en/medicines/human/EPAR/saxenda" target="_blank" rel="noopener">EMA: Saxenda</a></li><li><a href="https://www.juntadeandalucia.es/servicioandaluzdesalud/sites/default/files/sincfiles/wsas-media-mediafile_sasdocumento/2022/condiciones_de_visado_uso_antidiabeticos_enero_2022.pdf" target="_blank" rel="noopener">SAS: condiciones de visado de antidiabéticos</a></li><li><a href="https://www.sspa.juntadeandalucia.es/servicioandaluzdesalud/sites/default/files/sincfiles/wsas-media-mediafile_sasdocumento/2023/09_urm_dm2_28_03_2023_2.pdf" target="_blank" rel="noopener">SAS: recomendaciones de uso de medicamentos en DM2</a></li><li><a href="https://www.sanidad.gob.es/profesionales/medicamentos.do?cn=758637&metodo=verDetalle" target="_blank" rel="noopener">BIFIMED: situación de financiación de Mounjaro</a></li><li><a href="https://www.who.int/news/item/01-12-2025-who-issues-global-guideline-on-the-use-of-glp-1-medicines-in-treating-obesity" target="_blank" rel="noopener">OMS 2025: GLP-1 dentro de un abordaje integral y prolongado</a></li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9542252/" target="_blank" rel="noopener">STEP 1: recuperación de peso tras retirar semaglutida</a></li><li><a href="https://jamanetwork.com/journals/jama/fullarticle/2812936" target="_blank" rel="noopener">SURMOUNT-4: mantenimiento con tirzepatida</a></li><li><a href="https://ajcn.nutrition.org/article/S0002-9165%2825%2900240-0/fulltext" target="_blank" rel="noopener">Guía clínica 2025: prioridades nutricionales durante tratamiento GLP-1</a></li></ul>
+        <p>Información educativa, no sustituye la valoración individual. La financiación y disponibilidad pueden cambiar; el equipo prescriptor comprueba CIMA y BIFIMED en la fecha de la receta.</p>
+      </details>
+    </div>
+  `,
+
   // ---------- EJERCICIO ----------
 
   "ejercicio-empezar": `
