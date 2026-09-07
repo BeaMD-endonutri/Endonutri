@@ -1,0 +1,26 @@
+name: Decode PAPEF approved images
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/decode-papef-images.yml'
+jobs:
+  decode:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode approved PAPEF images
+        run: |
+          for i in 1 2 3 4; do
+            base64 -d "img/papef-$i.webp" > "img/papef-$i.tmp.webp"
+            mv "img/papef-$i.tmp.webp" "img/papef-$i.webp"
+          done
+      - name: Commit binary images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add img/papef-1.webp img/papef-2.webp img/papef-3.webp img/papef-4.webp
+          git commit -m "Corrige imágenes PAPEF con las cuatro aprobadas" || exit 0
+          git push
