@@ -47,3 +47,14 @@ const CONFIG = {
   }
 
 };
+
+// Módulo educativo PAPEF. Se carga aparte para no modificar la estructura original.
+const papefCss = document.createElement('link');
+papefCss.rel = 'stylesheet';
+papefCss.href = 'papef.css?v=2';
+document.head.appendChild(papefCss);
+
+const papefScript = document.createElement('script');
+papefScript.src = 'papef.js?v=2';
+papefScript.defer = true;
+document.head.appendChild(papefScript);
