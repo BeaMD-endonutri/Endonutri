@@ -53,6 +53,37 @@ function toggleGroup(btn) {
   }
 }
 
+// ---- ACCESO AL ÁREA PROFESIONAL ----
+function initProfessionalAreaLink() {
+  const nav = document.querySelector(".sidebar-nav");
+  if (!nav || document.getElementById("professionalAreaNav")) return;
+
+  const group = document.createElement("div");
+  group.className = "nav-group nav-single";
+  group.id = "professionalAreaNav";
+  group.style.marginTop = "12px";
+  group.style.paddingTop = "12px";
+  group.style.borderTop = "1px solid var(--gris-borde, #d5e8dc)";
+
+  const button = document.createElement("button");
+  button.className = "nav-group-title";
+  button.type = "button";
+  button.setAttribute("aria-label", "Abrir Área profesional");
+  button.style.background = "linear-gradient(135deg, #064e3b, #087f5b)";
+  button.style.color = "#fff";
+  button.style.borderRadius = "12px";
+  button.style.margin = "0 8px";
+  button.style.width = "calc(100% - 16px)";
+  button.style.boxShadow = "0 8px 22px rgba(6, 78, 59, .16)";
+  button.innerHTML = '<span class="nav-icon">🔒</span><span>Área profesional</span><span style="margin-left:auto;color:#e2b943">→</span>';
+  button.addEventListener("click", () => {
+    window.location.href = "profesionales.html";
+  });
+
+  group.appendChild(button);
+  nav.appendChild(group);
+}
+
 // ---- GUÍA DE MEDICAMENTOS GLP-1 ----
 function filterGlpCards(kind, button) {
   document.querySelectorAll(".glp-filter button").forEach(item => {
@@ -217,9 +248,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Carga contenidos
   if (typeof cargarContenidos === "function") cargarContenidos();
 
-    initObesityWheel();
+  initObesityWheel();
+  initProfessionalAreaLink();
 
-// Sección inicial
+  // Sección inicial
   showSection("home");
 
   // En desktop, abrir el primer grupo del sidebar
