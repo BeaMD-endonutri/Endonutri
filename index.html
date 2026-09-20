@@ -112,7 +112,6 @@
         <a href="#" onclick="showSection('ejercicio-cardio')">Cardio</a>
         <a href="#" onclick="showSection('ejercicio-casa')">Ejercicio en casa</a>
         <a href="#" onclick="showSection('ejercicio-pasos')">Pasos diarios</a>
-        <a href="#" onclick="showSection('ejercicio-rutinas')">Rutinas descargables</a>
         <a href="#" onclick="showSection('ejercicio-videos')">Vídeos</a>
       </div>
     </div>
@@ -146,15 +145,7 @@
       </div>
     </div>
 
-    <!-- 7. PREGUNTAS FRECUENTES -->
-    <div class="nav-group nav-single">
-      <button class="nav-group-title" onclick="showSection('faq'); closeSidebar()">
-        <span class="nav-icon">❓</span>
-        <span>Preguntas Frecuentes</span>
-      </button>
-    </div>
-
-    <!-- 8. CONTACTO -->
+    <!-- 7. CONTACTO -->
     <div class="nav-group nav-single">
       <button class="nav-group-title" onclick="showSection('contacto'); closeSidebar()">
         <span class="nav-icon">📞</span>
@@ -238,11 +229,11 @@
           </div>
           <span class="hcard-arrow">→</span>
         </div>
-        <div class="home-card accent-coral" onclick="showSection('ejercicio-rutinas')">
+        <div class="home-card accent-coral" onclick="showSection('ejercicio-empezar')">
           <div class="hcard-icon">🏃</div>
           <div class="hcard-text">
             <h3>Movimiento y Ejercicio</h3>
-            <p>Guías y rutinas descargables</p>
+            <p>Cómo empezar y avanzar a tu ritmo</p>
           </div>
           <span class="hcard-arrow">→</span>
         </div>
@@ -259,14 +250,6 @@
           <div class="hcard-text">
             <h3>Herramientas Útiles</h3>
             <p>Plato, etiquetas y más</p>
-          </div>
-          <span class="hcard-arrow">→</span>
-        </div>
-        <div class="home-card" onclick="showSection('faq')">
-          <div class="hcard-icon">❓</div>
-          <div class="hcard-text">
-            <h3>Preguntas Frecuentes</h3>
-            <p>Resolvemos tus dudas</p>
           </div>
           <span class="hcard-arrow">→</span>
         </div>
@@ -566,21 +549,6 @@
       </div>
     </section>
 
-    <section class="section" id="section-ejercicio-rutinas">
-      <div class="section-header">
-        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
-        <h2>Rutinas descargables</h2>
-      </div>
-      <div class="routines-intro">
-        <span class="eyebrow">MUÉVETE A TU RITMO</span>
-        <h3>Elige una rutina adaptada a tu punto de partida</h3>
-        <p>Descarga las propuestas en PDF para consultarlas cuando quieras. Empieza con una intensidad que te resulte asumible y progresa poco a poco.</p>
-      </div>
-      <div class="routine-levels" id="routinesGrid">
-        <!-- Los niveles y las rutinas se cargan desde contenidos.js -->
-      </div>
-    </section>
-
     <section class="section" id="section-ejercicio-videos">
       <div class="section-header">
         <button class="back-btn" onclick="showSection('home')">← Inicio</button>
@@ -760,20 +728,6 @@
         <div class="info-box mt-1">
           💡 Para actualizar el PDF imprimible, edita el archivo en <code>/pdfs/cuestionario-imprimible.pdf</code>
         </div>
-      </div>
-    </section>
-
-    <!-- ======= FAQ ======= -->
-    <section class="section" id="section-faq">
-      <div class="section-header">
-        <button class="back-btn" onclick="showSection('home')">← Inicio</button>
-        <h2>❓ Preguntas frecuentes</h2>
-      </div>
-      <div class="faq-container" id="faqContainer">
-        <!-- Generado por js/contenidos.js -->
-      </div>
-      <div class="info-box mt-1">
-        💡 Para añadir o editar preguntas: abre <code>js/contenidos.js</code> → array <code>FAQ</code>
       </div>
     </section>
 

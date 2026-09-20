@@ -331,6 +331,13 @@ const CONTENIDOS = {
         <details><summary><span>14</span><strong>“Después de los 40 el metabolismo se desploma”</strong><i>＋</i></summary><div><b>No ocurre de repente.</b> Con la edad pueden cambiar masa muscular, actividad, sueño, menopausia, enfermedad y medicación. Muchos factores se pueden trabajar con fuerza, movimiento, descanso y una pauta adaptada.</div></details>
         <details><summary><span>15</span><strong>“Si no adelgazo, seguro que tengo hipotiroidismo”</strong><i>＋</i></summary><div><b>No se puede saber por el peso.</b> El hipotiroidismo puede favorecer cansancio y una ganancia generalmente moderada, en parte por líquidos. Se confirma con analítica y, si está bien tratado, no suele explicar por sí solo una obesidad persistente.</div></details>
         <details><summary><span>16</span><strong>“Un producto light siempre adelgaza”</strong><i>＋</i></summary><div><b>“Light” solo compara con otro producto.</b> Puede tener menos grasa, azúcar o energía, pero no significa que sea saludable, saciante ni libre de calorías. Mira la etiqueta completa y la cantidad que realmente tomas.</div></details>
+        <details><summary><span>17</span><strong>“Para adelgazar hay que quitar el pan”</strong><i>＋</i></summary><div><b>No.</b> El pan puede formar parte de una alimentación equilibrada. Suele ayudar elegirlo integral, ajustar la cantidad y observar con qué lo acompañas. Ningún alimento aislado decide por sí solo si pierdes o ganas peso.</div></details>
+        <details><summary><span>18</span><strong>“Si no paso hambre, la dieta no funciona”</strong><i>＋</i></summary><div><b>Falso.</b> Un plan que provoca hambre intensa de forma constante suele ser más difícil de mantener. Volumen de verduras, proteína, fibra, líquidos y horarios adaptados pueden mejorar la saciedad. Si el hambre te desborda, no es falta de voluntad: es información útil para ajustar el plan en consulta.</div></details>
+        <details><summary><span>19</span><strong>“Si un día me salgo del plan, ya he estropeado la semana”</strong><i>＋</i></summary><div><b>Un momento puntual no define el proceso.</b> No necesitas compensarlo con ayunos ni ejercicio de castigo. Retoma tu siguiente comida habitual y observa qué ocurrió con curiosidad: contexto, hambre, emociones o falta de planificación.</div></details>
+        <details><summary><span>20</span><strong>“Cuanto más rápido baje el peso, mejor”</strong><i>＋</i></summary><div><b>No necesariamente.</b> Al principio puede variar mucho el agua corporal. Una bajada muy rápida también puede aumentar la pérdida de músculo, los síntomas y el abandono. El ritmo adecuado depende del punto de partida, la salud, el tratamiento y la capacidad de mantener los cambios.</div></details>
+        <details><summary><span>21</span><strong>“Sin ejercicio es imposible perder peso”</strong><i>＋</i></summary><div><b>No es imposible, pero moverte aporta mucho más que calorías gastadas.</b> Ayuda a conservar músculo, mejorar glucosa, tensión, capacidad física, ánimo y mantenimiento a largo plazo. Debe adaptarse a tus posibilidades: empezar con poco también cuenta.</div></details>
+        <details><summary><span>22</span><strong>“Si la báscula no cambia pronto, el plan ha fracasado”</strong><i>＋</i></summary><div><b>La báscula es solo una medida.</b> Agua, sal, ciclo menstrual, estreñimiento y entrenamiento pueden ocultar cambios durante días o semanas. También cuentan cintura, fuerza, hambre, energía, analíticas y cómo te queda la ropa. Valoramos la tendencia y decidimos si hace falta ajustar.</div></details>
+        <details><summary><span>23</span><strong>“Los suplementos para adelgazar son siempre una ayuda inocua”</strong><i>＋</i></summary><div><b>Falso.</b> Muchos tienen poca evidencia y algunos interaccionan con medicamentos o causan efectos adversos. No deben confundirse con fármacos prescritos para la obesidad, que tienen indicaciones, seguimiento y posibles efectos secundarios. Consulta antes de tomar cualquier producto.</div></details>
       </div>
       <aside class="myths-summary"><strong>Una regla útil:</strong> desconfía de cualquier mensaje que prohíba un alimento para todo el mundo, prometa resultados rápidos o atribuya el peso a una sola hormona, una hora o un nutriente.</aside>
       <details class="evidence-sources"><summary>Fuentes y revisiones utilizadas</summary><ul><li><a href="https://pubmed.ncbi.nlm.nih.gov/39485353/" target="_blank" rel="noopener">Metaanálisis sobre horario y frecuencia de las comidas (JAMA Network Open, 2024)</a>.</li><li><a href="https://pubmed.ncbi.nlm.nih.gov/37964316/" target="_blank" rel="noopener">Metaanálisis de ensayos sobre frecuencia de comidas y composición corporal (2023)</a>.</li><li><a href="https://www.who.int/europe/news-room/fact-sheets/item/physical-activity" target="_blank" rel="noopener">OMS: recomendaciones de actividad física y fuerza</a>.</li></ul></details>
@@ -1260,111 +1267,6 @@ const GALERIAS = {
 };
 
 // =============================================
-// RUTINAS DESCARGABLES EN PDF
-// =============================================
-/**
- * 1. Sube el PDF a /pdfs/rutinas/
- * 2. Añade una ficha al array. Ejemplo:
- * {
- *   titulo: "Rutina de iniciación",
- *   descripcion: "Trabajo global · 2 días por semana",
- *   nivel: "principiante",
- *   icono: "🌱",
- *   archivo: "pdfs/rutinas/rutina-iniciacion.pdf"
- * }
- */
-const RUTINAS = [
-  {
-    titulo: "Rutina con bandas · Día A",
-    descripcion: "8 ejercicios de cuerpo completo con bandas y material doméstico.",
-    nivel: "principiante",
-    etiqueta: "DÍA A",
-    icono: "A",
-    archivo: "pdfs/rutinas/rutina-principiante-dia-a.pdf"
-  },
-  {
-    titulo: "Rutina con bandas · Día B",
-    descripcion: "8 ejercicios complementarios para continuar la semana de entrenamiento.",
-    nivel: "principiante",
-    etiqueta: "DÍA B",
-    icono: "B",
-    archivo: "pdfs/rutinas/rutina-principiante-dia-b.pdf"
-  },
-  {
-    titulo: "Rutina con bandas · Día C",
-    descripcion: "8 ejercicios para completar la programación semanal de iniciación.",
-    nivel: "principiante",
-    etiqueta: "DÍA C",
-    icono: "C",
-    archivo: "pdfs/rutinas/rutina-principiante-dia-c.pdf"
-  }
-];
-
-const NIVELES_RUTINA = [
-  {
-    id: "principiante",
-    titulo: "Principiante",
-    descripcion: "Tres sesiones semanales para aprender la técnica y crear una base de fuerza.",
-    icono: "🌱"
-  },
-  {
-    id: "intermedio",
-    titulo: "Intermedio",
-    descripcion: "Rutinas para seguir progresando cuando domines el nivel inicial.",
-    icono: "🌿"
-  },
-  {
-    id: "avanzado",
-    titulo: "Avanzado",
-    descripcion: "Propuestas de mayor exigencia para personas con experiencia previa.",
-    icono: "🌳"
-  }
-];
-
-// =============================================
-// PREGUNTAS FRECUENTES (FAQ)
-// =============================================
-/**
- * Para añadir o editar una pregunta:
- * Añade un nuevo objeto { pregunta: "...", respuesta: "..." }
- * Separado por coma del anterior.
- */
-const FAQ = [
-  {
-    pregunta: "¿Puedo comer pan?",
-    respuesta: "Sí, el pan no está prohibido. Preferimos pan integral, en cantidades moderadas y dentro de una dieta equilibrada. Un par de rebanadas al día, bien combinadas, no son un problema."
-  },
-  {
-    pregunta: "¿Tengo que pasar hambre para adelgazar?",
-    respuesta: "No. Una dieta bien planificada debe mantenerte saciado/a. Si pasas mucha hambre, tu cuerpo activará mecanismos de defensa que harán más difícil la pérdida de peso. Cuéntanoslo en consulta y ajustamos el plan."
-  },
-  {
-    pregunta: "¿Qué pasa si un día me salto la dieta?",
-    respuesta: "Absolutamente nada. Un día puntual no define tu proceso. Lo que importa es el patrón general de alimentación a lo largo del tiempo. No hay alimentos prohibidos ni días arruinados."
-  },
-  {
-    pregunta: "¿Cuánto peso puedo perder por semana?",
-    respuesta: "Lo saludable y sostenible es entre 0,5 y 1 kg por semana. Pérdidas más rápidas suelen implicar pérdida de músculo y agua, y son difíciles de mantener."
-  },
-  {
-    pregunta: "¿Tengo que hacer ejercicio para adelgazar?",
-    respuesta: "El ejercicio no es imprescindible para la pérdida de peso, pero es fundamental para la salud general, el mantenimiento del peso perdido y la mejora de la composición corporal. Recomendamos combinarlo siempre con la alimentación."
-  },
-  {
-    pregunta: "¿La fruta engorda por la noche?",
-    respuesta: "No. La fruta es un alimento saludable independientemente de la hora a la que se consuma. Lo que importa es el total de calorías del día, no el horario."
-  },
-  {
-    pregunta: "¿Puedo tomar suplementos para adelgazar?",
-    respuesta: "No recomendamos ningún suplemento sin supervisión médica. Muchos productos del mercado no tienen evidencia científica y algunos pueden ser perjudiciales. Consulta siempre con tu equipo médico. Los análogos GLP-1 (Como Rybelsus, Ozempic, Wegovy o Mounjaro) pueden ser de gran ayuda siempre que se acompañen de una serie de hábitos dietéticos y de ejercicio saludables. Si tu facultativo te los ha recetado sigue siempre sus intrucciones. Las sesiones grupales e individuales de enfermería juegan un papel crucial en el mantenimiento de estos hábitos, además de resolver las dudas pertinentes acerca de estos medicamentos y sus posibles efectos asociados. "
-  },
-  {
-    pregunta: "¿Cuándo empezaré a ver resultados?",
-    respuesta: "Los cambios internos (tensión arterial, glucosa, energía) suelen notarse antes que el peso en la báscula. Normalmente en 2-4 semanas de adherencia al plan se observan cambios medibles."
-  }
-];
-
-// =============================================
 // FUNCIÓN: Cargar todos los contenidos
 // =============================================
 function setMetabolismPart(part, button) {
@@ -1429,62 +1331,6 @@ function cargarContenidos() {
       container.appendChild(item);
     });
   });
-
-  // Rutinas descargables
-  const routinesGrid = document.getElementById("routinesGrid");
-  if (routinesGrid) {
-    const levelNav = `
-      <nav class="routine-level-nav" aria-label="Niveles de las rutinas">
-        ${NIVELES_RUTINA.map(nivel => `<a href="#routine-level-${nivel.id}">${nivel.titulo}</a>`).join("")}
-      </nav>`;
-
-    const levelSections = NIVELES_RUTINA.map(nivel => {
-      const rutinasNivel = RUTINAS.filter(rutina => rutina.nivel === nivel.id);
-      const cards = rutinasNivel.length
-        ? `<div class="routines-grid">${rutinasNivel.map(rutina => `
-            <article class="routine-card">
-              <div class="routine-icon" aria-hidden="true">${rutina.icono || "🏃"}</div>
-              <span class="eyebrow">${rutina.etiqueta || "RUTINA"}</span>
-              <h3>${rutina.titulo}</h3>
-              <p>${rutina.descripcion || "Consulta la rutina cuando quieras."}</p>
-              <div class="routine-actions">
-                <a href="${rutina.archivo}" class="pdf-btn" target="_blank" rel="noopener">Ver PDF ↗</a>
-                <a href="${rutina.archivo}" class="pdf-download" download>Descargar ↓</a>
-              </div>
-            </article>
-          `).join("")}</div>`
-        : `<div class="routines-empty">
-            <span>${nivel.icono}</span>
-            <h3>Rutinas en preparación</h3>
-            <p>Próximamente añadiremos propuestas para el nivel ${nivel.titulo.toLowerCase()}.</p>
-          </div>`;
-
-      return `
-        <section class="routine-level" id="routine-level-${nivel.id}">
-          <header class="routine-level-header">
-            <span class="routine-level-icon" aria-hidden="true">${nivel.icono}</span>
-            <div><span class="eyebrow">NIVEL</span><h3>${nivel.titulo}</h3><p>${nivel.descripcion}</p></div>
-          </header>
-          ${cards}
-        </section>`;
-    }).join("");
-
-    routinesGrid.innerHTML = levelNav + levelSections;
-  }
-
-  // FAQ
-  const faqContainer = document.getElementById("faqContainer");
-  if (faqContainer) {
-    faqContainer.innerHTML = FAQ.map((item, i) => `
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
-          <span>${item.pregunta}</span>
-          <span class="faq-chevron">▾</span>
-        </button>
-        <div class="faq-answer">${item.respuesta}</div>
-      </div>
-    `).join("");
-  }
 
   // Contacto
   const contactGrid = document.getElementById("contactGrid");
