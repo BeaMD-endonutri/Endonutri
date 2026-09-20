@@ -45,6 +45,23 @@ const CONTENIDOS = {
       </div>
     </div>
 
+    <section class="bmi-guide" aria-labelledby="bmi-guide-title">
+      <div class="bmi-guide-copy">
+        <span class="obesity-kicker">CLASIFICACIÓN ORIENTATIVA EN PERSONAS ADULTAS</span>
+        <h3 id="bmi-guide-title">¿Qué significa cada rango de IMC?</h3>
+        <p>El IMC se calcula dividiendo el peso en kilos entre la altura en metros al cuadrado. Estos puntos de corte ayudan a hacer un primer cribado, pero <strong>no diagnostican por sí solos</strong> el estado de salud ni la cantidad real de grasa corporal.</p>
+      </div>
+      <div class="bmi-range-grid">
+        <article class="bmi-under"><span>&lt; 18,5</span><strong>Bajo peso</strong><small>Conviene valorar alimentación, masa muscular, síntomas y posibles causas.</small></article>
+        <article class="bmi-normal"><span>18,5–24,9</span><strong>Normopeso</strong><small>No garantiza una composición corporal saludable: también importan cintura, músculo y hábitos.</small></article>
+        <article class="bmi-over"><span>25,0–29,9</span><strong>Sobrepeso</strong><small>El riesgo cambia según la grasa abdominal, la historia clínica y otros factores.</small></article>
+        <article class="bmi-ob1"><span>30,0–34,9</span><strong>Obesidad grado I</strong><small>Requiere una valoración completa, respetuosa e individualizada.</small></article>
+        <article class="bmi-ob2"><span>35,0–39,9</span><strong>Obesidad grado II</strong><small>Puede asociarse a mayor riesgo, pero las complicaciones se valoran de forma directa.</small></article>
+        <article class="bmi-ob3"><span>≥ 40,0</span><strong>Obesidad grado III</strong><small>También llamada obesidad severa. El grado de IMC no sustituye la valoración clínica.</small></article>
+      </div>
+      <p class="bmi-note"><strong>Importante:</strong> estos rangos son para población adulta general. En infancia y adolescencia se usan percentiles; en embarazo, personas muy musculadas, algunas edades y determinados grupos étnicos la interpretación necesita más contexto.</p>
+    </section>
+
     <h3 class="obesity-section-title">Obesidad preclínica y clínica: una forma más precisa de entenderla</h3>
     <div class="obesity-state-grid">
       <article class="obesity-state-card preclinical">
@@ -128,10 +145,33 @@ const CONTENIDOS = {
   `,
 
   "obesidad-por-que": `
-    <h3>Tu cuerpo lucha para recuperar el peso perdido</h3>
-    <p>Cuando perdemos peso, nuestro cuerpo activa mecanismos de "defensa" para recuperarlo. Esto incluye cambios hormonales (aumenta el hambre, disminuye la saciedad) y una reducción del gasto metabólico.</p>
-    <p>No es debilidad. Es biología. Tu cuerpo percibe la pérdida de peso como una amenaza y se adapta para sobrevivir.</p>
-    <p>Por eso la pérdida de peso debe ser <strong>gradual, sostenible y acompañada</strong> por profesionales.</p>
+    <div class="why-page">
+      <div class="why-hero">
+        <div><span class="why-eyebrow">BIOLOGÍA · ENTORNO · VIDA REAL</span><h3>Perder peso no consiste en “portarse bien” todos los días</h3><p>Para que disminuya la grasa corporal debe mantenerse un déficit energético, pero lograrlo y sostenerlo no depende solo de saber qué alimentos son saludables. <strong>El cuerpo se adapta, el entorno empuja y la vida cambia.</strong> Entenderlo permite buscar soluciones en lugar de repartir culpas.</p></div>
+        <img src="img/reformas-2026/por-que-adaptacion.webp" alt="Ilustración sobre las adaptaciones del apetito, el gasto y el entorno durante la pérdida de peso" loading="lazy">
+      </div>
+
+      <section class="why-key"><span>↔</span><div><h3>El objetivo no es vencer a tu cuerpo, sino trabajar con él</h3><p>Al adelgazar, el organismo necesita menos energía para mantenerse y moverse. En muchas personas también aumenta el hambre, disminuye la saciedad y aparece más interés por la comida. Estas respuestas pueden durar tiempo y hacen que mantener el peso perdido requiera una estrategia distinta a la utilizada al principio.</p></div></section>
+
+      <h3>¿Qué puede poner el proceso cuesta arriba?</h3>
+      <div class="why-factor-grid">
+        <article><span>🍽️</span><strong>Más hambre y menos saciedad</strong><p>Las señales hormonales y cerebrales pueden favorecer comer más después de perder peso. No significa que hayas perdido fuerza de voluntad.</p></article>
+        <article><span>🔋</span><strong>Menor gasto energético</strong><p>Un cuerpo más ligero gasta menos. Además, algunas personas reducen sin notarlo sus pasos, gestos y movimiento cotidiano.</p></article>
+        <article><span>🛒</span><strong>Un entorno que lo pone fácil para comer</strong><p>Ofertas, raciones grandes, comida disponible, turnos, celebraciones y publicidad influyen incluso cuando conocemos la teoría.</p></article>
+        <article><span>🌙</span><strong>Sueño, estrés y cansancio</strong><p>No “rompen” el metabolismo, pero pueden aumentar el apetito, empeorar las decisiones y dejar menos energía para cocinar o moverse.</p></article>
+        <article><span>💊</span><strong>Salud y medicación</strong><p>Dolor, menopausia, depresión, diabetes, alteraciones hormonales y algunos fármacos pueden cambiar hambre, fatiga o actividad. Se revisan; no se culpabilizan.</p></article>
+        <article><span>📉</span><strong>Planes demasiado estrictos</strong><p>Cuantas más prohibiciones y más hambre, más difícil es sostener el plan. Bajar rápido no siempre ayuda a llegar más lejos.</p></article>
+      </div>
+
+      <section class="why-nursing">
+        <img src="img/reformas-2026/por-que-enfermeria.webp" alt="Enfermera y paciente revisando juntas la evolución y los hábitos en consulta" loading="lazy">
+        <div><span class="why-eyebrow">POR ESO IMPORTAN LAS SESIONES DE ENFERMERÍA</span><h3>No vienes a que te regañemos: vienes a descubrir qué cambio puede ayudarte ahora</h3><p>En consulta observamos la <strong>tendencia</strong>, no un peso aislado. Revisamos horarios, hambre, sueño, movimiento, entrenamiento, medicación, síntomas, entorno familiar, dificultades reales y cambios en la composición corporal.</p><p>Con esa información podemos elegir uno o dos ajustes concretos: mejorar una comida que deja poca saciedad, organizar opciones para un turno difícil, recuperar pasos, empezar fuerza, adaptar cantidades o hablar con el equipo médico si hace falta. <strong>El seguimiento sirve para probar, medir, aprender y reajustar.</strong></p></div>
+      </section>
+
+      <div class="why-progress"><h3>El progreso puede verse de muchas formas</h3><div><span>Cintura y ropa</span><span>Fuerza y movilidad</span><span>Menos hambre descontrolada</span><span>Mejor glucosa o tensión</span><span>Más energía</span><span>Peso más estable</span></div><p>Una meseta no significa automáticamente que el plan haya fracasado. Puede ser momento de revisar datos, reforzar hábitos o cambiar el objetivo temporalmente.</p></div>
+
+      <details class="evidence-sources"><summary>Fuentes científicas utilizadas</summary><ul><li><a href="https://pubmed.ncbi.nlm.nih.gov/37696920/" target="_blank" rel="noopener">Revisión sobre los mecanismos que favorecen recuperar peso tras adelgazar (Nature Reviews Endocrinology, 2023)</a>.</li><li><a href="https://pubmed.ncbi.nlm.nih.gov/38644683/" target="_blank" rel="noopener">Fisiología de la meseta de pérdida de peso (Hall, 2024)</a>.</li><li><a href="https://pubmed.ncbi.nlm.nih.gov/33759395/" target="_blank" rel="noopener">Workshop del NIDDK sobre el estado de peso reducido: apetito, gasto y mantenimiento</a>.</li></ul></details>
+    </div>
   `,
 
   "obesidad-hambre": `
@@ -248,18 +288,6 @@ const CONTENIDOS = {
         <p class="adaptation-note"><strong>¿Qué significa en la práctica?</strong> Que quizá haya que reajustar cantidades o actividad al avanzar, no que necesites comer cada vez menos sin límite. Las dietas extremas aumentan el coste físico y psicológico y favorecen perder músculo.</p>
       </section>
 
-      <h3>Desmontando el “acelerador metabólico”</h3>
-      <div class="metabolism-myths">
-        <details><summary><strong>“Si como muy poco, entraré en modo hambre y engordaré”</strong><i>+</i></summary><div>Una restricción real produce pérdida de peso, pero puede disminuir el gasto, aumentar el hambre, reducir el movimiento y favorecer abandonos o episodios de sobreingesta. El problema no es que el cuerpo cree energía de la nada, sino que una pauta extrema es difícil de sostener y puede dañar músculo y salud.</div></details>
-        <details><summary><strong>“Hacer cinco o seis comidas acelera el metabolismo”</strong><i>+</i></summary><div>Con energía y nutrientes equivalentes, repartir la comida en más tomas no ofrece una ventaja metabólica importante. El número de comidas debe adaptarse a hambre, medicación, horarios y preferencias.</div></details>
-        <details><summary><strong>“El desayuno enciende el metabolismo”</strong><i>+</i></summary><div>Desayunar puede ser útil para algunas personas, pero no es obligatorio para activar el gasto ni garantiza perder peso. Importan la alimentación completa y la adherencia.</div></details>
-        <details><summary><strong>“El músculo quema cientos de calorías mientras descanso”</strong><i>+</i></summary><div>El músculo sí gasta energía y conviene conservarlo, pero cada kilo adicional produce un aumento modesto del gasto en reposo. Su gran valor está en fuerza, función, glucosa, autonomía y calidad de la pérdida de peso.</div></details>
-        <details><summary><strong>“Té verde, picante, café o agua fría derriten grasa”</strong><i>+</i></summary><div>Algunos producen cambios pequeños y transitorios en el gasto. No generan una pérdida relevante por sí solos y la cafeína puede empeorar sueño, ansiedad o palpitaciones.</div></details>
-        <details><summary><strong>“Sudar más significa quemar más grasa”</strong><i>+</i></summary><div>El sudor regula la temperatura. La bajada inmediata de peso es agua y se recupera al hidratarse. Fajas, saunas o ropa térmica no aumentan la pérdida de grasa.</div></details>
-        <details><summary><strong>“Después de los 40 el metabolismo se desploma”</strong><i>+</i></summary><div>El gasto no cae de repente en un cumpleaños. Los cambios con la edad se relacionan en parte con menor masa muscular, actividad, sueño, menopausia, enfermedad y medicación; varios son modificables.</div></details>
-        <details><summary><strong>“Si no adelgazo, seguro que tengo hipotiroidismo”</strong><i>+</i></summary><div>El hipotiroidismo puede favorecer cansancio y una ganancia generalmente moderada, en parte por líquidos. Si está bien tratado, no suele explicar por sí solo una obesidad persistente. Se confirma con analítica, no por síntomas aislados.</div></details>
-      </div>
-
       <section class="metabolism-foundations">
         <img src="img/metabolismo/pilares-metabolicos.webp" alt="Persona rodeada de alimentación, fuerza, movimiento diario, sueño y apoyo sanitario" loading="lazy">
         <div><span class="metabolism-eyebrow">LO QUE SÍ IMPORTA</span><h3>Cinco pilares para perder grasa cuidando el metabolismo</h3><ol><li><b>Déficit moderado y ajustable:</b> suficiente para progresar sin convertir cada día en una lucha.</li><li><b>Proteína y alimentación completa:</b> ayudan a preservar músculo y saciedad; la pauta se individualiza si existe enfermedad renal.</li><li><b>Entrenamiento de fuerza:</b> protege masa libre de grasa, capacidad y autonomía durante la pérdida.</li><li><b>Movimiento cotidiano:</b> busca una base sostenible de pasos, pausas activas y tareas, además del ejercicio.</li><li><b>Sueño, seguimiento y tratamiento:</b> revisar evolución, medicación, síntomas y barreras permite ajustar antes de recurrir a extremos.</li></ol></div>
@@ -282,27 +310,53 @@ const CONTENIDOS = {
   `,
 
   "obesidad-mitos": `
-    <h3>Mitos frecuentes sobre la obesidad</h3>
-    <p>❌ <strong>"La obesidad es solo cuestión de voluntad"</strong><br>
-    ✅ La obesidad tiene bases biológicas, genéticas y ambientales. No es una elección.</p>
-    <p>❌ <strong>"Para adelgazar solo hay que comer menos y moverse más"</strong><br>
-    ✅ Es más complejo. Las hormonas, el sueño, el estrés y la microbiota también influyen.</p>
-    <p>❌ <strong>"Los carbohidratos engordan"</strong><br>
-    ✅ Ningún nutriente aislado engorda. El exceso de calorías totales es lo que importa.</p>
-    <p>❌ <strong>"Saltarse el desayuno ayuda a adelgazar"</strong><br>
-    ✅ Depende de cada persona. No hay una sola pauta válida para todos.</p>
-    <p>❌ <strong>"Los productos 'light' son siempre una buena opción"</strong><br>
-    ✅ Pueden tener menos grasa pero más azúcar. Hay que leer las etiquetas.</p>
+    <div class="myths-page">
+      <span class="myths-eyebrow">PREGUNTA · COMPRUEBA · DECIDE</span>
+      <h3>Los mitos simplifican problemas complejos</h3>
+      <p class="myths-lead">Algunas frases contienen una parte de verdad, pero la convierten en una regla para todo el mundo. Abre cada tarjeta para separar lo útil de lo exagerado.</p>
+      <div class="myths-grid">
+        <details open><summary><span>01</span><strong>“La obesidad es falta de voluntad”</strong><i>＋</i></summary><div><b>Falso.</b> Influyen biología, genética, hambre, medicación, salud mental, sueño, recursos y entorno. Las decisiones importan, pero no ocurren en el vacío. Tratar una enfermedad crónica puede requerir hábitos, apoyo psicológico, medicación o cirugía.</div></details>
+        <details><summary><span>02</span><strong>“Basta con comer menos y moverse más”</strong><i>＋</i></summary><div><b>Es una explicación incompleta.</b> Para perder grasa debe existir déficit energético, pero la dificultad está en conseguirlo sin hambre excesiva, pérdida muscular ni abandono. La pauta debe adaptarse a la persona y revisarse con el tiempo.</div></details>
+        <details><summary><span>03</span><strong>“Los carbohidratos a partir de las seis engordan”</strong><i>＋</i></summary><div><b>No existe una hora mágica.</b> El balance global y la calidad del patrón pesan mucho más. Comer muy tarde puede empeorar digestión, sueño o hacer que algunas personas ingieran más; en otras, una cena con hidratos encaja perfectamente. Importan cantidad, contexto y adherencia.</div></details>
+        <details><summary><span>04</span><strong>“No se pueden mezclar proteínas de carne y pescado”</strong><i>＋</i></summary><div><b>Falso.</b> El aparato digestivo puede procesar distintas proteínas en la misma comida. Mezclarlas no genera toxinas ni impide adelgazar. Lo relevante es la cantidad total, el tipo de alimento, la preparación y tus necesidades.</div></details>
+        <details><summary><span>05</span><strong>“Hay que comer cada dos o tres horas”</strong><i>＋</i></summary><div><b>No acelera el metabolismo.</b> Más tomas pueden ayudar a algunas personas a controlar hambre o repartir proteína; a otras les hacen pensar más en comida o picar sin necesidad. Elige la frecuencia que facilite saciedad, organización y control de la ingesta.</div></details>
+        <details><summary><span>06</span><strong>“Para perder grasa hay que hacer muchísimo cardio”</strong><i>＋</i></summary><div><b>No.</b> El cardio mejora corazón y capacidad física y puede aumentar el gasto, pero no sustituye una alimentación adecuada. Combinar actividad aeróbica, fuerza y movimiento diario ayuda a cuidar músculo, función y salud.</div></details>
+        <details><summary><span>07</span><strong>“Entrenar todos los días da mejores resultados”</strong><i>＋</i></summary><div><b>Más no siempre es mejor.</b> La mejora aparece al alternar estímulo y recuperación. Puedes moverte a diario, pero las sesiones exigentes deben organizarse según experiencia, sueño, dolor y capacidad. Dos días de fuerza ya son una base excelente.</div></details>
+        <details><summary><span>08</span><strong>“Si como muy poco, entraré en modo hambre y engordaré”</strong><i>＋</i></summary><div><b>El cuerpo no crea energía de la nada.</b> Una restricción real produce pérdida, pero puede reducir el gasto, aumentar el hambre, bajar el movimiento y favorecer abandono o sobreingesta. El problema es que una pauta extrema suele ser difícil de sostener y puede hacer perder músculo.</div></details>
+        <details><summary><span>09</span><strong>“Cinco o seis comidas aceleran el metabolismo”</strong><i>＋</i></summary><div><b>Falso.</b> Con energía y nutrientes equivalentes, fraccionar más no ofrece una ventaja metabólica importante. Sí puede ser una herramienta de saciedad, tolerancia digestiva o adaptación a horarios.</div></details>
+        <details><summary><span>10</span><strong>“El desayuno enciende el metabolismo”</strong><i>＋</i></summary><div><b>No necesita encenderse.</b> Tu cuerpo gasta energía mientras duermes. Desayunar puede sentar bien, ayudar a organizar la ingesta o mejorar el rendimiento, pero no es obligatorio para perder peso.</div></details>
+        <details><summary><span>11</span><strong>“El músculo quema cientos de calorías en reposo”</strong><i>＋</i></summary><div><b>Está exagerado.</b> Conservar o ganar músculo eleva algo el gasto, pero su gran valor está en la fuerza, la glucosa, la autonomía y una mejor composición corporal, no en convertir el cuerpo en un horno.</div></details>
+        <details><summary><span>12</span><strong>“Té verde, café, picante o agua fría derriten grasa”</strong><i>＋</i></summary><div><b>No de forma relevante.</b> Algunos producen cambios pequeños y transitorios. No compensan la alimentación ni la actividad, y mucha cafeína puede empeorar ansiedad, sueño o palpitaciones.</div></details>
+        <details><summary><span>13</span><strong>“Sudar más significa quemar más grasa”</strong><i>＋</i></summary><div><b>Falso.</b> Sudar sirve para regular la temperatura. La bajada rápida de peso es agua y vuelve al hidratarse. Fajas, saunas y ropa térmica no eliminan grasa.</div></details>
+        <details><summary><span>14</span><strong>“Después de los 40 el metabolismo se desploma”</strong><i>＋</i></summary><div><b>No ocurre de repente.</b> Con la edad pueden cambiar masa muscular, actividad, sueño, menopausia, enfermedad y medicación. Muchos factores se pueden trabajar con fuerza, movimiento, descanso y una pauta adaptada.</div></details>
+        <details><summary><span>15</span><strong>“Si no adelgazo, seguro que tengo hipotiroidismo”</strong><i>＋</i></summary><div><b>No se puede saber por el peso.</b> El hipotiroidismo puede favorecer cansancio y una ganancia generalmente moderada, en parte por líquidos. Se confirma con analítica y, si está bien tratado, no suele explicar por sí solo una obesidad persistente.</div></details>
+        <details><summary><span>16</span><strong>“Un producto light siempre adelgaza”</strong><i>＋</i></summary><div><b>“Light” solo compara con otro producto.</b> Puede tener menos grasa, azúcar o energía, pero no significa que sea saludable, saciante ni libre de calorías. Mira la etiqueta completa y la cantidad que realmente tomas.</div></details>
+      </div>
+      <aside class="myths-summary"><strong>Una regla útil:</strong> desconfía de cualquier mensaje que prohíba un alimento para todo el mundo, prometa resultados rápidos o atribuya el peso a una sola hormona, una hora o un nutriente.</aside>
+      <details class="evidence-sources"><summary>Fuentes y revisiones utilizadas</summary><ul><li><a href="https://pubmed.ncbi.nlm.nih.gov/39485353/" target="_blank" rel="noopener">Metaanálisis sobre horario y frecuencia de las comidas (JAMA Network Open, 2024)</a>.</li><li><a href="https://pubmed.ncbi.nlm.nih.gov/37964316/" target="_blank" rel="noopener">Metaanálisis de ensayos sobre frecuencia de comidas y composición corporal (2023)</a>.</li><li><a href="https://www.who.int/europe/news-room/fact-sheets/item/physical-activity" target="_blank" rel="noopener">OMS: recomendaciones de actividad física y fuerza</a>.</li></ul></details>
+    </div>
   `,
 
   "obesidad-composicion": `
-    <h3>No solo importa el peso en la báscula</h3>
-    <p>El peso corporal es la suma de músculo, grasa, hueso, agua y órganos. Lo que realmente importa en salud es la <strong>composición corporal</strong>.</p>
-    <p>Podemos tener un peso "normal" con exceso de grasa (obesidad sarcopénica), o un peso elevado con mucho músculo y poca grasa.</p>
-    <p>Por eso en consulta usamos mediciones como:</p>
-    <p>📏 <strong>Perímetro de cintura:</strong> indicador de grasa visceral (la más peligrosa)</p>
-    <p>⚖️ <strong>Bioimpedancia:</strong> mide % de grasa, músculo y agua</p>
-    <p>📊 <strong>IMC:</strong> útil como orientación, pero no suficiente por sí solo</p>
+    <div class="composition-page">
+      <div class="composition-hero"><div><span class="composition-eyebrow">MÁS ALLÁ DE LA BÁSCULA</span><h3>El peso es un total; la composición corporal cuenta de qué está hecho</h3><p>Dos personas pueden pesar lo mismo y tener distinta cantidad de músculo, grasa y agua. Incluso en una misma persona, el peso puede mantenerse mientras pierde grasa y gana músculo. <strong>Por eso un número aislado no explica todo el progreso.</strong></p></div><img src="img/reformas-2026/composicion-componentes.webp" alt="Ilustración de los componentes del peso corporal: músculo, grasa, agua, hueso y órganos" loading="lazy"></div>
+
+      <div class="composition-parts"><article><span>💪</span><strong>Masa muscular</strong><p>Ayuda a moverte, mantener fuerza, proteger articulaciones y utilizar glucosa.</p></article><article><span>●</span><strong>Grasa corporal</strong><p>Es necesaria, pero su exceso y distribución —especialmente abdominal— pueden aumentar el riesgo.</p></article><article><span>💧</span><strong>Agua corporal</strong><p>Cambia con sal, hidratos, ejercicio, menstruación, fiebre y hora del día.</p></article><article><span>🦴</span><strong>Huesos y órganos</strong><p>Forman parte de la masa libre de grasa y no deben confundirse con “músculo”.</p></article></div>
+
+      <figure class="same-weight-figure"><img src="img/reformas-2026/composicion-mismo-peso.webp" alt="La misma mujer con el mismo peso representada con diferentes proporciones de grasa y músculo" loading="lazy"><figcaption><strong>Mismo peso, cuerpos distintos.</strong> La imagen es educativa: la apariencia no permite conocer con exactitud el porcentaje de grasa ni la salud de una persona.</figcaption></figure>
+
+      <section class="recomp-explain"><span>⇄</span><div><h3>¿Qué es la recomposición corporal?</h3><p>Es perder grasa mientras se gana o se conserva músculo. Puede ocurrir sobre todo al empezar a entrenar fuerza, volver tras una pausa o mejorar una alimentación antes insuficiente. La báscula puede bajar despacio, pero la cintura, la ropa, la fuerza y la composición sí cambian.</p></div></section>
+
+      <section class="tanita-section"><img src="img/reformas-2026/composicion-tanita.webp" alt="Medición de composición corporal mediante bioimpedancia segmental en consulta" loading="lazy"><div><span class="composition-eyebrow">LA TANITA DE CONSULTA</span><h3>Una estimación útil cuando se interpreta bien</h3><p>La TANITA es un aparato de <strong>bioimpedancia</strong>. Envía una corriente eléctrica muy pequeña e imperceptible y mide la oposición que encuentra al atravesar el cuerpo. Con ese dato y ecuaciones basadas en edad, sexo, altura y peso estima agua, masa grasa y masa libre de grasa.</p><p><strong>No ve directamente la grasa ni el músculo y no es 100 % exacta.</strong> La cifra puede cambiar por hidratación, comida reciente, vejiga llena, ejercicio, alcohol, sal, menstruación, temperatura y contacto con los electrodos.</p></div></section>
+
+      <div class="bia-trend"><h3>Lo más valioso es la tendencia</h3><div><article><b>1</b><p>Medir en condiciones parecidas: hora, hidratación, comida y ejercicio previo.</p></article><article><b>2</b><p>Comparar varias mediciones, no reaccionar a un cambio pequeño de un solo día.</p></article><article><b>3</b><p>Interpretar junto a cintura, fuerza, síntomas, analítica, ropa y evolución clínica.</p></article></div><p>Un cambio brusco de “músculo” en pocos días suele reflejar agua, no tejido muscular ganado o perdido de verdad.</p></div>
+
+      <h3>¿Qué herramientas combinamos en consulta?</h3>
+      <div class="measurement-grid"><article><span>⚖</span><strong>Peso e IMC</strong><p>Orientan y permiten seguir una tendencia, pero no separan los componentes.</p></article><article><span>📏</span><strong>Perímetro de cintura</strong><p>Aproxima la acumulación abdominal y el riesgo cardiometabólico.</p></article><article><span>〽</span><strong>Bioimpedancia</strong><p>Estima composición e hidratación; es más útil con un protocolo repetible.</p></article><article><span>✊</span><strong>Fuerza y función</strong><p>Dinamometría, levantarse de una silla, movilidad y rendimiento muestran capacidad real.</p></article></div>
+
+      <aside class="composition-takeaway"><strong>La idea importante</strong><p>No perseguimos un porcentaje perfecto ni comparamos tu cuerpo con el de otra persona. Buscamos una evolución compatible con más salud, fuerza, autonomía y bienestar.</p></aside>
+      <details class="evidence-sources"><summary>Fuentes y limitaciones de la medición</summary><ul><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12337901/" target="_blank" rel="noopener">Revisión de instrumentos de bioimpedancia y su interpretación (Clinical Nutrition ESPEN, 2025)</a>.</li><li><a href="https://espen.org/documents/BIA2.pdf" target="_blank" rel="noopener">ESPEN: condiciones estandarizadas y limitaciones de la bioimpedancia</a>.</li><li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10143694/" target="_blank" rel="noopener">Ensayo sobre el efecto de la ingesta aguda de líquidos en la estimación por bioimpedancia (2023)</a>.</li></ul></details>
+    </div>
   `,
 
   "obesidad-piramide": `
@@ -451,6 +505,11 @@ const CONTENIDOS = {
         </details>
 
         <details class="diet-card">
+          <summary><img src="img/reformas-2026/fodmap.webp" alt="Alimentos bajos en FODMAP alrededor de una ilustración del intestino"><span><small class="ev-medium">ÚTIL PARA SÍNTOMAS, NO PARA ADELGAZAR</small><b>Dieta baja en FODMAP</b><em>Una prueba temporal y con reintroducción</em></span><i>＋</i></summary>
+          <div class="diet-body"><p><strong>¿En qué consiste?</strong> Reduce temporalmente ciertos hidratos fermentables que pueden aumentar gas, distensión, dolor o diarrea: algunos fructanos, galactooligosacáridos, lactosa, fructosa y polioles. No significa eliminar todos los hidratos ni comer “sin gluten” de forma automática.</p><p><strong>¿Sirve para el SIBO?</strong> Puede aliviar síntomas digestivos en algunas personas, pero la mayor parte de la evidencia procede del síndrome de intestino irritable. <strong>No ha demostrado eliminar el sobrecrecimiento</strong> ni sustituye el estudio de sus causas y el tratamiento indicado.</p><p><strong>¿Cómo se realiza?</strong> Consta de tres fases: restricción corta —habitualmente 4–6 semanas como máximo—, reintroducción ordenada y personalización. Si no mejora, no tiene sentido mantenerla.</p><p><strong>Pérdida de peso:</strong> no está diseñada para adelgazar. Puede reducir energía por eliminar muchos alimentos, pero ese no es su objetivo ni una ventaja.</p><p class="diet-alert"><strong>No debe hacerse de forma estricta durante meses.</strong> Puede reducir variedad, fibra y calidad de la dieta, favorecer déficits o empeorar la relación con la comida. Conviene supervisión profesional, especialmente si hay bajo peso, desnutrición, embarazo, enfermedad intestinal o antecedentes de trastorno alimentario.</p></div>
+        </details>
+
+        <details class="diet-card">
           <summary><img src="img/tipos-dietas/detox-monodieta.webp" alt="Zumos verdes y una selección repetitiva de una sola fruta"><span><small class="ev-none">SIN RESPALDO</small><b>Detox, zumos y monodietas</b><em>Piña, alcachofa, sopa, potitos…</em></span><i>＋</i></summary>
           <div class="diet-body"><p><strong>¿En qué consisten?</strong> Limitan la alimentación a zumos, caldos o uno o pocos alimentos durante varios días. Prometen “limpiar toxinas” o perder peso con rapidez.</p><p><strong>Pérdida de peso:</strong> la bajada rápida suele incluir agua, glucógeno y contenido intestinal. No hay evidencia de que eliminen toxinas; hígado, riñones, pulmones e intestino ya cumplen esas funciones.</p><p class="diet-alert"><strong>Riesgos:</strong> hambre, mareos, pérdida muscular, carencias, efecto rebote y peor relación con la comida. No son una estrategia saludable.</p></div>
         </details>
@@ -471,7 +530,7 @@ const CONTENIDOS = {
       </div>
 
       <div class="diets-safety"><strong>Consulta antes de hacer restricciones importantes</strong> si hay embarazo o lactancia, infancia/adolescencia, diabetes con medicación, enfermedad renal o hepática, cáncer, fragilidad, desnutrición o antecedentes de trastorno alimentario.</div>
-      <div class="evidence-box"><h3>Fuentes y evidencia</h3><p><a href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD013334.pub2/information" target="_blank" rel="noopener">Cochrane: bajo contenido en hidratos frente a dieta equilibrada</a> · <a href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD015610.pub2/full" target="_blank" rel="noopener">Cochrane 2026: ayuno intermitente</a> · <a href="https://www.nice.org.uk/guidance/ng246/chapter/Physical-activity-and-diet" target="_blank" rel="noopener">NICE: tratamiento dietético de la obesidad</a> · <a href="https://www.wcrf.org/diet-activity-and-cancer/cancer-prevention-recommendations/" target="_blank" rel="noopener">World Cancer Research Fund</a> · <a href="https://www.nccih.nih.gov/health/homeopathy" target="_blank" rel="noopener">NCCIH: homeopatía</a>.</p></div>
+      <div class="evidence-box"><h3>Fuentes y evidencia</h3><p><a href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD013334.pub2/information" target="_blank" rel="noopener">Cochrane: bajo contenido en hidratos frente a dieta equilibrada</a> · <a href="https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD015610.pub2/full" target="_blank" rel="noopener">Cochrane 2026: ayuno intermitente</a> · <a href="https://www.nice.org.uk/guidance/ng246/chapter/Physical-activity-and-diet" target="_blank" rel="noopener">NICE: tratamiento dietético de la obesidad</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/33315591/" target="_blank" rel="noopener">ACG: prueba limitada baja en FODMAP para intestino irritable</a> · <a href="https://pubmed.ncbi.nlm.nih.gov/35337654/" target="_blank" rel="noopener">AGA: restricción, reintroducción y personalización FODMAP</a> · <a href="https://patient.gastro.org/small-intestinal-bacterial-overgrowth-sibo-managing-with-diet/" target="_blank" rel="noopener">AGA: dieta y SIBO</a> · <a href="https://www.wcrf.org/diet-activity-and-cancer/cancer-prevention-recommendations/" target="_blank" rel="noopener">World Cancer Research Fund</a> · <a href="https://www.nccih.nih.gov/health/homeopathy" target="_blank" rel="noopener">NCCIH: homeopatía</a>.</p></div>
     </div>
   `,
 
@@ -592,12 +651,28 @@ const CONTENIDOS = {
   // ---------- EJERCICIO ----------
 
   "ejercicio-empezar": `
-    <h3>Cómo empezar a moverse desde cero</h3>
-    <p>Lo más importante es <strong>empezar</strong>. No necesitas ir al gimnasio ni hacer ejercicio intenso para empezar a notar beneficios.</p>
-    <p>🎯 <strong>Semana 1-2:</strong> Camina 10-15 minutos al día. Cualquier momento vale.</p>
-    <p>🎯 <strong>Semana 3-4:</strong> Aumenta a 20-30 minutos. Añade alguna cuesta.</p>
-    <p>🎯 <strong>Mes 2:</strong> Intenta llegar a los 150 minutos semanales de actividad moderada.</p>
-    <p>💡 <strong>Consejo:</strong> Encuentra una actividad que disfrutes. La adherencia a largo plazo es lo que marca la diferencia.</p>
+    <div class="start-move-page">
+      <div class="start-move-hero"><div><span class="move-eyebrow">EMPEZAR PEQUEÑO TAMBIÉN CUENTA</span><h3>Tu primera meta no son 10.000 pasos: es moverte un poco más que ahora</h3><p>No necesitas estar en forma para empezar, ni esperar a tener tiempo para una hora de gimnasio. Caminar, levantarte de la silla, subir un tramo de escaleras, bailar o hacer fuerza con una banda ya son actividad. <strong>Algo es mejor que nada y los minutos se pueden repartir.</strong></p></div><img src="img/reformas-2026/ejercicio-empezar.webp" alt="Personas diversas comenzando con paseos, escaleras, silla y bandas elásticas" loading="lazy"></div>
+
+      <section class="move-check"><span>✓</span><div><h3>Antes de empezar, elige tu punto de partida real</h3><p>Durante tres o cuatro días observa cuánto caminas, cuánto tiempo pasas sentado y qué tareas ya haces. No lo uses para juzgarte: úsalo para elegir una dosis que puedas repetir incluso en una semana difícil.</p></div></section>
+
+      <div class="talk-test"><div><span>🙂</span><strong>Suave</strong><p>Puedes hablar y cantar. Ideal para calentar, recuperar o empezar con poca condición física.</p></div><div class="recommended"><span>🗣️</span><strong>Moderada</strong><p>Puedes hablar en frases, pero cantar cuesta. Es una referencia práctica para caminar con intención.</p></div><div><span>😮‍💨</span><strong>Vigorosa</strong><p>Solo puedes decir pocas palabras. No es necesaria al principio y requiere más recuperación.</p></div></div>
+
+      <h3>Un ejemplo de progresión sencilla</h3>
+      <div class="move-roadmap"><article><span>1–2</span><strong>Familiarízate</strong><p>10–15 minutos de paseo cómodo, 3 días por semana. Si es mucho, prueba bloques de 5 minutos. Añade pausas activas al estar sentado.</p></article><article><span>3–4</span><strong>Añade tiempo</strong><p>Sube 5 minutos a alguna sesión o añade un cuarto día. Mantén un ritmo en el que puedas hablar.</p></article><article><span>5–6</span><strong>Suma fuerza</strong><p>Incluye 2 sesiones breves en días alternos: levantarte de una silla, empujar una pared, remo con banda y puente de glúteos.</p></article><article><span>7+</span><strong>Construye tu semana</strong><p>Acércate poco a poco a 150 minutos moderados semanales y 2 días de fuerza. Es una meta de salud, no un requisito para que el inicio cuente.</p></article></div>
+
+      <figure class="move-progression"><img src="img/reformas-2026/ejercicio-progresion.webp" alt="Progresión gradual desde caminar hasta combinar fuerza, movilidad y descanso" loading="lazy"><figcaption>Aumenta primero el tiempo o la frecuencia y después la intensidad. Cambia una sola cosa cada vez.</figcaption></figure>
+
+      <section class="move-week"><span class="move-eyebrow">UNA SEMANA POSIBLE PARA EMPEZAR</span><div><article><b>Lunes</b><p>Paseo 10–15 min</p></article><article><b>Martes</b><p>Fuerza 15–20 min</p></article><article><b>Miércoles</b><p>Descanso activo o paseo suave</p></article><article><b>Jueves</b><p>Paseo 15–20 min</p></article><article><b>Viernes</b><p>Fuerza 15–20 min</p></article><article><b>Fin de semana</b><p>Actividad que disfrutes y descanso</p></article></div></section>
+
+      <div class="move-tips"><article><span>👟</span><strong>Hazlo fácil de repetir</strong><p>Deja calzado o banda visibles, elige una ruta corta y reserva un momento concreto.</p></article><article><span>🪑</span><strong>Rompe el tiempo sentado</strong><p>Levántate y muévete unos minutos con regularidad. Entrenar no borra por completo un día inmóvil.</p></article><article><span>📈</span><strong>Progresa sin prisa</strong><p>Si terminas bien y recuperas con normalidad, añade un poco. Si te deja agotado varios días, reduce.</p></article><article><span>💚</span><strong>Elige algo que te guste</strong><p>Caminar, nadar, bailar, bici, máquinas o clases: la mejor opción es la segura que puedes mantener.</p></article></div>
+
+      <aside class="move-safety"><strong>Para y consulta</strong><p>si aparece dolor en el pecho, desmayo, falta de aire desproporcionada, palpitaciones intensas, debilidad repentina o dolor agudo. Si tienes una enfermedad descompensada, embarazo con complicaciones, una lesión reciente o grandes limitaciones, pide una pauta adaptada antes de aumentar la intensidad.</p></aside>
+
+      <section class="move-support"><h3>Tu plan debe adaptarse a ti</h3><p>En consulta podemos revisar síntomas, enfermedades, medicación, experiencia, equilibrio, fuerza y barreras. El objetivo es elegir <strong>tipo, frecuencia, intensidad, tiempo y progresión</strong> de forma realista. No todas las personas empiezan caminando ni necesitan avanzar al mismo ritmo.</p></section>
+
+      <details class="evidence-sources"><summary>Fuentes y recomendaciones utilizadas</summary><ul><li><a href="https://www.who.int/europe/news-room/fact-sheets/item/physical-activity" target="_blank" rel="noopener">OMS: 150–300 minutos moderados y fuerza al menos 2 días por semana</a>.</li><li>Plan Andaluz de Prescripción de Ejercicio Físico y Guía andaluza de recomendación de actividad física y prescripción de ejercicio para la salud (documentos aportados).</li></ul><p>Las recomendaciones poblacionales son una meta general. En personas inactivas, comenzar con sesiones breves, progresar según tolerancia y reducir el sedentarismo ya aporta beneficios.</p></details>
+    </div>
   `,
 
   "ejercicio-fuerza": `
