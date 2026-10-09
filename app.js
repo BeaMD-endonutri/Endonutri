@@ -1,5 +1,6 @@
 document.write('<script src="app-core.js"><\/script>');
 
+// ENDONUTRI deployment refresh 2026-10-09 10:54
 // Ajustes de interfaz solicitados para ENDONUTRI.
 document.addEventListener("DOMContentLoaded", () => {
   // Eliminar por completo la sección "Ideas de Comidas" de la navegación,
@@ -37,11 +38,11 @@ document.addEventListener("DOMContentLoaded", () => {
     ejercicioCasa.style.boxShadow = "none";
 
     const paginasRutina = [
-      ["Día 1 · Base y control", "img/rutina-casa/rutina-dia-1.webp"],
-      ["Día 2 · Estabilidad y fuerza funcional", "img/rutina-casa/rutina-dia-2.webp"],
-      ["Día 3 · Coordinación y progresión", "img/rutina-casa/rutina-dia-3.webp"],
-      ["Abdominales fáciles · Nivel principiante", "img/rutina-casa/abdominales-principiante.webp"],
-      ["Progresión de abdominales · Principiante a intermedio", "img/rutina-casa/abdominales-progresion.webp"],
+      ["Día 1 · Base y control", "img/rutina-casa/rutina-dia-1.webp?v=20261009-1054"],
+      ["Día 2 · Estabilidad y fuerza funcional", "img/rutina-casa/rutina-dia-2.webp?v=20261009-1054"],
+      ["Día 3 · Coordinación y progresión", "img/rutina-casa/rutina-dia-3.webp?v=20261009-1054"],
+      ["Abdominales fáciles · Nivel principiante", "img/rutina-casa/abdominales-principiante.webp?v=20261009-1054"],
+      ["Progresión de abdominales · Principiante a intermedio", "img/rutina-casa/abdominales-progresion.webp?v=20261009-1054"],
     ];
 
     ejercicioCasa.innerHTML = `
