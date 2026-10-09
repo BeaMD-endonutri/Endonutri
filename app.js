@@ -48,7 +48,12 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="rutina-casa-pages" style="max-width:520px;margin:0 auto;display:grid;gap:28px;">
         ${paginasRutina.map(([titulo, src], index) => `
           <figure style="margin:0;">
-            <img src="${src}" alt="${titulo}" loading="${index === 0 ? "eager" : "lazy"}" style="display:block;width:100%;height:auto;margin:0;border-radius:18px;box-shadow:0 10px 34px rgba(16,68,58,.12);background:#f7f3ea;">
+            <img
+              src="${src}"
+              alt="${titulo}"
+              loading="${index === 0 ? "eager" : "lazy"}"
+              style="display:block;width:100%;height:auto;margin:0;border-radius:18px;box-shadow:0 10px 34px rgba(16,68,58,.12);background:#f7f3ea;"
+            >
           </figure>
         `).join("")}
       </div>
