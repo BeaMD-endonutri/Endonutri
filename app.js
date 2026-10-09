@@ -26,4 +26,37 @@ document.addEventListener("DOMContentLoaded", () => {
       box.remove();
     }
   });
+
+  // Sustituir todo el contenido de "Ejercicio en casa" por la nueva rutina
+  // y mostrar todas las páginas en orden, una debajo de otra.
+  const ejercicioCasa = document.getElementById("content-ejercicio-casa");
+  if (ejercicioCasa) {
+    ejercicioCasa.classList.remove("editable-zone");
+    ejercicioCasa.style.padding = "0";
+    ejercicioCasa.style.background = "transparent";
+    ejercicioCasa.style.boxShadow = "none";
+
+    const paginasRutina = [
+      ["Día 1 · Base y control", "img/rutina-casa/rutina-dia-1.webp"],
+      ["Día 2 · Estabilidad y fuerza funcional", "img/rutina-casa/rutina-dia-2.webp"],
+      ["Día 3 · Coordinación y progresión", "img/rutina-casa/rutina-dia-3.webp"],
+      ["Abdominales fáciles · Nivel principiante", "img/rutina-casa/abdominales-principiante.webp"],
+      ["Progresión de abdominales · Principiante a intermedio", "img/rutina-casa/abdominales-progresion.webp"],
+    ];
+
+    ejercicioCasa.innerHTML = `
+      <div class="rutina-casa-pages" style="max-width:520px;margin:0 auto;display:grid;gap:28px;">
+        ${paginasRutina.map(([titulo, src], index) => `
+          <figure style="margin:0;">
+            <img
+              src="${src}"
+              alt="${titulo}"
+              loading="${index === 0 ? "eager" : "lazy"}"
+              style="display:block;width:100%;height:auto;margin:0;border-radius:18px;box-shadow:0 10px 34px rgba(16,68,58,.12);background:#f7f3ea;"
+            >
+          </figure>
+        `).join("")}
+      </div>
+    `;
+  }
 });
